@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ติวสอบ IC Plain 2569 — คู่มือผู้แนะนำการลงทุนตราสารทั่วไป</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Noto+Serif+Thai:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F6F2; --surface:#FFFFFF; --surface2:#E8EEE8; --ink:#1C2321; --ink2:#4A5551; --line:#D3DDD5;
+  --brand:#12463A; --brand2:#1E6B58; --brandsoft:#DCEAE3; --gold:#B8892B; --goldsoft:#F5ECD8;
+  --red:#B3261E; --redsoft:#F8E4E1; --ok:#1F7A4D; --oksoft:#DDF0E4; --blue:#2D5F8B; --bluesoft:#E2ECF5;
+  --shadow:0 1px 2px rgba(18,70,58,.06),0 4px 16px rgba(18,70,58,.06);
+  --serif:"Noto Serif Thai","Noto Serif",Georgia,serif;
+  --sans:"IBM Plex Sans Thai","Noto Sans Thai","Leelawadee UI",Tahoma,system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1614; --surface:#16201D; --surface2:#1D2A26; --ink:#E4EAE6; --ink2:#A3B0AA; --line:#2B3A35;
+  --brand:#7CC4A9; --brand2:#5FAF92; --brandsoft:#1C3A31; --gold:#D9AE55; --goldsoft:#33291A;
+  --red:#F08A80; --redsoft:#3A1F1C; --ok:#6FCF97; --oksoft:#173326; --blue:#8DB8E0; --bluesoft:#1A2B3B;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#0F1614; --surface:#16201D; --surface2:#1D2A26; --ink:#E4EAE6; --ink2:#A3B0AA; --line:#2B3A35;
+  --brand:#7CC4A9; --brand2:#5FAF92; --brandsoft:#1C3A31; --gold:#D9AE55; --goldsoft:#33291A;
+  --red:#F08A80; --redsoft:#3A1F1C; --ok:#6FCF97; --oksoft:#173326; --blue:#8DB8E0; --bluesoft:#1A2B3B;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75}
+a{color:var(--brand2)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+img{max-width:100%}
+.layout{display:grid;grid-template-columns:290px minmax(0,1fr);min-height:100%}
+/* sidebar */
+.side{position:sticky;top:env(safe-area-inset-top,0px);height:calc(100vh - env(safe-area-inset-top,0px));overflow-y:auto;background:var(--surface);border-right:1px solid var(--line);padding:22px 14px 40px}
+.logo{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--ink);padding:0 8px 18px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.seal{width:42px;height:42px;border-radius:50%;background:var(--brand);color:var(--bg);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;box-shadow:inset 0 0 0 3px var(--gold)}
+.logo b{display:block;font-family:var(--serif);font-size:18px;line-height:1.2}
+.logo small{color:var(--ink2);font-size:13px}
+.navgrp{font-size:13px;color:var(--ink2);margin:16px 8px 6px;font-weight:600}
+.nav a{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:15px;line-height:1.45}
+.nav a:hover{background:var(--surface2)}
+.nav a.on{background:var(--brandsoft);color:var(--brand);font-weight:600}
+.nav .n{flex:0 0 24px;height:24px;border-radius:6px;background:var(--surface2);display:grid;place-items:center;font-size:12px;font-weight:600;color:var(--ink2)}
+.nav a.on .n{background:var(--brand);color:var(--bg)}
+.nav .dot{margin-left:auto;flex:0 0 auto;font-size:12px;font-weight:600;padding:0 6px;border-radius:10px;line-height:20px}
+.dot.pass{background:var(--oksoft);color:var(--ok)}.dot.fail{background:var(--redsoft);color:var(--red)}
+.sidefoot{margin:22px 8px 0;display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:20px;padding:4px 12px;font-size:14px}
+.chip:hover{border-color:var(--brand2)}
+/* topbar mobile */
+.topbar{display:none}
+main{min-width:0;padding:34px 28px 80px}
+.wrap{max-width:780px;margin:0 auto}
+/* headings */
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.35;color:var(--ink)}
+h1{font-size:clamp(28px,4.4vw,40px);margin:.2em 0 .3em}
+h2{font-size:26px;margin:1.6em 0 .5em}
+.body h3{font-size:22px;margin:2em 0 .5em;padding-top:.8em;border-top:1px solid var(--line);color:var(--brand)}
+.body h3:first-child{border-top:0;margin-top:.4em;padding-top:0}
+.body h4{font-size:18px;margin:1.4em 0 .3em}
+.kicker{display:inline-flex;gap:8px;align-items:center;color:var(--ink2);font-size:15px}
+.tag{font-size:13px;padding:2px 10px;border-radius:20px;background:var(--goldsoft);color:var(--gold);font-weight:600}
+.lead{font-size:19px;color:var(--ink2);margin:0 0 1.6em}
+/* content components */
+.body p{margin:.7em 0}
+.body ul,.body ol{padding-left:1.4em}
+.body li{margin:.3em 0}
+.body b{color:var(--ink);font-weight:600}
+.pic,.hot,.warn,.calc{border-radius:12px;padding:14px 18px;margin:1.1em 0;position:relative}
+.pic{background:var(--bluesoft);border-left:4px solid var(--blue)}
+.pic::before{content:"🖼 เห็นภาพ";display:block;font-size:13px;font-weight:600;color:var(--blue);margin-bottom:2px}
+.hot{background:var(--goldsoft);border-left:4px solid var(--gold)}
+.hot::before{content:"★ จุดออกสอบ";display:block;font-size:13px;font-weight:600;color:var(--gold);margin-bottom:2px}
+.warn{background:var(--redsoft);border-left:4px solid var(--red)}
+.warn::before{content:"⛔ ข้อห้าม";display:block;font-size:13px;font-weight:600;color:var(--red);margin-bottom:2px}
+.calc{background:var(--surface);border:1px dashed var(--brand2);font-variant-numeric:tabular-nums}
+.calc::before{content:"🧮 ตัวอย่างคำนวณ";display:block;font-size:13px;font-weight:600;color:var(--brand2);margin-bottom:2px}
+.big-rule{font-family:var(--serif);font-size:21px;text-align:center;padding:16px 18px;border:2px solid var(--brand);border-radius:12px;background:var(--brandsoft);color:var(--brand)}
+.big-rule b{color:inherit}
+.note{color:var(--ink2);font-size:15.5px;background:var(--surface2);border-radius:10px;padding:10px 14px}
+.tbl{overflow-x:auto;margin:1.1em 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.tbl table{border-collapse:collapse;width:100%;font-size:15.5px;line-height:1.55}
+.tbl th{background:var(--brand);color:var(--bg);text-align:left;padding:9px 12px;font-weight:600;white-space:nowrap}
+:root[data-theme="dark"] .tbl th{color:#0F1614}
+.tbl td{padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--surface2)}
+table.mini{font-size:15px}
+.lv{display:inline-grid;place-items:center;min-width:34px;height:30px;border-radius:8px;font-weight:700;color:#fff;font-size:15px;padding:0 6px}
+.l1{background:#2E7D5B}.l2{background:#4E8F4A}.l3{background:#7A9A3A}.l4{background:#A89A2C}.l5{background:#C2862A}.l6{background:#C76A2A}.l7{background:#BE4A2A}.l8{background:#A3262A}.l9{background:#6E1F3D}
+ol.steps{counter-reset:s;list-style:none;padding-left:0}
+ol.steps>li{counter-increment:s;position:relative;padding:4px 0 10px 46px;margin:0}
+ol.steps>li::before{content:counter(s);position:absolute;left:0;top:4px;width:32px;height:32px;border-radius:50%;background:var(--brand);color:var(--bg);display:grid;place-items:center;font-weight:700;font-size:15px}
+ol.steps>li:not(:last-child)::after{content:"";position:absolute;left:15px;top:38px;bottom:0;width:2px;background:var(--line)}
+.stack{margin:1.2em 0;display:flex;flex-direction:column;gap:6px}
+.st{padding:12px 16px;border-radius:10px;color:#fff;line-height:1.5;font-size:15.5px}
+.st b{color:#fff}
+.s1{background:#12463A;margin:0 0}.s2{background:#1E6B58;margin:0 3%}.s3{background:#3E8A6B;margin:0 6%}.s4{background:#A9862F;margin:0 9%}.s5{background:#B5652B;margin:0 12%}.s6{background:#A3262A;margin:0 15%}
+/* home */
+.hero{background:var(--brand);color:#F3F6F2;border-radius:18px;padding:32px 30px;position:relative;overflow:hidden}
+:root[data-theme="dark"] .hero{background:#12463A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:#12463A}}
+.hero h1{color:#F3F6F2;margin-top:0}
+.hero p{color:#D6E4DD;margin:.4em 0;max-width:36em}
+.hero .guil{position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:22px double rgba(184,137,43,.35)}
+.hero .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:10px;padding:10px 18px;font-weight:600;text-decoration:none;font-size:16px}
+.btn.gold{background:var(--gold);color:#1C2321}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn.pri{background:var(--brand);color:var(--bg)}
+.btn.sec{background:var(--surface2);color:var(--ink)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow);margin:18px 0}
+.examBar{display:flex;height:44px;border-radius:10px;overflow:hidden;margin:12px 0 6px;font-size:14px;font-weight:600}
+.examBar div{display:grid;place-items:center;color:#fff;text-align:center;line-height:1.2;padding:0 4px}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px;font-size:15px}
+.legend div{padding:10px 12px;border-radius:10px;background:var(--surface2)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:14px}
+.rule{border:2px solid var(--brand);border-radius:12px;padding:12px 14px}
+.rule .num{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--brand);line-height:1.2}
+.rule.red{border-color:var(--red)}.rule.red .num{color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.tile{display:block;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color .15s,transform .15s}
+.tile:hover{border-color:var(--brand2);transform:translateY(-2px)}
+.tile .no{font-size:13px;color:var(--ink2)}
+.tile .tt{font-weight:600;line-height:1.45;margin:2px 0 8px}
+.meter{height:6px;border-radius:4px;background:var(--surface2);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--brand2)}
+.meter i.bad{background:var(--red)}
+.tile .sc{font-size:13px;color:var(--ink2);margin-top:5px}
+/* quiz */
+.quiz{margin-top:44px;padding-top:10px;border-top:3px double var(--line)}
+.quiz-h{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.qitem{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0}
+.qitem.right{border-color:var(--ok);box-shadow:inset 4px 0 0 var(--ok)}
+.qitem.wrong{border-color:var(--red);box-shadow:inset 4px 0 0 var(--red)}
+.qitem.skip{border-color:var(--gold);box-shadow:inset 4px 0 0 var(--gold)}
+.qnum{font-size:13px;color:var(--ink2);font-weight:600;display:flex;gap:8px;align-items:center}
+.qtext{font-weight:600;margin:4px 0 10px;line-height:1.6}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;margin:6px 0;cursor:pointer;line-height:1.55;background:var(--bg)}
+.opt:hover{border-color:var(--brand2)}
+.opt input{margin-top:6px;accent-color:var(--brand)}
+.opt .k{font-weight:600;color:var(--ink2)}
+.opt.sel{border-color:var(--brand);background:var(--brandsoft)}
+.opt.is-ans{border-color:var(--ok);background:var(--oksoft)}
+.opt.is-wrong{border-color:var(--red);background:var(--redsoft)}
+.done .opt{cursor:default}
+.exp{margin-top:10px;padding:12px 14px;border-radius:10px;background:var(--surface2);font-size:15.5px;line-height:1.7}
+.exp b{display:block;margin-bottom:2px}
+.exp.r b{color:var(--ok)}.exp.w b{color:var(--red)}.exp.s b{color:var(--gold)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:20px 0}
+.result{border-radius:14px;padding:20px 22px;margin:20px 0;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.result.pass{background:var(--oksoft);border:1px solid var(--ok)}
+.result.fail{background:var(--redsoft);border:1px solid var(--red)}
+.result .big{font-family:var(--serif);font-size:44px;font-weight:700;line-height:1}
+.result.pass .big{color:var(--ok)}.result.fail .big{color:var(--red)}
+.secs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;width:100%}
+.secs div{background:var(--surface);border-radius:10px;padding:10px 12px;font-size:15px}
+.secs b{font-size:20px;display:block}
+.sechead{font-family:var(--serif);font-size:20px;margin:30px 0 4px;color:var(--brand)}
+.sticky{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:18px}
+.timer.low{color:var(--red)}
+.pager{display:flex;justify-content:space-between;gap:10px;margin-top:40px;flex-wrap:wrap}
+.pager a{flex:1 1 220px;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px 16px;background:var(--surface)}
+.pager a:hover{border-color:var(--brand2)}
+.pager small{color:var(--ink2);display:block}
+.pager .nx{text-align:right}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px;margin:0 0 20px;font-size:15.5px}
+.toc summary{cursor:pointer;font-weight:600}
+.toc ol{margin:.4em 0 0;padding-left:1.2em;columns:2;column-gap:28px}
+.toc a{text-decoration:none}
+.disc{font-size:14px;color:var(--ink2);margin-top:40px;border-top:1px solid var(--line);padding-top:14px}
+.filter{display:flex;gap:6px;flex-wrap:wrap}
+.filter button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:20px;padding:3px 12px;font-size:14px}
+.filter button.on{background:var(--brand);color:var(--bg);border-color:var(--brand)}
+@media (max-width:900px){
+  .layout{display:block}
+  .side{position:fixed;inset:0 auto 0 0;width:min(320px,86vw);height:100%;z-index:30;transform:translateX(-105%);transition:transform .2s;padding-top:calc(22px + env(safe-area-inset-top,0px))}
+  body.menu .side{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.35)}
+  .topbar{display:flex;position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 14px;padding-top:calc(8px + env(safe-area-inset-top,0px));align-items:center;gap:12px}
+  .topbar b{font-family:var(--serif);font-size:16px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .menuBtn{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:4px 12px}
+  main{padding:20px 16px 70px}
+  .toc ol{columns:1}
+  .sticky{top:calc(52px + env(safe-area-inset-top,0px))}
+  .hero{padding:24px 20px}
+  body{font-size:16.5px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{.side,.topbar,.actions,.sticky{display:none!important}.layout{display:block}}
+</style>
+</head>
+<body>
+<div class="topbar"><button class="menuBtn" id="menuBtn" aria-label="เปิดเมนูบทเรียน">☰ บทเรียน</button><b id="topTitle">IC Plain 2569</b></div>
+<div class="layout">
+<nav class="side" id="side" aria-label="สารบัญบทเรียน"></nav>
+<main id="main" tabindex="-1"><div class="wrap" id="view"></div></main>
+</div>
+<script>
+const CH = [];
+
+CH.push({
+id:"duty", part:2, title:"หน้าที่ความรับผิดชอบและข้อห้ามเด็ดขาดของ IC",
+lead:"รู้ว่า IC คือใคร ทำอะไรได้ ทำอะไรไม่ได้เลย และทำไมกฎแต่ละข้อถึงมีอยู่",
+body:`
+<h3>1.1 IC คือใคร และทำไมต้องมีใบอนุญาต</h3>
+<p><b>IC (Investment Consultant) หรือ “ผู้แนะนำการลงทุน”</b> คือบุคคลที่ทำหน้าที่ติดต่อกับผู้ลงทุนโดยตรงเพื่อ <b>ให้คำแนะนำ ชักชวน หรือขาย</b> หลักทรัพย์และหน่วยลงทุน โดยต้องได้รับ <b>ความเห็นชอบจากสำนักงาน ก.ล.ต.</b> และทำงานในนามบริษัทที่ตนสังกัด (บริษัทหลักทรัพย์ บลจ. ธนาคาร หรือบริษัทประกันที่ขาย Unit Linked)</p>
+<div class="pic"><b>ภาพจำ:</b> IC เหมือน <b>เภสัชกร</b> ไม่ใช่พนักงานขายของทั่วไป เภสัชกรต้องถามอาการ ประวัติแพ้ยา และอายุก่อนจ่ายยา เพราะยาที่ดีกับคนหนึ่งอาจอันตรายกับอีกคน ผลิตภัณฑ์การลงทุนก็เช่นกัน ใบอนุญาตคือหลักประกันว่าคนที่ “จ่ายยา” ให้เงินเรารู้จริงและมีจรรยาบรรณ</div>
+<p><b>IC Plain</b> แนะนำได้เฉพาะ <b>ตราสารทั่วไป (Plain products)</b> เช่น หุ้นสามัญ หุ้นบุริมสิทธิ หุ้นกู้ทั่วไป พันธบัตร กองทุนรวมทั่วไป และกรมธรรม์ประกันชีวิตควบการลงทุน (Unit Linked) ส่วน <b>ผลิตภัณฑ์ซับซ้อน</b> เช่น สัญญาซื้อขายล่วงหน้า (อนุพันธ์) หรือหุ้นกู้อนุพันธ์ (Structured Notes) ต้องใช้ใบอนุญาตระดับ <b>IC Complex</b></p>
+
+<h3>1.2 เส้นทางการได้รับความเห็นชอบและการรักษาสถานะ</h3>
+<ol class="steps">
+<li><b>สอบผ่าน</b> หลักสูตร IC Plain (100 ข้อ ผ่าน 70% และหมวดกฎเกณฑ์/จรรยาบรรณ ต้องได้อย่างน้อย 14/20)</li>
+<li><b>อบรมตามหลักสูตรที่กำหนด</b> (เช่น หลักสูตรจรรยาบรรณ/การปฏิบัติงาน)</li>
+<li><b>บริษัทต้นสังกัดยื่นขอความเห็นชอบ</b> ต่อ ก.ล.ต. ในนามของ IC (IC ยื่นเองไม่ได้ เพราะ IC ต้องทำงานภายใต้การกำกับของบริษัท)</li>
+<li><b>รักษาสถานะ</b> ต้องอบรมทบทวนความรู้ (Refresher) ตามจำนวนชั่วโมงและรอบระยะเวลาที่ ก.ล.ต. กำหนด ถ้าไม่อบรม สถานะจะถูกระงับ</li>
+</ol>
+<p><b>ลักษณะต้องห้าม</b> ที่ทำให้ไม่ได้รับความเห็นชอบ เช่น เคยต้องคำพิพากษาในความผิดเกี่ยวกับทรัพย์ที่กระทำโดยทุจริต เคยถูกลงโทษเพราะกระทำความผิดตามกฎหมายหลักทรัพย์ เป็นบุคคลล้มละลาย หรือมีพฤติกรรมไม่น่าไว้วางใจ หลักคิดคือ <b>คนที่ดูแลเงินของประชาชนต้องมีความน่าเชื่อถือ (Fit & Proper)</b></p>
+
+<h3>1.3 หน้าที่หลักของ IC (สิ่งที่ “ต้องทำ”)</h3>
+<div class="tbl"><table>
+<tr><th>หน้าที่</th><th>ความหมาย</th><th>ทำไมต้องทำ</th></tr>
+<tr><td><b>KYC</b> (Know Your Customer)</td><td>รู้จักตัวตน อาชีพ แหล่งที่มาของเงิน วัตถุประสงค์การลงทุนของลูกค้า</td><td>เป็นฐานของการแนะนำที่เหมาะสม และป้องกันการฟอกเงิน</td></tr>
+<tr><td><b>CDD</b> (Customer Due Diligence)</td><td>ตรวจสอบความถูกต้องของข้อมูล ประเมินความเสี่ยงด้านฟอกเงิน เช่น ลูกค้าเป็นบุคคลทางการเมือง (PEP) หรือไม่</td><td>กฎหมายป้องกันและปราบปรามการฟอกเงิน (AML/CTF)</td></tr>
+<tr><td><b>Suitability</b></td><td>ให้ลูกค้าทำแบบประเมินความเหมาะสม แล้วแนะนำให้สอดคล้องกับระดับความเสี่ยงที่ลูกค้ารับได้</td><td>ลูกค้าแต่ละคนรับความผันผวนได้ไม่เท่ากัน</td></tr>
+<tr><td><b>Know Your Product</b></td><td>เข้าใจผลิตภัณฑ์อย่างแท้จริง ทั้งผลตอบแทน ความเสี่ยง ค่าธรรมเนียม เงื่อนไข</td><td>แนะนำสิ่งที่ตัวเองไม่เข้าใจ = แนะนำแบบประมาท</td></tr>
+<tr><td><b>เปิดเผยข้อมูลครบถ้วน</b></td><td>ให้หนังสือชี้ชวน/ข้อมูลสรุป อธิบายความเสี่ยง ค่าธรรมเนียม และความขัดแย้งทางผลประโยชน์</td><td>ลูกค้าต้องตัดสินใจบนข้อมูลที่ครบและไม่บิดเบือน</td></tr>
+<tr><td><b>เก็บหลักฐาน</b></td><td>บันทึกการให้คำแนะนำ บันทึกเสียงการรับคำสั่งทางโทรศัพท์</td><td>ใช้พิสูจน์ข้อเท็จจริงเมื่อมีข้อพิพาท</td></tr>
+<tr><td><b>รายงานธุรกรรมต้องสงสัย</b></td><td>แจ้งหน่วยงานกำกับภายในบริษัท เพื่อรายงานต่อ ปปง.</td><td>หน้าที่ตามกฎหมาย AML</td></tr>
+</table></div>
+
+<h3>1.4 ข้อห้ามเด็ดขาด (สิ่งที่ “ห้ามทำ” ไม่ว่ากรณีใด)</h3>
+<div class="warn"><b>หลักจำ:</b> ถ้าการกระทำทำให้ <b>เงินลูกค้าไปปนกับเงิน IC</b>, ทำให้ <b>IC ตัดสินใจแทนลูกค้า</b>, ทำให้ <b>ลูกค้าได้ข้อมูลผิด</b> หรือทำให้ <b>IC ได้ประโยชน์บนความเสียหายของลูกค้า</b> — ผิดแน่นอน</div>
+<div class="tbl"><table>
+<tr><th>ข้อห้าม</th><th>ตัวอย่างสถานการณ์</th><th>เหตุผลที่ห้าม</th></tr>
+<tr><td>รับเงิน/ทรัพย์สินของลูกค้าไว้กับตัว</td><td>ลูกค้าฝากเงินสด 100,000 บาทไว้กับ IC ให้ไปซื้อกองทุนให้</td><td>เสี่ยงยักยอก เงินต้องเข้าบัญชีบริษัทหรือบัญชีที่ใช้เพื่อการนี้โดยตรงเท่านั้น</td></tr>
+<tr><td>รับประกันผลตอบแทนหรือรับประกันว่าไม่ขาดทุน</td><td>“รับรองครับ ปีนี้ได้ 10% แน่นอน”</td><td>การลงทุนมีความเสี่ยง การรับประกันคือการให้ข้อมูลที่ทำให้ลูกค้าสำคัญผิด</td></tr>
+<tr><td>ร่วมรับผลกำไรหรือขาดทุนกับลูกค้า</td><td>“ถ้าขาดทุนผมช่วยจ่ายครึ่งหนึ่ง กำไรแบ่งกัน”</td><td>ทำให้ IC มีส่วนได้เสียในพอร์ตลูกค้า ความเป็นกลางหายไป</td></tr>
+<tr><td>ซื้อขายในบัญชีลูกค้าโดยไม่ได้รับคำสั่ง</td><td>เห็นราคาดีเลยซื้อให้ก่อนแล้วค่อยโทรบอก</td><td>ลูกค้าเป็นผู้ตัดสินใจเท่านั้น</td></tr>
+<tr><td>รับมอบอำนาจตัดสินใจซื้อขายแทน</td><td>“จัดการให้ตามสบายเลย” แล้ว IC ซื้อขายเอง</td><td>IC ไม่ใช่ผู้จัดการกองทุนส่วนบุคคล ถ้าลูกค้าต้องการแบบนี้ ต้องใช้บริการกองทุนส่วนบุคคลที่ได้รับอนุญาต</td></tr>
+<tr><td>Churning (ชักชวนซื้อขายบ่อยเกินจำเป็น)</td><td>สลับกองทุนให้ลูกค้าทุกสัปดาห์เพื่อเก็บค่าธรรมเนียม</td><td>ประโยชน์ตกกับ IC ลูกค้าเสียค่าธรรมเนียมโดยไม่จำเป็น</td></tr>
+<tr><td>ใช้ข้อมูลภายใน (Insider Trading)</td><td>รู้จากเพื่อนว่าบริษัทจะประกาศกำไรพิเศษ เลยรีบซื้อ/บอกลูกค้า</td><td>เอาเปรียบผู้ลงทุนอื่นที่ไม่รู้ข้อมูล มีโทษอาญา</td></tr>
+<tr><td>Front Running (ส่งคำสั่งตัดหน้าลูกค้า)</td><td>รู้ว่าลูกค้ารายใหญ่จะซื้อ 1 ล้านหุ้น จึงซื้อเข้าพอร์ตตัวเองก่อน</td><td>ใช้ข้อมูลคำสั่งของลูกค้าหาประโยชน์ให้ตัวเอง</td></tr>
+<tr><td>ปั่นราคาหรือสร้างข่าวลือ</td><td>โพสต์ข่าวไม่จริงให้คนแห่ซื้อหุ้น</td><td>บิดเบือนกลไกตลาด มีโทษอาญา</td></tr>
+<tr><td>ให้ลูกค้ากู้ยืม หรือกู้ยืมจากลูกค้า</td><td>ขอยืมเงินลูกค้าที่สนิทกัน</td><td>สร้างภาระผูกพันส่วนตัวที่กระทบความเป็นกลาง</td></tr>
+<tr><td>ลงนามแทน หรือให้ลูกค้าเซ็นเอกสารเปล่า</td><td>“เซ็นไว้ก่อนเดี๋ยวผมกรอกให้”</td><td>เปิดช่องให้ทุจริต ลูกค้าไม่รู้ว่าตนยืนยันอะไร</td></tr>
+<tr><td>เปิดเผยข้อมูลลูกค้า</td><td>เล่าให้เพื่อนฟังว่าลูกค้าคนดังถือหุ้นอะไร</td><td>ผิดหน้าที่รักษาความลับ ยกเว้นเปิดเผยตามกฎหมาย/หน่วยงานกำกับ</td></tr>
+<tr><td>ทำแบบประเมินความเสี่ยงแทนลูกค้า/ชี้นำคำตอบ</td><td>ติ๊กให้เสร็จเพื่อให้ได้ระดับสูงพอซื้อกองหุ้น</td><td>ทำให้ผลประเมินไม่สะท้อนตัวตนจริงของลูกค้า</td></tr>
+</table></div>
+
+<h3>1.5 จรรยาบรรณหลักที่ข้อสอบชอบวัด</h3>
+<ul>
+<li><b>ซื่อสัตย์สุจริต (Integrity)</b> — พูดความจริง ไม่บิดเบือน ไม่ปกปิดข้อมูลสำคัญ</li>
+<li><b>เป็นธรรม (Fairness)</b> — ปฏิบัติต่อลูกค้าทุกรายอย่างเท่าเทียม</li>
+<li><b>ระมัดระวังรอบคอบ (Due Care)</b> — วิเคราะห์ก่อนแนะนำ มีเหตุผลรองรับ</li>
+<li><b>รักษาความลับ (Confidentiality)</b> — ข้อมูลลูกค้าไม่เปิดเผยโดยไม่มีอำนาจตามกฎหมาย</li>
+<li><b>ความรู้ความสามารถ (Competence)</b> — พัฒนาความรู้ต่อเนื่อง แนะนำเฉพาะสิ่งที่อยู่ในขอบเขตใบอนุญาต</li>
+<li><b>ปฏิบัติตามกฎหมายและกฎเกณฑ์ (Compliance)</b> — ทั้งกฎหมาย ประกาศ ก.ล.ต. และนโยบายบริษัท</li>
+<li><b>ประโยชน์ของลูกค้ามาก่อน (Client First)</b> — ลำดับคือ ลูกค้า → บริษัท → ตัว IC</li>
+</ul>
+
+<h3>1.6 บทลงโทษ</h3>
+<p>ก.ล.ต. อาจลงโทษทางปกครองตามความร้ายแรง ได้แก่ <b>ภาคทัณฑ์ → พักการให้ความเห็นชอบ (ห้ามทำงานชั่วคราว) → เพิกถอนการให้ความเห็นชอบ</b> ส่วนความผิดร้ายแรงอย่างการใช้ข้อมูลภายในหรือการปั่นหุ้น มี <b>โทษอาญาหรือมาตรการลงโทษทางแพ่ง</b> ตามกฎหมายหลักทรัพย์ด้วย นอกจากนี้บริษัทต้นสังกัดก็มีบทลงโทษทางวินัยของตนเอง</p>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> (1) โจทย์สถานการณ์ “ลูกค้าไว้ใจให้จัดการแทน” — คำตอบคือห้ามรับ (2) “ลูกค้าเอาเงินสดมาให้” — ห้ามรับ ให้โอนเข้าบัญชีบริษัท (3) “IC ชดเชยผลขาดทุน” — ผิดเสมอแม้เจตนาดี (4) การชักชวนโดยอ้างผลตอบแทนในอดีตว่าจะเกิดซ้ำ — ผิด เพราะผลการดำเนินงานในอดีตไม่ได้รับประกันอนาคต</div>
+`,
+quiz:[
+{q:"ลูกค้าสูงอายุนำเงินสด 200,000 บาทมาที่สาขา แล้วขอให้ IC “ช่วยเอาไปซื้อกองทุนให้หน่อย” IC ควรทำอย่างไร",o:["รับเงินไว้แล้วออกใบรับเงินส่วนตัวให้ลูกค้า","รับเงินไว้ แล้วรีบนำเข้าบัญชีส่วนตัวก่อนโอนต่อให้บริษัท","ไม่รับเงินไว้กับตัว แนะนำให้ลูกค้าชำระผ่านช่องทางของบริษัทโดยตรง เช่น เคาน์เตอร์หรือโอนเข้าบัญชีบริษัท","ให้เพื่อนร่วมงานรับเงินแทน เพื่อเป็นพยาน"],a:2,e:"IC ห้ามรับฝากเงินหรือทรัพย์สินของลูกค้าไว้กับตัว ไม่ว่าจะมีพยานหรือออกใบรับเองก็ตาม เพราะเปิดช่องให้ยักยอกและทำให้เงินลูกค้าปนกับเงิน IC เงินต้องเข้าระบบของบริษัทโดยตรงเท่านั้น"},
+{q:"ลูกค้าบอกว่า “ผมงานยุ่งมาก คุณเห็นว่าหุ้นตัวไหนดีก็ซื้อขายให้ได้เลย ไม่ต้องโทรถาม” IC ควรตอบอย่างไร",o:["ตกลง เพราะลูกค้าให้ความยินยอมด้วยวาจาแล้ว","ตกลง แต่ให้ลูกค้าเซ็นหนังสือมอบอำนาจกับ IC เป็นการส่วนตัว","ปฏิเสธการตัดสินใจแทน และอธิบายว่าถ้าต้องการให้ผู้อื่นบริหารให้ ควรใช้บริการกองทุนส่วนบุคคลหรือกองทุนรวม","ตกลงเฉพาะหุ้นขนาดใหญ่ที่มีความเสี่ยงต่ำ"],a:2,e:"IC ไม่มีอำนาจตัดสินใจซื้อขายแทนลูกค้า การตัดสินใจลงทุนต้องเป็นของลูกค้า หากลูกค้าต้องการมอบการตัดสินใจ ต้องใช้บริการที่ได้รับอนุญาตโดยเฉพาะ เช่น กองทุนส่วนบุคคล (Private Fund) ซึ่งมีผู้จัดการที่ได้รับใบอนุญาตและมีสัญญากำกับชัดเจน"},
+{q:"IC ได้ยินจากเพื่อนที่ทำงานในบริษัทจดทะเบียนแห่งหนึ่งว่าบริษัทกำลังจะประกาศควบรวมกิจการ แต่ยังไม่เปิดเผยต่อสาธารณะ IC ควรทำอย่างไร",o:["แจ้งลูกค้าคนสำคัญก่อนเพื่อรักษาความสัมพันธ์","ซื้อหุ้นเข้าบัญชีตัวเองเล็กน้อย ไม่แจ้งใคร","ไม่ใช้ข้อมูลนั้นซื้อขายและไม่เผยแพร่ต่อ เพราะเป็นข้อมูลภายใน","รอจนข่าวลือแพร่ในโซเชียลก่อนค่อยแนะนำลูกค้า"],a:2,e:"ข้อมูลที่ยังไม่เปิดเผยต่อสาธารณะและมีผลต่อราคาหลักทรัพย์คือข้อมูลภายใน ทั้งการใช้เองและการบอกต่อให้คนอื่นใช้ ถือเป็นการใช้ข้อมูลภายใน (Insider Trading) ซึ่งมีโทษตามกฎหมาย ข่าวลือในโซเชียลก็ไม่ได้ทำให้ข้อมูลกลายเป็นข้อมูลสาธารณะ"},
+{q:"ข้อใดคือพฤติกรรม Churning",o:["แนะนำให้ลูกค้าถือกองทุนระยะยาวเพื่อลดค่าธรรมเนียม","ชักชวนให้ลูกค้าซื้อขายหรือสับเปลี่ยนกองทุนบ่อยเกินความจำเป็น เพื่อให้ IC ได้ค่าตอบแทนมากขึ้น","ทำ Rebalance พอร์ตปีละครั้งตามแผนที่ตกลงกัน","ขายหุ้นตัดขาดทุนตามคำสั่งลูกค้า"],a:1,e:"Churning คือการกระตุ้นให้ลูกค้าซื้อขายบ่อยเกินสมควรเพื่อหารายได้ค่านายหน้า ลูกค้าเสียค่าธรรมเนียมโดยไม่ได้ประโยชน์ จึงขัดหลักประโยชน์ลูกค้ามาก่อน ส่วนการ Rebalance ตามแผนเป็นการบริหารพอร์ตที่สมเหตุสมผล"},
+{q:"ลูกค้าขาดทุนจากกองทุนที่ IC แนะนำ 50,000 บาท IC รู้สึกผิดจึงเสนอโอนเงินค่าคอมมิชชันของตนชดเชยให้ 20,000 บาท การกระทำนี้เป็นอย่างไร",o:["ถูกต้อง เพราะแสดงความรับผิดชอบต่อลูกค้า","ถูกต้อง หากลูกค้ายินยอมเป็นลายลักษณ์อักษร","ไม่ถูกต้อง เพราะเป็นการร่วมรับผลขาดทุนกับลูกค้า ซึ่งเป็นข้อห้าม","ไม่ถูกต้อง เพราะควรชดเชยเต็มจำนวน 50,000 บาท"],a:2,e:"การชดเชยผลขาดทุนหรือแบ่งกำไรกับลูกค้าเป็นข้อห้ามแม้เจตนาดี เพราะทำให้ IC มีส่วนได้เสียกับผลลัพธ์ในบัญชีลูกค้า และสร้างความคาดหวังแบบ “รับประกัน” หากเกิดความเสียหายจากการแนะนำที่ผิดพลาดจริง ต้องดำเนินการผ่านกระบวนการร้องเรียนของบริษัท"}
+]});
+
+CH.push({
+id:"fair", part:2, title:"การปฏิบัติต่อลูกค้าอย่างเท่าเทียมเป็นธรรม และการจัดการความขัดแย้งทางผลประโยชน์",
+lead:"หลัก Fair Dealing และวิธีจัดการ Conflict of Interest แบบที่ข้อสอบต้องการ",
+body:`
+<h3>2.1 “เท่าเทียม” แปลว่าอะไรในงานแนะนำการลงทุน</h3>
+<p><b>เท่าเทียม (Fair Dealing)</b> ไม่ได้แปลว่าแนะนำสินค้าเดียวกันให้ทุกคน แต่แปลว่า <b>ทุกคนได้รับโอกาส ข้อมูล และมาตรฐานการดูแลเท่ากัน</b> แล้วจึงแนะนำตามความเหมาะสมของแต่ละคน</p>
+<div class="pic"><b>ภาพจำ:</b> คิดถึง <b>คิวโรงพยาบาล</b> ใครมาก่อนได้ตรวจก่อน (ลำดับคำสั่ง) หมอทุกคนใช้มาตรฐานการตรวจเดียวกัน (มาตรฐานการดูแล) แต่ยาที่ได้ต่างกันตามอาการ (คำแนะนำตามความเหมาะสม) คนไข้ VIP จะได้ห้องพักสวยกว่าได้ แต่จะ “ลัดคิวผ่าตัดโดยเบียดคนอื่น” ไม่ได้</div>
+<div class="tbl"><table>
+<tr><th>หลักปฏิบัติ</th><th>ทำอย่างไร</th></tr>
+<tr><td>ลำดับคำสั่ง</td><td>ส่งคำสั่งซื้อขายตามลำดับเวลาที่ได้รับ (First come, first served) ไม่จัดลำดับตามขนาดพอร์ต</td></tr>
+<tr><td>การเผยแพร่ข้อมูล</td><td>บทวิเคราะห์หรือคำแนะนำ ต้องเผยแพร่ให้ลูกค้าในกลุ่มเป้าหมายพร้อมกัน ไม่ส่งให้รายใหญ่ก่อน</td></tr>
+<tr><td>การจัดสรรหลักทรัพย์ (เช่น IPO)</td><td>จัดสรรตามหลักเกณฑ์ที่กำหนดล่วงหน้าและเปิดเผย ไม่จัดสรรให้ตนเองหรือคนใกล้ชิดก่อนลูกค้า</td></tr>
+<tr><td>ค่าธรรมเนียม</td><td>คิดตามอัตราที่เปิดเผยไว้ ส่วนลดใดๆ ต้องมีเกณฑ์ชัดเจน</td></tr>
+<tr><td>คำสั่งรวม (Block order) ที่ได้รับไม่ครบ</td><td>เฉลี่ยให้ลูกค้าตามสัดส่วนหรือเกณฑ์ที่เป็นธรรม ไม่เลือกให้ลูกค้าบางคนได้ราคาดีกว่า</td></tr>
+</table></div>
+
+<h3>2.2 การดูแลลูกค้ากลุ่มเปราะบาง</h3>
+<p>ลูกค้าบางกลุ่มเสี่ยงต่อการเข้าใจผิดมากกว่าปกติ เช่น ผู้สูงอายุ ผู้มีความรู้ทางการเงินน้อย หรือผู้มีข้อจำกัดในการสื่อสาร IC ต้อง <b>อธิบายช้าลง ตรวจความเข้าใจ เสนอให้มีญาติหรือผู้ที่ไว้ใจร่วมรับฟัง และระมัดระวังเป็นพิเศษ</b> เมื่อจะแนะนำผลิตภัณฑ์ความเสี่ยงสูง การดูแลเป็นพิเศษนี้ไม่ขัดกับหลักเท่าเทียม เพราะเป้าหมายคือให้ทุกคน <b>เข้าใจได้เท่ากัน</b></p>
+
+<h3>2.3 ความขัดแย้งทางผลประโยชน์ (Conflict of Interest: COI) คืออะไร</h3>
+<p>COI คือ <b>สถานการณ์ที่ประโยชน์ของ IC หรือบริษัท อาจขัดกับประโยชน์ของลูกค้า</b> จนอาจทำให้คำแนะนำไม่เป็นกลาง สิ่งสำคัญคือ COI <b>ไม่จำเป็นต้องเกิดความเสียหายแล้ว</b> แค่ “มีโอกาส” ทำให้ลำเอียงก็ต้องจัดการ</p>
+<div class="tbl"><table>
+<tr><th>แหล่งที่มาของ COI</th><th>ตัวอย่าง</th></tr>
+<tr><td>ค่าตอบแทน</td><td>กองทุน A ให้ค่าคอมฯ สูงกว่ากองทุน B ที่เหมาะกับลูกค้ามากกว่า</td></tr>
+<tr><td>ผลิตภัณฑ์ของบริษัทหรือบริษัทในเครือ</td><td>ธนาคารแนะนำกองทุนของ บลจ. ในเครือ หรือหุ้นกู้ที่บริษัทเป็นผู้จัดจำหน่าย</td></tr>
+<tr><td>การลงทุนส่วนตัวของ IC</td><td>IC ถือหุ้น XYZ แล้วแนะนำให้ลูกค้าซื้อ ราคาขึ้น IC ได้ประโยชน์ด้วย</td></tr>
+<tr><td>ของขวัญหรือผลประโยชน์</td><td>ผู้ออกหุ้นกู้พา IC ไปเที่ยวต่างประเทศ</td></tr>
+<tr><td>ความสัมพันธ์ส่วนตัว</td><td>ญาติเป็นผู้บริหารบริษัทที่ออกหุ้นกู้</td></tr>
+</table></div>
+
+<h3>2.4 สามขั้นจัดการ COI (จำเป็นลำดับ)</h3>
+<ol class="steps">
+<li><b>หลีกเลี่ยง (Avoid)</b> — ถ้าเลี่ยงได้ต้องเลี่ยงก่อน เช่น ไม่รับของขวัญมูลค่าสูง ไม่แนะนำหุ้นที่ตนเพิ่งซื้อเพื่อเก็งกำไร</li>
+<li><b>เปิดเผย (Disclose)</b> — ถ้าเลี่ยงไม่ได้ ต้องแจ้งลูกค้า <b>ก่อนลูกค้าตัดสินใจ</b> ให้ชัดเจนและเข้าใจได้ เช่น “บริษัทเป็นผู้จัดจำหน่ายหุ้นกู้นี้และได้รับค่าธรรมเนียมจากผู้ออก”</li>
+<li><b>ยึดประโยชน์ลูกค้า (Act in client’s best interest)</b> — การเปิดเผยแล้ว <b>ไม่ได้ทำให้แนะนำสิ่งที่ไม่เหมาะสมได้</b> คำแนะนำยังต้องเหมาะกับลูกค้าเสมอ</li>
+</ol>
+<div class="pic"><b>ภาพจำ:</b> กรรมการตัดสินฟุตบอลที่ลูกชายเล่นอยู่ในทีมหนึ่ง วิธีที่ดีที่สุดคือ <b>ไม่รับตัดสินแมตช์นั้น</b> (หลีกเลี่ยง) ถ้าไม่มีกรรมการคนอื่นเลยจริงๆ ต้อง <b>ประกาศให้ทั้งสองทีมรู้</b> (เปิดเผย) และยังต้อง <b>ตัดสินอย่างยุติธรรม</b> (ยึดประโยชน์ส่วนรวม) การประกาศไม่ได้ให้สิทธิ์ช่วยทีมลูก</div>
+
+<h3>2.5 ลำดับความสำคัญของผลประโยชน์</h3>
+<p class="big-rule">ลูกค้า &gt; บริษัท &gt; ตัว IC</p>
+<p>เมื่อผลประโยชน์ชนกัน ให้คิดตามลำดับนี้เสมอ เช่น ลูกค้าและ IC ต้องการซื้อหุ้นตัวเดียวกันพร้อมกัน ต้องส่งคำสั่งของลูกค้าก่อน หรือบริษัทต้องการระบายหุ้นกู้ที่ขายไม่หมด ก็ไม่สามารถยัดเยียดให้ลูกค้าที่ไม่เหมาะสมได้</p>
+
+<h3>2.6 การซื้อขายหลักทรัพย์ส่วนตัวของ IC</h3>
+<ul>
+<li>เปิดบัญชีและซื้อขายตามนโยบายบริษัท (โดยทั่วไปต้องซื้อขายผ่านบริษัทต้นสังกัดหรือรายงานบัญชีที่เปิดที่อื่น)</li>
+<li>ปฏิบัติตามช่วงห้ามซื้อขาย (Blackout Period) และรายชื่อหลักทรัพย์ที่ห้ามซื้อขาย (Restricted List)</li>
+<li>ห้ามส่งคำสั่งของตนตัดหน้าลูกค้า (Front Running) และห้ามซื้อขายสวนทางคำแนะนำที่ตนให้ลูกค้าเพื่อหาประโยชน์</li>
+<li><b>Chinese Wall</b> คือการแยกข้อมูลระหว่างหน่วยงานที่รู้ข้อมูลภายใน (เช่น วาณิชธนกิจ) กับหน่วยงานที่ติดต่อลูกค้า เพื่อป้องกันข้อมูลรั่วไหล</li>
+</ul>
+
+<h3>2.7 ของขวัญและการเลี้ยงรับรอง</h3>
+<p>รับได้เฉพาะ <b>ตามประเพณีนิยม มูลค่าไม่สูง และเป็นไปตามนโยบายบริษัท</b> สิ่งที่อาจทำให้เสียความเป็นกลางต้องปฏิเสธหรือรายงานต่อหน่วยงานกำกับดูแลภายใน (Compliance) หลักคิด: <b>ถ้าลูกค้ารู้แล้วจะสงสัยในความเป็นกลางของเรา ก็ไม่ควรรับ</b></p>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> “เปิดเผยแล้ว จึงแนะนำได้ทุกอย่าง” — <b>ผิด</b> เพราะการเปิดเผยไม่ได้แทนที่หลักความเหมาะสม / “ลูกค้ารายใหญ่ควรได้บทวิเคราะห์ก่อน” — <b>ผิด</b> / “ส่งคำสั่งตัวเองพร้อมลูกค้าแต่ได้ราคาดีกว่า” — <b>ผิด</b></div>
+`,
+quiz:[
+{q:"เมื่อผลประโยชน์ของลูกค้า บริษัท และ IC ขัดแย้งกัน ควรให้ความสำคัญตามลำดับใด",o:["บริษัท → ลูกค้า → IC","ลูกค้า → บริษัท → IC","IC → ลูกค้า → บริษัท","ลูกค้า → IC → บริษัท"],a:1,e:"หลักการพื้นฐานคือประโยชน์ของลูกค้ามาก่อนเสมอ ตามด้วยบริษัทที่ IC สังกัดและมีหน้าที่ต่อ ส่วนประโยชน์ส่วนตัวของ IC อยู่ลำดับสุดท้าย"},
+{q:"IC ถือหุ้น ABC อยู่จำนวนมาก และเห็นว่าหุ้น ABC เหมาะกับพอร์ตลูกค้ารายหนึ่ง สิ่งที่ถูกต้องที่สุดคือข้อใด",o:["ห้ามแนะนำหุ้น ABC ให้ลูกค้าคนใดเลย","แนะนำได้โดยไม่ต้องบอก เพราะหุ้นเหมาะกับลูกค้าจริง","แนะนำได้หากเหมาะสม และต้องเปิดเผยให้ลูกค้าทราบว่า IC ถือหุ้นดังกล่าว","ขายหุ้นของตนออกก่อนแล้วค่อยแนะนำ"],a:2,e:"การถือหุ้นที่แนะนำเป็น COI ที่เลี่ยงได้ยากและไม่จำเป็นต้องห้ามแนะนำ หากหุ้นเหมาะกับลูกค้าจริง แต่ต้องเปิดเผยให้ลูกค้าทราบก่อนตัดสินใจ ส่วนการขายหุ้นออกก่อนแนะนำอาจกลายเป็นการซื้อขายสวนทางคำแนะนำ"},
+{q:"ลูกค้ารายใหญ่โทรสั่งซื้อหุ้น DEF 2 ล้านหุ้น IC คาดว่าราคาจะขึ้นจากคำสั่งนี้ จึงส่งคำสั่งซื้อในบัญชีตนเองก่อน 10,000 หุ้น พฤติกรรมนี้คืออะไร",o:["Front Running","Churning","Insider Trading โดยผู้บริหาร","การทำ Arbitrage"],a:0,e:"Front Running คือการใช้ข้อมูลคำสั่งซื้อขายของลูกค้าที่ยังไม่ได้ดำเนินการ เพื่อส่งคำสั่งของตนเองหรือผู้อื่นก่อนหน้า ทำให้ลูกค้าอาจได้ราคาแย่ลง เป็นการเอาเปรียบลูกค้าโดยตรง"},
+{q:"ฝ่ายวิจัยออกบทวิเคราะห์ปรับคำแนะนำหุ้น GHI เป็น “ซื้อ” ข้อใดปฏิบัติถูกต้อง",o:["ส่งให้ลูกค้ากลุ่ม VIP ก่อน 1 วันเพื่อเป็นสิทธิพิเศษ","ส่งให้ลูกค้าที่ถือหุ้นนั้นอยู่ก่อน","เผยแพร่ให้ลูกค้าในกลุ่มเป้าหมายพร้อมกันตามช่องทางปกติของบริษัท","IC ซื้อหุ้นเข้าพอร์ตตัวเองก่อนแล้วค่อยส่งต่อ"],a:2,e:"หลักเท่าเทียมกำหนดให้ข้อมูลที่อาจมีผลต่อการตัดสินใจลงทุนต้องเผยแพร่พร้อมกัน การให้บางกลุ่มรู้ก่อนทำให้เกิดความได้เปรียบที่ไม่เป็นธรรม ส่วน IC ซื้อก่อนคือการเอาประโยชน์จากข้อมูลก่อนลูกค้า"},
+{q:"กองทุน X ให้ค่าตอบแทนกับ IC สูงกว่ากองทุน Y แต่กองทุน Y เหมาะกับเป้าหมายของลูกค้ามากกว่า IC ควรทำอย่างไร",o:["แนะนำกองทุน X แล้วเปิดเผยอัตราค่าตอบแทน","แนะนำกองทุน Y เพราะเหมาะสมกับลูกค้ามากกว่า","เสนอทั้งสองกองโดยเน้นจุดเด่นของกองทุน X","ให้ลูกค้าเลือกเองโดยไม่ให้ความเห็น"],a:1,e:"การเปิดเผย COI ไม่ได้ทำให้แนะนำสิ่งที่ไม่เหมาะสมได้ หน้าที่หลักคือยึดประโยชน์ลูกค้า ถ้ากองทุน Y เหมาะกว่า ต้องแนะนำกองทุน Y การนิ่งเฉยไม่ให้ความเห็นก็ไม่ใช่การทำหน้าที่ผู้แนะนำที่ดี"}
+]});
+
+CH.push({
+id:"suit", part:2, title:"ขั้นตอนการทำ Suitability Test (ประเมินความเสี่ยงลูกค้า)",
+lead:"จาก KYC สู่ระดับความเสี่ยง 1–5 และการจับคู่กับกองทุนระดับ 1–8",
+body:`
+<h3>3.1 Suitability คืออะไร และทำไมสำคัญ</h3>
+<p><b>Suitability Test</b> คือแบบประเมินที่ช่วยวัดว่าลูกค้า <b>รับความเสี่ยงได้ระดับใด</b> โดยดูทั้ง <b>ความสามารถในการรับความเสี่ยง (Ability)</b> เช่น อายุ รายได้ ภาระ เงินออม ระยะเวลาลงทุน และ <b>ความเต็มใจรับความเสี่ยง (Willingness)</b> เช่น ทัศนคติเมื่อเห็นพอร์ตติดลบ</p>
+<div class="pic"><b>ภาพจำ:</b> เหมือน <b>ร้านขายรองเท้าวิ่ง</b> ที่ให้ลูกค้าเดินบนลู่วิ่งก่อน ดูน้ำหนักลงเท้า ระยะที่วิ่ง แล้วจึงเลือกรุ่นให้ คนที่ “อยากได้” รองเท้าแข่งมาราธอน แต่เพิ่งเริ่มวิ่งและเข่าไม่ดี อาจบาดเจ็บได้ Ability คือ “เข่า” Willingness คือ “ใจ” ต้องดูทั้งสองอย่าง</div>
+
+<h3>3.2 ขั้นตอนทั้งหมด (เป็นลำดับ)</h3>
+<ol class="steps">
+<li><b>KYC/CDD</b> — เก็บข้อมูลตัวตน อาชีพ รายได้ แหล่งที่มาของเงิน วัตถุประสงค์การลงทุน และตรวจสอบความเสี่ยงด้านฟอกเงิน</li>
+<li><b>ลูกค้าทำแบบประเมิน Suitability ด้วยตนเอง</b> — IC อธิบายคำถามให้เข้าใจได้ แต่ <b>ห้ามตอบแทน ห้ามชี้นำคำตอบ</b></li>
+<li><b>คิดคะแนนและจัดระดับความเสี่ยง</b> — แปลงคะแนนเป็นระดับ 1–5</li>
+<li><b>แจ้งผลประเมินและสัดส่วนการลงทุนที่เหมาะสม (Asset Allocation)</b> ให้ลูกค้าทราบ</li>
+<li><b>แนะนำผลิตภัณฑ์ที่สอดคล้อง</b> — ระดับความเสี่ยงของผลิตภัณฑ์ต้องไม่สูงกว่าระดับที่ลูกค้ารับได้</li>
+<li><b>กรณีลูกค้าต้องการลงทุนเสี่ยงสูงกว่าผลประเมิน</b> — อธิบายความเสี่ยงที่สูงกว่า ให้ลูกค้า <b>ลงนามรับทราบความเสี่ยง</b> แล้วลูกค้าเป็นผู้ตัดสินใจเอง</li>
+<li><b>ทบทวน</b> — อย่างน้อยทุก 2 ปี หรือทันทีเมื่อข้อมูลสำคัญของลูกค้าเปลี่ยน เช่น เกษียณ ตกงาน ได้มรดก</li>
+</ol>
+
+<h3>3.3 หัวข้อในแบบประเมินมาตรฐาน</h3>
+<div class="tbl"><table>
+<tr><th>หัวข้อคำถาม</th><th>วัดอะไร</th><th>ตัวอย่างผลต่อคะแนน</th></tr>
+<tr><td>อายุ</td><td>ระยะเวลาที่เหลือในการฟื้นตัวจากความเสียหาย</td><td>อายุน้อย คะแนนสูงกว่า</td></tr>
+<tr><td>ภาระค่าใช้จ่ายต่อรายได้</td><td>สภาพคล่องและความจำเป็นต้องใช้เงิน</td><td>ภาระสูง คะแนนต่ำ</td></tr>
+<tr><td>สถานะทางการเงิน (สินทรัพย์ vs หนี้สิน)</td><td>เบาะรองรับเมื่อขาดทุน</td><td>สินทรัพย์มากกว่าหนี้มาก คะแนนสูง</td></tr>
+<tr><td>ประสบการณ์และความรู้การลงทุน</td><td>ความเข้าใจผลิตภัณฑ์</td><td>เคยลงทุนหุ้น/กองทุนหุ้น คะแนนสูง</td></tr>
+<tr><td>ระยะเวลาที่คาดว่าจะไม่ใช้เงิน</td><td>รอให้ราคาฟื้นได้หรือไม่</td><td>มากกว่า 7 ปี คะแนนสูง</td></tr>
+<tr><td>เป้าหมายการลงทุน</td><td>ต้องการรักษาเงินต้น หรือเน้นเติบโต</td><td>เน้นเติบโต คะแนนสูง</td></tr>
+<tr><td>ช่วงผลตอบแทนที่ยอมรับได้</td><td>ความทนต่อความผันผวน</td><td>รับได้ทั้งกำไรและขาดทุนสูง คะแนนสูง</td></tr>
+<tr><td>ปฏิกิริยาเมื่อขาดทุน</td><td>Willingness</td><td>“ซื้อเพิ่ม” คะแนนสูง “ขายทันที” คะแนนต่ำ</td></tr>
+<tr><td>ระดับขาดทุนที่ยอมรับได้</td><td>เพดานความเจ็บปวด</td><td>รับได้มากกว่า 30% คะแนนสูง</td></tr>
+</table></div>
+<p>นอกจากคำถามที่คิดคะแนน แบบประเมินยังมี <b>คำถามเพิ่มเติมเรื่องการลงทุนในอนุพันธ์/หุ้นกู้อนุพันธ์ และความเสี่ยงอัตราแลกเปลี่ยน</b> ซึ่ง <b>ใช้ประกอบการพิจารณาและไม่นำมาคิดคะแนน</b></p>
+
+<h3>3.4 การแปลงคะแนนเป็นระดับความเสี่ยง (ตามแบบมาตรฐานของ ก.ล.ต.)</h3>
+<div class="tbl"><table>
+<tr><th>คะแนน</th><th>ระดับ</th><th>ประเภทผู้ลงทุน</th><th>กองทุนรวมที่แนะนำได้</th></tr>
+<tr><td>น้อยกว่า 15</td><td>1</td><td>เสี่ยงต่ำ</td><td>ระดับ 1</td></tr>
+<tr><td>15 – 21</td><td>2</td><td>เสี่ยงปานกลางค่อนข้างต่ำ</td><td>ระดับ 1 – 4</td></tr>
+<tr><td>22 – 29</td><td>3</td><td>เสี่ยงปานกลางค่อนข้างสูง</td><td>ระดับ 1 – 5</td></tr>
+<tr><td>30 – 36</td><td>4</td><td>เสี่ยงสูง</td><td>ระดับ 1 – 7</td></tr>
+<tr><td>37 ขึ้นไป</td><td>5</td><td>เสี่ยงสูงมาก</td><td>ระดับ 1 – 8</td></tr>
+</table></div>
+<p class="note">บริษัทอาจปรับแบบประเมินของตนได้ แต่ต้องเทียบเท่ามาตรฐาน ให้จำ “ตารางจับคู่ระดับลูกค้า–ระดับกองทุน” ให้แม่น เพราะออกสอบบ่อยที่สุด</p>
+<div class="pic"><b>ภาพจำ:</b> คิดเป็น <b>ความสูงของเครื่องเล่นในสวนสนุก</b> ลูกค้าระดับ 1 เล่นได้แค่ม้าหมุน (ตลาดเงิน) ระดับ 2 ขึ้นรถไฟเหาะเด็กได้ (ถึงตราสารหนี้) ระดับ 3 เล่นได้ถึงกองผสม ระดับ 4 เล่นรถไฟเหาะใหญ่ได้ (หุ้น หุ้นรายอุตสาหกรรม) ระดับ 5 เล่นได้ทุกเครื่องรวมถึงทองคำและน้ำมัน (ระดับ 8)</div>
+
+<h3>3.5 กรณีลูกค้าอยากลงทุนเสี่ยงกว่าผลประเมิน</h3>
+<p>ทำได้ (สำหรับผลิตภัณฑ์ทั่วไป) แต่ IC ต้อง <b>อธิบายว่าผลิตภัณฑ์นั้นเสี่ยงสูงกว่าที่ลูกค้ารับได้อย่างไร</b> และให้ลูกค้า <b>ลงนามรับทราบ</b> สิ่งที่ห้ามคือ <b>ให้ลูกค้าทำแบบประเมินใหม่ทันทีเพื่อ “ดันคะแนน”</b> ให้ถึงระดับที่ต้องการ โดยที่ข้อเท็จจริงไม่ได้เปลี่ยน</p>
+<p>สำหรับ <b>ผลิตภัณฑ์ซับซ้อนหรือความเสี่ยงสูง (ระดับ 8+)</b> มีเกณฑ์เพิ่ม เช่น ต้องประเมินความรู้ความเข้าใจของลูกค้าเพิ่มเติม และผู้แนะนำต้องมีใบอนุญาตที่สูงกว่า IC Plain</p>
+
+<h3>3.6 ตัวอย่างเดินเรื่อง</h3>
+<div class="calc"><b>คุณมาลี อายุ 58 ปี</b> ใกล้เกษียณ มีเงินเก็บ 2 ล้านบาท ต้องใช้เงินภายใน 3 ปี ไม่เคยลงทุนอะไรนอกจากเงินฝาก ถ้าพอร์ตติดลบ 10% จะขายทันที → คะแนนประเมินได้ 17 = <b>ระดับ 2</b><br>
+แนะนำได้: กองทุนตลาดเงิน กองทุนพันธบัตรรัฐบาล กองทุนตราสารหนี้ (ระดับ 1–4)<br>
+คุณมาลีอยากซื้อกองทุนหุ้นเทคโนโลยี (ระดับ 7) เพราะเพื่อนได้กำไร → IC ต้องอธิบายความผันผวน เช่น ราคาอาจลดลง 30–40% ในช่วงสั้น และขัดกับความต้องการใช้เงินใน 3 ปี ถ้ายังยืนยัน ต้องให้ลงนามรับทราบความเสี่ยง</div>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> (1) ใครทำแบบประเมิน — ลูกค้า (2) ทบทวนทุกกี่ปี — อย่างน้อย 2 ปี (3) ระดับ 2 ซื้อได้ถึงระดับไหน — 4 (4) ระดับ 4 ซื้อได้ถึงระดับไหน — 7 (5) คำถามอนุพันธ์/FX — ไม่คิดคะแนน</div>
+`,
+quiz:[
+{q:"ข้อใดถูกต้องเกี่ยวกับการทำแบบประเมิน Suitability",o:["IC ควรตอบแทนลูกค้าที่ไม่มีเวลา เพื่อความรวดเร็ว","ลูกค้าต้องตอบด้วยตนเอง IC อธิบายความหมายของคำถามได้แต่ห้ามชี้นำ","IC เลือกคำตอบที่ทำให้ลูกค้าได้ระดับสูงเพื่อให้มีทางเลือกลงทุนมากขึ้น","ทำครั้งเดียวใช้ได้ตลอดไป"],a:1,e:"แบบประเมินต้องสะท้อนข้อเท็จจริงและทัศนคติของลูกค้าเอง IC ช่วยอธิบายได้ แต่การตอบแทนหรือชี้นำทำให้ผลประเมินไม่ถูกต้อง และแบบประเมินต้องทบทวนอย่างน้อยทุก 2 ปี"},
+{q:"ลูกค้าที่มีระดับความเสี่ยงที่รับได้ระดับ 2 สามารถลงทุนในกองทุนรวมที่มีระดับความเสี่ยงสูงสุดได้ถึงระดับใด โดยไม่ต้องลงนามรับทราบความเสี่ยงเพิ่ม",o:["ระดับ 1","ระดับ 3","ระดับ 4","ระดับ 5"],a:2,e:"ตามตารางจับคู่มาตรฐาน ลูกค้าระดับ 2 (เสี่ยงปานกลางค่อนข้างต่ำ) ลงทุนได้ในกองทุนระดับ 1–4 คือถึงกองทุนรวมตราสารหนี้ ส่วนกองทุนผสม (ระดับ 5) ขึ้นไปถือว่าเสี่ยงเกินระดับ"},
+{q:"ลูกค้ามีผลประเมินระดับ 3 แต่ต้องการซื้อกองทุนรวมตราสารทุน (ระดับ 6) IC ควรทำอย่างไร",o:["ปฏิเสธขายโดยเด็ดขาด","ให้ลูกค้าทำแบบประเมินใหม่ทันทีจนได้ระดับ 4","อธิบายความเสี่ยงที่สูงกว่าระดับที่รับได้ และให้ลูกค้าลงนามรับทราบความเสี่ยงก่อนลงทุน","ขายได้เลยเพราะเป็นสิทธิของลูกค้า"],a:2,e:"สำหรับผลิตภัณฑ์ทั่วไป ลูกค้ามีสิทธิตัดสินใจลงทุนเสี่ยงเกินผลประเมินได้ แต่ IC ต้องอธิบายและให้ลงนามรับทราบความเสี่ยง การให้ทำแบบประเมินใหม่เพื่อดันคะแนนโดยที่ข้อเท็จจริงไม่เปลี่ยนเป็นสิ่งที่ห้ามทำ"},
+{q:"ลูกค้าทำแบบประเมินได้ 25 คะแนน ลูกค้าอยู่ในระดับความเสี่ยงใด",o:["ระดับ 2 เสี่ยงปานกลางค่อนข้างต่ำ","ระดับ 3 เสี่ยงปานกลางค่อนข้างสูง","ระดับ 4 เสี่ยงสูง","ระดับ 5 เสี่ยงสูงมาก"],a:1,e:"ช่วงคะแนน 22–29 คือระดับ 3 (เสี่ยงปานกลางค่อนข้างสูง) ลงทุนได้ในกองทุนระดับ 1–5"},
+{q:"คำถามเพิ่มเติมเกี่ยวกับการลงทุนในอนุพันธ์และความเสี่ยงอัตราแลกเปลี่ยนในแบบประเมิน มีลักษณะอย่างไร",o:["คิดคะแนนเป็น 2 เท่าของข้อปกติ","ใช้ประกอบการพิจารณาให้คำแนะนำ แต่ไม่นำมาคิดคะแนน","ลูกค้าไม่ต้องตอบ","ใช้แทนคำถามเรื่องอายุ"],a:1,e:"คำถามเรื่องอนุพันธ์และ FX ช่วยให้ IC รู้ว่าลูกค้าเข้าใจและยอมรับความเสี่ยงเฉพาะเหล่านี้หรือไม่ เช่น ก่อนแนะนำกองทุนต่างประเทศที่ไม่ป้องกันความเสี่ยงค่าเงิน แต่ไม่ได้นำไปรวมคะแนนระดับความเสี่ยง"},
+{q:"เหตุการณ์ใดที่ IC ควรให้ลูกค้าทบทวนแบบประเมินก่อนครบรอบ 2 ปี",o:["ลูกค้าเปลี่ยนเบอร์โทรศัพท์","ลูกค้าเกษียณอายุและไม่มีรายได้ประจำแล้ว","ตลาดหุ้นปรับขึ้น 5%","บริษัทออกกองทุนใหม่"],a:1,e:"การเกษียณทำให้ความสามารถในการรับความเสี่ยง (รายได้ ระยะเวลาลงทุน ความต้องการสภาพคล่อง) เปลี่ยนไปอย่างมีนัยสำคัญ ผลประเมินเดิมจึงอาจไม่สะท้อนความจริงแล้ว ส่วนข้อมูลติดต่อหรือภาวะตลาดไม่ได้เปลี่ยนตัวตนของลูกค้า"}
+]});
+
+CH.push({
+id:"ethicsdrill", part:2, title:"ตะลุยโจทย์หมวดจรรยาบรรณ 20 ข้อ (เป้า 14/20)",
+lead:"ชุดฝึกสถานการณ์จริง เกณฑ์ผ่านเหมือนสอบจริง 70%",
+pass:14,
+body:`
+<h3>วิธีคิดเมื่อเจอโจทย์จรรยาบรรณ</h3>
+<p>ข้อสอบหมวด 2 (ข้อ 31–50 ในข้อสอบจริง) ส่วนใหญ่เป็น <b>โจทย์สถานการณ์</b> ตัวเลือกมักมีข้อที่ “ฟังดูใจดี” หรือ “ฟังดูช่วยลูกค้า” แต่ผิดหลัก ให้ใช้ <b>ตัวกรอง 4 ข้อ</b> นี้ตัดตัวเลือก</p>
+<ol class="steps">
+<li><b>ลูกค้าเป็นผู้ตัดสินใจหรือไม่?</b> ถ้า IC ตัดสินใจแทน ตัดทิ้ง</li>
+<li><b>เงินหรือทรัพย์สินลูกค้าอยู่ในระบบบริษัทหรือไม่?</b> ถ้าผ่านมือ IC ตัดทิ้ง</li>
+<li><b>ข้อมูลที่ให้ครบ จริง และไม่ชี้นำหรือไม่?</b> ถ้ารับประกัน ปกปิด หรือเกินจริง ตัดทิ้ง</li>
+<li><b>ใครได้ประโยชน์?</b> ถ้า IC หรือบริษัทได้ประโยชน์บนความเสียเปรียบของลูกค้า ตัดทิ้ง</li>
+</ol>
+<div class="pic"><b>ภาพจำ:</b> ตัวเลือกที่ถูกในหมวดนี้มักจะ “น่าเบื่อที่สุด” — ปฏิเสธ อธิบาย เปิดเผย ส่งต่อให้ฝ่ายกำกับดูแล หรือทำตามขั้นตอนของบริษัท ถ้าตัวเลือกไหนดู “ทางลัด” หรือ “ใจดีเกินหน้าที่” ให้สงสัยไว้ก่อน</div>
+<p>กดตรวจคำตอบเมื่อทำครบ ระบบจะบอกว่าผ่านเกณฑ์ 14/20 หรือไม่ พร้อมเหตุผลทุกข้อ</p>
+`,
+quiz:[
+{q:"ลูกค้าขอให้ IC ช่วยกรอกแบบประเมินความเสี่ยงให้ เพราะ “ตอบอะไรก็ได้ ขอให้ซื้อกองหุ้นได้ก็พอ” IC ควรทำอย่างไร",o:["กรอกให้ตามที่ลูกค้าขอ","ให้ลูกค้าตอบเองตามความเป็นจริง และอธิบายเหตุผลของการประเมิน","กรอกให้ได้ระดับ 4 แล้วให้ลูกค้าเซ็น","ข้ามการประเมินเพราะลูกค้ายืนยันเอง"],a:1,e:"แบบประเมินต้องสะท้อนข้อเท็จจริงของลูกค้า การกรอกแทนหรือแต่งคำตอบทำให้ระบบคัดกรองความเหมาะสมไร้ความหมาย หากลูกค้าต้องการลงทุนเสี่ยงกว่าผลประเมินจริง ก็มีขั้นตอนลงนามรับทราบความเสี่ยงรองรับอยู่แล้ว"},
+{q:"IC บอกลูกค้าว่า “กองทุนนี้ย้อนหลัง 5 ปีได้เฉลี่ย 12% ต่อปี ปีหน้าก็น่าจะได้ไม่ต่ำกว่านี้แน่นอน” ข้อความนี้ผิดหลักใด",o:["ไม่ผิด เพราะใช้ข้อมูลจริง","ผิด เพราะทำให้เข้าใจว่าผลตอบแทนในอดีตเป็นการรับประกันผลตอบแทนในอนาคต","ผิด เพราะควรใช้ข้อมูลย้อนหลัง 10 ปี","ผิด เพราะต้องพูดเป็นภาษาอังกฤษ"],a:1,e:"ผลการดำเนินงานในอดีตไม่ได้เป็นสิ่งยืนยันผลในอนาคต การใช้คำว่า “แน่นอน” เป็นการรับประกันผลตอบแทนโดยนัยและทำให้ลูกค้าสำคัญผิด"},
+{q:"ลูกค้าคนหนึ่งเป็นดาราชื่อดัง เพื่อน IC ถามว่าดาราคนนั้นถือหุ้นอะไรบ้าง IC ควรตอบอย่างไร",o:["บอกได้ เพราะเป็นข้อมูลที่น่าสนใจ","บอกเฉพาะชื่อหุ้น ไม่บอกจำนวน","ปฏิเสธ เพราะเป็นข้อมูลลูกค้าที่ต้องรักษาความลับ","บอกได้หากเพื่อนสัญญาว่าไม่บอกต่อ"],a:2,e:"ข้อมูลบัญชีและการลงทุนของลูกค้าเป็นความลับ เปิดเผยได้เฉพาะตามที่กฎหมายกำหนดหรือต่อหน่วยงานที่มีอำนาจ เช่น ก.ล.ต. หรือศาล การบอกบางส่วนก็ยังเป็นการเปิดเผยความลับ"},
+{q:"ลูกค้าโทรสั่งซื้อกองทุน แต่ระบบบันทึกเสียงขัดข้องชั่วคราว IC ควรทำอย่างไร",o:["รับคำสั่งตามปกติ จดลงกระดาษส่วนตัว","ปฏิบัติตามขั้นตอนสำรองของบริษัท เช่น ให้ลูกค้ายืนยันคำสั่งผ่านช่องทางที่มีหลักฐาน","ปฏิเสธลูกค้าและไม่ให้คำแนะนำอื่น","ส่งคำสั่งภายหลังเมื่อระบบกลับมา โดยใช้ราคาเดิม"],a:1,e:"หลักฐานการรับคำสั่งมีไว้ป้องกันข้อพิพาท เมื่อระบบขัดข้องต้องใช้ขั้นตอนสำรองที่บริษัทกำหนดให้มีหลักฐานยืนยันได้ การจดเองไม่มีน้ำหนักพอ และการส่งคำสั่งภายหลังโดยอ้างราคาเดิมเป็นไปไม่ได้และไม่ถูกต้อง"},
+{q:"บริษัทผู้ออกหุ้นกู้เสนอพา IC ทุกคนที่ขายหุ้นกู้ได้เกินเป้าไปเที่ยวญี่ปุ่นฟรี IC ควรทำอย่างไร",o:["รับได้เพราะเป็นรางวัลจากผลงาน","ปฏิเสธหรือรายงานต่อฝ่ายกำกับดูแล เพราะอาจกระทบความเป็นกลางในการแนะนำ","รับได้แต่ต้องไม่โพสต์ลงโซเชียล","รับได้หากจ่ายค่าตั๋วเครื่องบินเอง"],a:1,e:"ผลประโยชน์มูลค่าสูงจากผู้ออกผลิตภัณฑ์ที่ผูกกับยอดขาย ทำให้ IC มีแรงจูงใจขายหุ้นกู้นั้นแม้ไม่เหมาะกับลูกค้า ต้องปฏิเสธหรือรายงานตามนโยบายบริษัท"},
+{q:"ลูกค้าอายุ 75 ปี ฟังไม่ค่อยชัดและดูเหมือนไม่เข้าใจความเสี่ยงของกองทุนที่สนใจ IC ควรทำอย่างไร",o:["ขายตามที่ลูกค้าต้องการเพื่อไม่ให้เสียเวลา","อธิบายช้าลง ตรวจความเข้าใจ และเสนอให้ญาติหรือคนที่ลูกค้าไว้ใจร่วมรับฟัง","ปฏิเสธลูกค้าสูงอายุทุกราย","แนะนำให้ลงทุนกองที่เสี่ยงสูงเพื่อให้ได้ผลตอบแทนเร็ว"],a:1,e:"ลูกค้ากลุ่มเปราะบางต้องได้รับการดูแลเพิ่มเติมเพื่อให้เข้าใจข้อมูลได้เท่าคนอื่น การปฏิเสธทั้งหมดก็ไม่เป็นธรรม การดูแลพิเศษคือการทำให้การตัดสินใจของลูกค้าอยู่บนความเข้าใจจริง"},
+{q:"IC ทราบว่าลูกค้าโอนเงินจำนวนมากจากหลายบัญชีที่ไม่เกี่ยวข้องกัน แล้วรีบขายคืนในเวลาสั้นๆ โดยไม่สนใจผลขาดทุน IC ควรทำอย่างไร",o:["ไม่ต้องสนใจเพราะเป็นเงินของลูกค้า","สอบถามลูกค้าอย่างละเอียดจนลูกค้าบอกความจริง","แจ้งหน่วยงานกำกับดูแลภายในบริษัทตามขั้นตอน เพื่อพิจารณารายงานธุรกรรมที่มีเหตุอันควรสงสัย","บอกลูกค้าว่ากำลังจะถูกรายงาน"],a:2,e:"พฤติกรรมนี้มีลักษณะของธุรกรรมที่มีเหตุอันควรสงสัยด้านการฟอกเงิน IC ต้องแจ้งตามช่องทางของบริษัทเพื่อรายงานต่อ ปปง. และห้ามแจ้งลูกค้าว่ากำลังถูกรายงาน (Tipping-off) เพราะจะทำลายการตรวจสอบ"},
+{q:"IC ถูกหัวหน้ากดดันให้ขายหุ้นกู้ของบริษัทในเครือให้ได้ตามเป้า โดยบอกว่า “ลูกค้าเสี่ยงต่ำก็ขายไปเถอะ เขาไม่รู้หรอก” IC ควรทำอย่างไร",o:["ทำตามหัวหน้าเพราะเป็นนโยบาย","ขายให้ลูกค้าเสี่ยงต่ำโดยไม่บอกความเสี่ยง","แนะนำเฉพาะลูกค้าที่เหมาะสม และรายงานความกังวลต่อฝ่ายกำกับดูแลตามช่องทางของบริษัท","ลาออกทันที"],a:2,e:"หน้าที่ต่อลูกค้าและกฎเกณฑ์อยู่เหนือคำสั่งที่ขัดหลักจรรยาบรรณ IC ต้องแนะนำตามความเหมาะสม และใช้ช่องทางรายงานภายในเมื่อพบการกระทำที่อาจผิดกฎ"},
+{q:"ลูกค้าเป็นญาติสนิทของ IC และขอยืมเงิน 50,000 บาท โดยจะคืนเมื่อขายกองทุนได้กำไร IC ควรทำอย่างไร",o:["ให้ยืมได้เพราะเป็นญาติ","ให้ยืมแต่คิดดอกเบี้ยต่ำ","ไม่ให้ยืม เพราะการให้ลูกค้ากู้ยืมเงินเป็นข้อห้าม และเงินกู้ผูกกับผลการลงทุนอีกด้วย","ให้ยืมโดยหักจากค่าคอมฯ"],a:2,e:"การให้กู้ยืมหรือกู้ยืมจากลูกค้าเป็นข้อห้าม เพราะสร้างภาระผูกพันส่วนตัวกับผลการลงทุน กรณีนี้ IC จะได้ประโยชน์ถ้าลูกค้าขายกองทุนได้กำไร จึงมีแรงจูงใจในการแนะนำที่ไม่เป็นกลาง"},
+{q:"ลูกค้าขอให้ IC ช่วยเซ็นชื่อแทนในใบคำสั่งซื้อ เพราะลูกค้าอยู่ต่างจังหวัด IC ควรทำอย่างไร",o:["เซ็นแทนได้หากลูกค้าอนุญาตทางโทรศัพท์","ห้ามเซ็นแทน ให้ลูกค้าส่งคำสั่งผ่านช่องทางที่บริษัทรองรับ เช่น ระบบออนไลน์หรือโทรศัพท์ที่บันทึกเสียง","ให้เพื่อนร่วมงานเซ็นแทน","เซ็นแทนแล้วส่งสำเนาให้ลูกค้าภายหลัง"],a:1,e:"การลงนามแทนลูกค้าเปิดช่องให้เกิดการปลอมแปลงและข้อพิพาท คำสั่งต้องมาจากลูกค้าผ่านช่องทางที่ตรวจสอบได้"},
+{q:"ข้อใดเป็นการเปิดเผยความขัดแย้งทางผลประโยชน์ที่ถูกต้องที่สุด",o:["เขียนไว้ในเอกสารภายในบริษัทเท่านั้น","แจ้งลูกค้าอย่างชัดเจนก่อนลูกค้าตัดสินใจลงทุน","แจ้งหลังจากลูกค้าซื้อแล้วเพื่อไม่ให้ลูกค้าเปลี่ยนใจ","ไม่ต้องแจ้งหากผลิตภัณฑ์เหมาะสม"],a:1,e:"การเปิดเผยต้องเกิดก่อนการตัดสินใจ และต้องชัดเจนพอให้ลูกค้าใช้ประกอบการตัดสินใจได้ การเปิดเผยภายหลังหรือซ่อนไว้ในเอกสารภายในไม่ทำให้ลูกค้าได้ประโยชน์"},
+{q:"IC จะได้รับจัดสรรหุ้น IPO ที่มีความต้องการสูง ขณะที่ลูกค้าหลายรายจองไว้แต่ได้ไม่ครบ IC ควรทำอย่างไร",o:["จัดสรรให้ตนเองก่อนเพราะเป็นพนักงาน","จัดสรรให้ลูกค้าตามหลักเกณฑ์ที่กำหนดอย่างเป็นธรรมก่อน และไม่ใช้ตำแหน่งหน้าที่จัดสรรให้ตนเองหรือคนใกล้ชิด","ให้ลูกค้ารายใหญ่ทั้งหมด","แบ่งให้ญาติก่อนแล้วค่อยให้ลูกค้า"],a:1,e:"การจัดสรรต้องเป็นไปตามเกณฑ์ที่เปิดเผยและเป็นธรรมต่อลูกค้า IC และบุคคลใกล้ชิดต้องไม่ได้เปรียบลูกค้าจากตำแหน่งหน้าที่"},
+{q:"IC แนะนำกองทุนต่างประเทศที่ไม่ป้องกันความเสี่ยงค่าเงิน สิ่งที่ต้องอธิบายเพิ่มเติมคืออะไร",o:["ไม่ต้องอธิบาย เพราะเป็นกองทุนรวมทั่วไป","ผลตอบแทนอาจเพิ่มขึ้นหรือลดลงจากการเปลี่ยนแปลงของอัตราแลกเปลี่ยน แม้สินทรัพย์ต่างประเทศจะราคาไม่เปลี่ยน","ค่าเงินบาทจะอ่อนค่าแน่นอน","กองทุนนี้ไม่มีความเสี่ยงด้านเครดิต"],a:1,e:"ความเสี่ยงอัตราแลกเปลี่ยนเป็นข้อมูลสำคัญที่ลูกค้าต้องเข้าใจ หากเงินบาทแข็งค่าขึ้น มูลค่าที่แปลงกลับเป็นบาทจะลดลง IC ห้ามคาดการณ์ค่าเงินในลักษณะรับประกัน"},
+{q:"ลูกค้าบ่นว่าได้รับคำแนะนำที่ผิดพลาดจาก IC อีกคนในบริษัท และต้องการร้องเรียน IC ควรทำอย่างไร",o:["บอกลูกค้าว่าไม่ใช่เรื่องของตน","ช่วยปลอบใจและแนะนำให้ลืมเรื่องนี้","รับเรื่องและแจ้งช่องทางร้องเรียนของบริษัท หรือส่งต่อหน่วยงานที่รับผิดชอบตามขั้นตอน","บอกลูกค้าให้ย้ายไปบริษัทอื่น"],a:2,e:"บริษัทต้องมีระบบรับเรื่องร้องเรียนที่เป็นธรรม IC ควรช่วยให้ลูกค้าเข้าถึงกระบวนการนั้น ไม่ปัดความรับผิดชอบหรือห้ามปรามลูกค้า"},
+{q:"IC ได้ข้อมูลจากการสนทนากับลูกค้าว่าลูกค้าเป็นกรรมการบริษัทจดทะเบียน และกำลังจะขายหุ้นบริษัทตนเองก่อนประกาศงบที่ขาดทุนหนัก IC ควรทำอย่างไร",o:["รับคำสั่งขายตามปกติเพราะเป็นคำสั่งลูกค้า","ขายหุ้นตัวเดียวกันในพอร์ตตนเองด้วย","แจ้งฝ่ายกำกับดูแลภายในบริษัท เพราะอาจเป็นการซื้อขายโดยใช้ข้อมูลภายใน และไม่นำข้อมูลไปใช้","บอกลูกค้ารายอื่นให้ขายก่อน"],a:2,e:"เมื่อมีเหตุอันควรสงสัยว่าคำสั่งซื้อขายเกิดจากข้อมูลภายใน IC ต้องรายงานตามขั้นตอนของบริษัท และต้องไม่ใช้หรือส่งต่อข้อมูลนั้น การขายตามหรือบอกต่อทำให้ IC มีส่วนในความผิด"},
+{q:"ข้อใดไม่ใช่การปฏิบัติต่อลูกค้าอย่างเท่าเทียม",o:["ส่งคำสั่งตามลำดับเวลาที่ได้รับ","ให้ลูกค้าพอร์ตใหญ่ได้รับการส่งคำสั่งก่อนลูกค้าพอร์ตเล็กที่สั่งมาก่อน","เผยแพร่บทวิเคราะห์พร้อมกัน","คิดค่าธรรมเนียมตามอัตราที่เปิดเผย"],a:1,e:"ขนาดพอร์ตไม่ใช่เหตุผลในการลัดลำดับคำสั่ง ลูกค้าที่สั่งก่อนต้องได้รับการส่งคำสั่งก่อน ลูกค้ารายใหญ่อาจได้บริการเสริมอื่น แต่ต้องไม่ทำให้ลูกค้ารายอื่นเสียเปรียบ"},
+{q:"IC ต้องการซื้อหุ้นตัวเดียวกับที่เพิ่งแนะนำลูกค้าในวันเดียวกัน ข้อใดถูกต้อง",o:["ส่งคำสั่งตนเองก่อนเพื่อให้ได้ราคาดี","ส่งคำสั่งของลูกค้าก่อน และปฏิบัติตามนโยบายการซื้อขายส่วนตัวของบริษัท","ซื้อในบัญชีญาติแทน","ห้าม IC ซื้อหุ้นใดๆ ตลอดเวลา"],a:1,e:"IC ซื้อขายส่วนตัวได้ตามนโยบายบริษัท แต่คำสั่งของลูกค้าต้องมาก่อนเสมอ การใช้บัญชีญาติเพื่อเลี่ยงก็ยังเป็นการหาประโยชน์ก่อนลูกค้า"},
+{q:"IC รู้ว่าผลิตภัณฑ์ที่ลูกค้าสนใจอยู่นอกขอบเขตใบอนุญาต IC Plain เช่น หุ้นกู้อนุพันธ์ IC ควรทำอย่างไร",o:["แนะนำได้ถ้ามีประสบการณ์","ไม่ให้คำแนะนำเอง และส่งต่อให้ผู้แนะนำที่มีใบอนุญาตเหมาะสม","แนะนำโดยอ่านจากเอกสารให้ฟัง","บอกลูกค้าว่าผลิตภัณฑ์นี้ไม่ดี"],a:1,e:"IC ต้องทำงานภายในขอบเขตใบอนุญาตของตน ผลิตภัณฑ์ซับซ้อนต้องให้ผู้มีใบอนุญาตระดับ IC Complex ที่เหมาะสมเป็นผู้แนะนำ"},
+{q:"ลูกค้าขอให้ IC ส่งคำสั่งซื้อในบัญชีของภรรยาลูกค้า โดยภรรยาไม่ได้มอบอำนาจไว้กับบริษัท IC ควรทำอย่างไร",o:["ทำได้เพราะเป็นสามีภรรยากัน","ไม่รับคำสั่ง เพราะผู้สั่งไม่ใช่เจ้าของบัญชีหรือผู้รับมอบอำนาจที่บริษัทรับรอง","รับคำสั่งแล้วค่อยแจ้งภรรยาภายหลัง","รับคำสั่งเฉพาะครั้งนี้"],a:1,e:"คำสั่งต้องมาจากเจ้าของบัญชีหรือผู้รับมอบอำนาจที่บริษัทรับรองไว้เท่านั้น ความสัมพันธ์ในครอบครัวไม่ได้ทำให้มีอำนาจสั่งการในบัญชีของผู้อื่น"},
+{q:"IC โพสต์ในโซเชียลมีเดียส่วนตัวว่า “หุ้น ZZZ จะขึ้น 50% ในเดือนนี้ ใครไม่ซื้อพลาดแน่” การกระทำนี้เป็นอย่างไร",o:["ทำได้เพราะเป็นบัญชีส่วนตัว","ทำได้ถ้าใส่คำว่า “ไม่ใช่คำแนะนำ”","ไม่เหมาะสม เพราะเป็นการให้ข้อมูลเกินจริงลักษณะรับประกัน และอาจกระทบราคาหลักทรัพย์","ทำได้ถ้าตนเองถือหุ้นนั้นอยู่"],a:2,e:"IC ต้องรักษามาตรฐานวิชาชีพแม้ในช่องทางส่วนตัว ข้อความลักษณะรับประกันผลตอบแทนและเร่งเร้าให้ซื้ออาจทำให้ผู้อื่นสำคัญผิด และหาก IC ถือหุ้นอยู่ยิ่งเป็น COI ที่ร้ายแรงขึ้น"}
+]});
+
+CH.push({
+id:"funds", part:3, title:"ประเภทและความเสี่ยงของกองทุนรวม (ระดับ 1–8)",
+lead:"กองทุนรวมทำงานอย่างไร ใครเกี่ยวข้อง และแต่ละระดับความเสี่ยงต่างกันตรงไหน",
+body:`
+<h3>5.1 กองทุนรวมคืออะไร</h3>
+<p><b>กองทุนรวม (Mutual Fund)</b> คือการนำเงินของผู้ลงทุนจำนวนมากมารวมกัน แล้วให้ <b>บริษัทหลักทรัพย์จัดการกองทุน (บลจ.)</b> นำไปลงทุนตามนโยบายที่ระบุไว้ในโครงการ ผู้ลงทุนจะได้ <b>หน่วยลงทุน</b> เป็นหลักฐานสิทธิในทรัพย์สินของกองทุน</p>
+<div class="pic"><b>ภาพจำ:</b> เพื่อน 100 คนลงขันกันจ้าง <b>เชฟมืออาชีพ</b> (บลจ.) ทำอาหารตามเมนูที่ตกลงไว้ (นโยบายการลงทุน) มี <b>ผู้ตรวจครัว</b> (ผู้ดูแลผลประโยชน์) คอยเก็บวัตถุดิบและดูว่าเชฟไม่หยิบของกลับบ้าน มี <b>คนจดบัญชีว่าใครลงขันเท่าไร</b> (นายทะเบียน) และมี <b>หน่วยงานรัฐ</b> (ก.ล.ต.) อนุญาตเมนูและคอยกำกับ</div>
+<div class="tbl"><table>
+<tr><th>ผู้เกี่ยวข้อง</th><th>หน้าที่</th></tr>
+<tr><td>บลจ. (ผู้จัดการกองทุน)</td><td>ตัดสินใจลงทุนตามนโยบาย คำนวณและประกาศ NAV</td></tr>
+<tr><td>ผู้ดูแลผลประโยชน์ (Trustee)</td><td>เก็บรักษาทรัพย์สินของกองทุน ตรวจสอบให้ บลจ. ปฏิบัติตามโครงการและกฎหมาย รับรอง NAV เป็นตัวแทนผู้ถือหน่วย (เช่น ธนาคารพาณิชย์)</td></tr>
+<tr><td>นายทะเบียนหน่วยลงทุน</td><td>บันทึกรายชื่อผู้ถือหน่วยและจำนวนหน่วย</td></tr>
+<tr><td>ผู้สนับสนุนการขาย (Selling Agent)</td><td>ขายและรับซื้อคืนหน่วยลงทุน (เช่น ธนาคาร บล.) IC ทำงานในฐานะนี้</td></tr>
+<tr><td>ก.ล.ต.</td><td>อนุมัติการจัดตั้งและกำกับดูแล</td></tr>
+</table></div>
+<p><b>จุดสำคัญ:</b> กองทุนรวมเป็น <b>นิติบุคคลแยกต่างหากจาก บลจ.</b> และทรัพย์สินถูกเก็บโดยผู้ดูแลผลประโยชน์ ดังนั้นถ้า บลจ. ล้มละลาย <b>เจ้าหนี้ของ บลจ. ไม่สามารถยึดทรัพย์สินของกองทุนได้</b> แต่ความเสี่ยงจากการลงทุนตามปกติยังเป็นของผู้ลงทุน</p>
+
+<h3>5.2 มูลค่าหน่วยลงทุน (NAV) และค่าธรรมเนียม</h3>
+<div class="calc"><b>NAV ต่อหน่วย = (มูลค่าทรัพย์สินทั้งหมด − หนี้สิน) ÷ จำนวนหน่วยลงทุน</b><br>
+ตัวอย่าง: ทรัพย์สิน 1,050 ล้านบาท หนี้สิน 50 ล้านบาท มี 80 ล้านหน่วย → NAV = 1,000 ÷ 80 = <b>12.50 บาท/หน่วย</b></div>
+<ul>
+<li><b>ค่าธรรมเนียมที่เรียกจากผู้ถือหน่วยโดยตรง</b> — ค่าธรรมเนียมขาย (Front-end) ค่าธรรมเนียมรับซื้อคืน (Back-end) ค่าธรรมเนียมสับเปลี่ยน</li>
+<li><b>ค่าธรรมเนียมที่เรียกจากกองทุน</b> — ค่าจัดการ ค่าผู้ดูแลผลประโยชน์ ค่านายทะเบียน ซึ่งหักทุกวันจาก NAV ผู้ลงทุนจึง “ไม่เห็นใบเสร็จ” แต่จ่ายผ่าน NAV ที่ลดลง</li>
+<li>ราคาขาย (Offer Price) = NAV + Front-end fee / ราคารับซื้อคืน (Bid Price) = NAV − Back-end fee</li>
+<li>กองทุนเปิดซื้อขายด้วย <b>ราคาที่ประกาศหลังปิดวันทำการ (Forward Pricing)</b> คือผู้ลงทุนไม่รู้ NAV ณ ตอนส่งคำสั่ง เพื่อป้องกันการเอาเปรียบผู้ถือหน่วยเดิม</li>
+</ul>
+
+<h3>5.3 แบ่งตามการซื้อขายหน่วยลงทุน</h3>
+<div class="tbl"><table>
+<tr><th>ประเภท</th><th>ลักษณะ</th><th>สภาพคล่อง</th></tr>
+<tr><td>กองทุนเปิด (Open-end)</td><td>ซื้อเพิ่มและขายคืนกับ บลจ. ได้ตามรอบที่กำหนด จำนวนหน่วยเปลี่ยนแปลงได้</td><td>สูง</td></tr>
+<tr><td>กองทุนปิด (Closed-end)</td><td>ขายครั้งเดียวตอนเสนอขาย มีอายุโครงการแน่นอน ขายคืนกับ บลจ. ไม่ได้ก่อนครบกำหนด (อาจจดทะเบียนซื้อขายในตลาด)</td><td>ต่ำกว่า</td></tr>
+<tr><td>ETF (Exchange Traded Fund)</td><td>กองทุนที่ซื้อขายในตลาดหลักทรัพย์ระหว่างวันเหมือนหุ้น มักอ้างอิงดัชนี</td><td>ระหว่างวัน</td></tr>
+</table></div>
+
+<h3>5.4 ระดับความเสี่ยงกองทุนรวม 8 ระดับ (หัวใจของบทนี้)</h3>
+<p>ก.ล.ต. กำหนดให้จัดระดับความเสี่ยงตาม <b>ประเภทสินทรัพย์ที่กองทุนลงทุนเป็นหลัก</b> เรียงจากความผันผวนของราคาต่ำไปสูง</p>
+<div class="tbl"><table class="lvl">
+<tr><th>ระดับ</th><th>ประเภทกองทุน</th><th>ลงทุนในอะไร</th><th>ความเสี่ยงหลัก</th><th>เหมาะกับ</th></tr>
+<tr><td><span class="lv l1">1</span></td><td>กองทุนรวมตลาดเงินที่ลงทุนเฉพาะในประเทศ</td><td>เงินฝาก ตั๋วเงินคลัง ตราสารหนี้ระยะสั้นมากในประเทศ (อายุตราสารไม่เกินประมาณ 1 ปี และอายุเฉลี่ยของพอร์ตสั้นมาก)</td><td>ต่ำมาก ราคาแทบไม่ผันผวน</td><td>พักเงิน ใช้เงินเร็ว</td></tr>
+<tr><td><span class="lv l2">2</span></td><td>กองทุนรวมตลาดเงินที่ลงทุนในต่างประเทศบางส่วน</td><td>เหมือนระดับ 1 แต่มีตราสารต่างประเทศบางส่วน</td><td>เพิ่มความเสี่ยงอัตราแลกเปลี่ยน/ประเทศ</td><td>พักเงินที่ยอมรับความเสี่ยงต่างประเทศเล็กน้อย</td></tr>
+<tr><td><span class="lv l3">3</span></td><td>กองทุนรวมพันธบัตรรัฐบาล</td><td>พันธบัตรรัฐบาล ตั๋วเงินคลัง พันธบัตร ธปท. เป็นหลัก</td><td>ความเสี่ยงด้านเครดิตต่ำ แต่มีความเสี่ยงอัตราดอกเบี้ย</td><td>เน้นเงินต้นปลอดภัยกว่าเงินฝาก ระยะกลาง</td></tr>
+<tr><td><span class="lv l4">4</span></td><td>กองทุนรวมตราสารหนี้</td><td>พันธบัตร หุ้นกู้เอกชน เงินฝาก ทุกอายุ</td><td>ความเสี่ยงเครดิตของเอกชน + อัตราดอกเบี้ย</td><td>ต้องการรายได้สม่ำเสมอ รับความผันผวนได้บ้าง</td></tr>
+<tr><td><span class="lv l5">5</span></td><td>กองทุนรวมผสม</td><td>ลงทุนทั้งตราสารหนี้และตราสารทุน (และอาจมีสินทรัพย์อื่น) ในสัดส่วนตามนโยบาย</td><td>ผันผวนปานกลาง ตามสัดส่วนหุ้น</td><td>อยากได้ผลตอบแทนสูงกว่าตราสารหนี้แต่ไม่อยากเสี่ยงเท่าหุ้นล้วน</td></tr>
+<tr><td><span class="lv l6">6</span></td><td>กองทุนรวมตราสารทุน</td><td>หุ้นเป็นหลัก โดยเฉลี่ยรอบปีบัญชีไม่น้อยกว่า 80% ของ NAV กระจายหลายอุตสาหกรรม</td><td>ความเสี่ยงตลาดหุ้น ผันผวนสูง</td><td>ลงทุนระยะยาว รับขาดทุนชั่วคราวได้</td></tr>
+<tr><td><span class="lv l7">7</span></td><td>กองทุนรวมหมวดอุตสาหกรรม (Sector Fund)</td><td>หุ้นในอุตสาหกรรมเดียวเป็นหลัก เช่น เทคโนโลยี การแพทย์ พลังงาน</td><td>กระจุกตัว (Concentration Risk) ถ้าอุตสาหกรรมนั้นแย่ทั้งกลุ่มจะเสียหายหนัก</td><td>ผู้ที่เข้าใจอุตสาหกรรมและรับความเสี่ยงสูงได้</td></tr>
+<tr><td><span class="lv l8">8</span></td><td>กองทุนรวมที่ลงทุนในทรัพย์สินทางเลือก (Alternative)</td><td>ทองคำ น้ำมัน สินค้าโภคภัณฑ์ และทรัพย์สินทางเลือกอื่น</td><td>ราคาผันผวนสูงตามอุปสงค์/อุปทานโลก มักไม่มีกระแสเงินสดรองรับ</td><td>ผู้รับความเสี่ยงสูงมาก ใช้เป็นส่วนเสริมของพอร์ต</td></tr>
+<tr><td><span class="lv l9">8+</span></td><td>กองทุนที่มีความเสี่ยงสูงหรือซับซ้อน</td><td>เช่น ลงทุนในอนุพันธ์เพื่อเก็งกำไร หรือมีโครงสร้างซับซ้อน</td><td>เข้าใจยาก อาจขาดทุนมาก</td><td>ผู้ลงทุนที่มีความรู้และผ่านเกณฑ์เพิ่มเติม</td></tr>
+</table></div>
+<div class="pic"><b>ภาพจำ “บันไดความเสี่ยง”:</b> ขั้น 1–2 เก็บเงินในกระปุกที่ฝากธนาคาร (ตลาดเงิน) → ขั้น 3 ให้รัฐบาลยืม → ขั้น 4 ให้บริษัทเอกชนยืม → ขั้น 5 ให้ยืมครึ่งหนึ่ง เป็นเจ้าของกิจการครึ่งหนึ่ง → ขั้น 6 เป็นเจ้าของกิจการหลายแห่ง → ขั้น 7 เป็นเจ้าของกิจการแค่อุตสาหกรรมเดียว → ขั้น 8 ถือของที่ไม่ผลิตรายได้เอง เช่น ทองคำ น้ำมัน ราคาขึ้นลงตามความต้องการของโลก<br><b>ยิ่งเป็น “เจ้าหนี้” ยิ่งเสี่ยงต่ำ ยิ่งเป็น “เจ้าของ” และยิ่งกระจุกตัว ยิ่งเสี่ยงสูง</b></div>
+<h4>ทำไมการลงทุนต่างประเทศเพิ่มความเสี่ยง</h4>
+<p>กองทุนที่ลงทุนต่างประเทศมีความเสี่ยงเพิ่ม 2 อย่าง คือ <b>ความเสี่ยงอัตราแลกเปลี่ยน</b> (ถ้าไม่ทำ Hedging เต็มจำนวน) และ <b>ความเสี่ยงประเทศ (Country Risk)</b> เช่น การเมือง กฎหมายควบคุมเงินทุน กองทุนจึงต้องเปิดเผยนโยบายป้องกันความเสี่ยงค่าเงินให้ผู้ลงทุนทราบ</p>
+
+<h3>5.5 กองทุนประเภทพิเศษที่ควรรู้</h3>
+<div class="tbl"><table>
+<tr><th>ประเภท</th><th>ลักษณะ</th></tr>
+<tr><td>กองทุนรวมต่างประเทศ (FIF)</td><td>ลงทุนในต่างประเทศเป็นส่วนสำคัญ</td></tr>
+<tr><td>Feeder Fund</td><td>นำเงินเกือบทั้งหมดไปลงทุนในกองทุนต่างประเทศกองเดียว (Master Fund)</td></tr>
+<tr><td>Fund of Funds</td><td>ลงทุนในกองทุนอื่นหลายกอง</td></tr>
+<tr><td>กองทุนดัชนี (Index Fund)</td><td>บริหารแบบเชิงรับ (Passive) ให้ผลตอบแทนใกล้เคียงดัชนีอ้างอิง ค่าธรรมเนียมมักต่ำ</td></tr>
+<tr><td>กองทุนปันผล vs สะสมมูลค่า</td><td>ปันผลจ่ายเงินสด (บุคคลธรรมดาถูกหักภาษี ณ ที่จ่าย 10%) ส่วนแบบสะสมมูลค่า กำไรจากการขายคืนของบุคคลธรรมดาได้รับยกเว้นภาษี</td></tr>
+<tr><td>กองทุนรวมที่มีกำหนดอายุ (Term Fund)</td><td>มักลงทุนตราสารหนี้ที่ครบกำหนดใกล้อายุกองทุน</td></tr>
+<tr><td>REIT / กองทุนโครงสร้างพื้นฐาน</td><td>ลงทุนอสังหาริมทรัพย์หรือโครงสร้างพื้นฐาน รายได้จากค่าเช่า/ค่าบริการ ซื้อขายในตลาด</td></tr>
+</table></div>
+
+<h3>5.6 เอกสารที่ต้องให้ลูกค้า</h3>
+<p><b>หนังสือชี้ชวนส่วนข้อมูลสรุปสำคัญ (Fact Sheet)</b> ต้องส่งมอบให้ผู้ลงทุนก่อนหรือพร้อมการลงทุน ระบุนโยบาย ระดับความเสี่ยง ผลการดำเนินงานย้อนหลัง ค่าธรรมเนียม และความเสี่ยงสำคัญ IC ต้องอธิบายสาระสำคัญ ไม่ใช่แค่ยื่นเอกสาร</p>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> จำลำดับระดับ 1–8 ให้ได้แม่น โดยเฉพาะ “พันธบัตรรัฐบาล = 3, ตราสารหนี้ = 4, ผสม = 5, หุ้น = 6, หมวดอุตสาหกรรม = 7, ทองคำ/น้ำมัน = 8” และบทบาทผู้ดูแลผลประโยชน์ที่ “ดูแลทรัพย์สิน” ไม่ใช่ “ตัดสินใจลงทุน”</div>
+`,
+quiz:[
+{q:"กองทุนรวมทองคำมีระดับความเสี่ยงเท่าใด",o:["ระดับ 5","ระดับ 6","ระดับ 7","ระดับ 8"],a:3,e:"ทองคำเป็นทรัพย์สินทางเลือก ราคาผันผวนตามอุปสงค์อุปทานโลก ค่าเงิน และความกังวลของนักลงทุน โดยไม่มีกระแสเงินสดรองรับ จึงจัดอยู่ในระดับ 8 สูงสุดของกลุ่มทั่วไป"},
+{q:"กองทุนที่ลงทุนในหุ้นกลุ่มเทคโนโลยีเป็นหลัก จัดอยู่ระดับความเสี่ยงใด และเพราะเหตุใด",o:["ระดับ 6 เพราะลงทุนในหุ้น","ระดับ 7 เพราะกระจุกตัวในอุตสาหกรรมเดียว","ระดับ 5 เพราะเป็นกองผสม","ระดับ 8 เพราะเป็นทรัพย์สินทางเลือก"],a:1,e:"Sector Fund ลงทุนในอุตสาหกรรมเดียว จึงไม่ได้รับประโยชน์จากการกระจายความเสี่ยงข้ามอุตสาหกรรม เมื่ออุตสาหกรรมนั้นแย่ ราคาจะลดลงพร้อมกันทั้งพอร์ต ความเสี่ยงจึงสูงกว่ากองทุนหุ้นทั่วไป (ระดับ 6)"},
+{q:"ใครทำหน้าที่เก็บรักษาทรัพย์สินของกองทุนรวมและตรวจสอบการทำงานของ บลจ.",o:["นายทะเบียนหน่วยลงทุน","ผู้สนับสนุนการขาย","ผู้ดูแลผลประโยชน์","ผู้สอบบัญชีของผู้ถือหน่วย"],a:2,e:"ผู้ดูแลผลประโยชน์ (Trustee) เป็นผู้เก็บรักษาทรัพย์สินและดูแลให้ บลจ. ปฏิบัติตามโครงการ เป็นกลไกถ่วงดุลที่ทำให้ บลจ. ไม่ได้ถือทรัพย์สินของกองทุนไว้เอง"},
+{q:"กองทุนมีทรัพย์สิน 525 ล้านบาท หนี้สิน 25 ล้านบาท และหน่วยลงทุน 40 ล้านหน่วย NAV ต่อหน่วยเท่ากับเท่าใด",o:["12.50 บาท","13.13 บาท","13.75 บาท","11.88 บาท"],a:0,e:"NAV = (525 − 25) ÷ 40 = 500 ÷ 40 = 12.50 บาท ต้องหักหนี้สินก่อนเสมอ ถ้าลืมหักจะได้ 13.13 บาทซึ่งผิด"},
+{q:"หาก บลจ. ที่บริหารกองทุนรวมล้มละลาย ผลต่อทรัพย์สินของกองทุนรวมเป็นอย่างไร",o:["เจ้าหนี้ของ บลจ. ยึดทรัพย์สินกองทุนได้ทั้งหมด","ทรัพย์สินกองทุนแยกจาก บลจ. และอยู่ในความดูแลของผู้ดูแลผลประโยชน์ เจ้าหนี้ของ บลจ. จึงยึดไม่ได้","ผู้ถือหน่วยจะได้รับเงินคืนเต็มจำนวนจากรัฐ","กองทุนจะถูกเปลี่ยนเป็นเงินฝากโดยอัตโนมัติ"],a:1,e:"กองทุนรวมเป็นนิติบุคคลแยกต่างหาก ทรัพย์สินไม่ใช่ของ บลจ. จึงไม่ถูกนำไปชำระหนี้ของ บลจ. อาจมีการโอนให้ บลจ. อื่นบริหารแทน แต่รัฐไม่ได้รับประกันมูลค่าเงินลงทุน"}
+]});
+
+CH.push({
+id:"tax", part:3, title:"สิทธิประโยชน์ทางภาษีและเงื่อนไขของกองทุนประหยัดภาษี",
+lead:"RMF, ThaiESG/ThaiESGX และ SSF เดิม วงเงิน เงื่อนไข และผลของการผิดเงื่อนไข (ข้อมูลปีภาษี 2569)",
+body:`
+<h3>6.1 ทำไมรัฐให้สิทธิลดหย่อนภาษี</h3>
+<p>รัฐต้องการ <b>ส่งเสริมการออมระยะยาว</b> (เพื่อเกษียณ) และ <b>สนับสนุนตลาดทุนไทย/การลงทุนที่ยั่งยืน</b> จึงให้ผู้ลงทุนนำเงินซื้อหน่วยลงทุนไปหักจากเงินได้ก่อนคำนวณภาษี แลกกับการ <b>ยอมถือครองตามระยะเวลาที่กำหนด</b></p>
+<div class="pic"><b>ภาพจำ:</b> เหมือน <b>โปรโมชันสมาชิกฟิตเนสราคาพิเศษ</b> ที่ต้องอยู่ครบสัญญา ถ้ายกเลิกก่อนต้องคืนส่วนลดทั้งหมดพร้อมค่าปรับ ภาษีที่ประหยัดได้คือส่วนลด การถือครองครบกำหนดคืออายุสัญญา</div>
+<div class="calc"><b>ภาษีที่ประหยัดได้ = เงินที่ใช้ลดหย่อน × อัตราภาษีขั้นสูงสุดที่ผู้ลงทุนเสียอยู่</b><br>
+ตัวอย่าง: ผู้มีเงินได้สุทธิอยู่ในขั้นภาษี 20% ซื้อ RMF 100,000 บาท → ประหยัดภาษีได้ประมาณ 20,000 บาท ผู้อยู่ขั้น 5% ประหยัดได้เพียง 5,000 บาท → <b>ยิ่งรายได้สูง ยิ่งได้ประโยชน์มาก</b></div>
+
+<h3>6.2 RMF (กองทุนรวมเพื่อการเลี้ยงชีพ)</h3>
+<div class="tbl"><table>
+<tr><th>หัวข้อ</th><th>เงื่อนไข</th></tr>
+<tr><td>วงเงินลดหย่อน</td><td>ไม่เกิน 30% ของเงินได้พึงประเมิน และเมื่อรวมกับกลุ่มเงินออมเพื่อเกษียณ (กองทุนสำรองเลี้ยงชีพ กบข. กองทุนสงเคราะห์ครูเอกชน กอช. ประกันชีวิตแบบบำนาญ และ SSF ที่ซื้อในปีที่มีสิทธิ) ต้องไม่เกิน 500,000 บาท</td></tr>
+<tr><td>การซื้อต่อเนื่อง</td><td>ต้องซื้อสม่ำเสมอทุกปี โดยไม่กำหนดขั้นต่ำ (สำหรับการลงทุนตั้งแต่ปี 2563) ระงับการซื้อได้ไม่เกิน 1 ปีติดต่อกัน (หรือในปีที่ไม่มีเงินได้)</td></tr>
+<tr><td>การขายคืน</td><td>ต้องถือไม่น้อยกว่า 5 ปีนับจากวันที่ซื้อครั้งแรก (วันชนวัน) <b>และ</b> มีอายุไม่ต่ำกว่า 55 ปีบริบูรณ์ (ยกเว้นทุพพลภาพหรือเสียชีวิต)</td></tr>
+<tr><td>นโยบายการลงทุน</td><td>ลงทุนได้หลากหลาย ทั้งตลาดเงิน ตราสารหนี้ หุ้น ทองคำ ไทยและต่างประเทศ</td></tr>
+</table></div>
+<p>สังเกตว่า <b>ต้องครบทั้ง 2 เงื่อนไข</b> (5 ปี และ 55 ปี) เช่น เริ่มซื้อตอนอายุ 53 ต้องถือถึงอายุ 58 ส่วนเริ่มซื้อตอนอายุ 30 ต้องถือถึงอายุ 55</p>
+
+<h3>6.3 ThaiESG และ ThaiESGX</h3>
+<div class="tbl"><table>
+<tr><th>หัวข้อ</th><th>เงื่อนไข (หน่วยลงทุนที่ซื้อปี 2567–2569)</th></tr>
+<tr><td>วงเงินลดหย่อน</td><td>ไม่เกิน 30% ของเงินได้พึงประเมิน และไม่เกิน 300,000 บาท <b>แยกต่างหาก</b> จากวงเงินกลุ่มเกษียณ 500,000 บาท (ในปีภาษี 2569 วงเงินนี้นับรวม ThaiESG และ ThaiESGX)</td></tr>
+<tr><td>การถือครอง</td><td>ไม่น้อยกว่า 5 ปีนับจากวันที่ซื้อ (นับแบบวันชนวัน) ส่วนที่ซื้อในปี 2566 ต้องถือ 8 ปี</td></tr>
+<tr><td>การซื้อต่อเนื่อง</td><td>ไม่บังคับ ซื้อปีไหนลดหย่อนปีนั้น</td></tr>
+<tr><td>นโยบายการลงทุน</td><td>หุ้นไทยและตราสารหนี้ไทยที่เข้าเกณฑ์ด้านสิ่งแวดล้อม สังคม และธรรมาภิบาล (ESG) หรือด้านความยั่งยืน</td></tr>
+</table></div>
+<p class="note">ThaiESGX เป็นกองทุนแบบ ThaiESG ที่เปิดให้ใช้สิทธิเป็นกรณีพิเศษ (รวมถึงรองรับการย้ายเงินจาก LTF เดิมในช่วงที่กำหนด) รายละเอียดวงเงินพิเศษกำหนดเป็นรายปี ให้ตรวจสอบประกาศกรมสรรพากรล่าสุดก่อนแนะนำลูกค้า</p>
+
+<h3>6.4 SSF และ LTF (กองทุนเดิมที่ยังต้องรู้)</h3>
+<ul>
+<li><b>SSF</b> ให้สิทธิลดหย่อนสำหรับการซื้อปี 2563–2567 (30% ไม่เกิน 200,000 บาท และนับรวมในวงเงิน 500,000) ต้องถือ 10 ปีนับจากวันที่ซื้อ ปัจจุบัน <b>ซื้อใหม่ไม่ได้สิทธิลดหย่อนแล้ว</b> แต่ผู้ที่ถืออยู่ยังต้องถือให้ครบเงื่อนไข</li>
+<li><b>LTF</b> สิ้นสุดสิทธิลดหย่อนสำหรับเงินลงทุนใหม่ตั้งแต่ปี 2563 ผู้ถือเดิมต้องถือครบ 7 ปีปฏิทิน</li>
+</ul>
+
+<h3>6.5 ตารางเทียบภาพรวม</h3>
+<div class="tbl"><table>
+<tr><th></th><th>RMF</th><th>ThaiESG/ThaiESGX</th><th>SSF (ถือเดิม)</th></tr>
+<tr><td>สัดส่วนของเงินได้</td><td>30%</td><td>30%</td><td>30%</td></tr>
+<tr><td>เพดาน</td><td>รวมกลุ่มเกษียณไม่เกิน 500,000</td><td>300,000 แยกต่างหาก</td><td>200,000 (อยู่ในกลุ่ม 500,000)</td></tr>
+<tr><td>ระยะถือ</td><td>5 ปี + อายุ 55</td><td>5 ปี วันชนวัน</td><td>10 ปี วันชนวัน</td></tr>
+<tr><td>ซื้อทุกปี</td><td>ต้อง (เว้นได้ไม่เกิน 1 ปีติดกัน)</td><td>ไม่ต้อง</td><td>ไม่ต้อง</td></tr>
+</table></div>
+
+<h3>6.6 ผลของการผิดเงื่อนไข</h3>
+<ol class="steps">
+<li><b>คืนสิทธิลดหย่อนภาษี</b> ที่เคยใช้ (ย้อนหลังไม่เกิน 5 ปีภาษีสำหรับ RMF) โดยยื่นแบบเพิ่มเติม</li>
+<li><b>ชำระเงินเพิ่ม 1.5% ต่อเดือน</b> ของภาษีที่ต้องชำระคืน นับจากวันครบกำหนดยื่นแบบของปีที่ใช้สิทธิ</li>
+<li><b>กำไรจากการขายคืน</b> ต้องนำมารวมคำนวณเป็นเงินได้ (บลจ. จะหักภาษี ณ ที่จ่าย)</li>
+</ol>
+<div class="calc"><b>ตัวอย่างการคำนวณวงเงิน</b><br>
+คุณเอ เงินได้ทั้งปี 1,500,000 บาท จ่ายเงินสะสม PVD 150,000 บาท ต้องการลดหย่อนให้มากที่สุด<br>
+• ThaiESG: 30% × 1,500,000 = 450,000 แต่เพดาน 300,000 → ซื้อได้ <b>300,000</b><br>
+• RMF: 30% × 1,500,000 = 450,000 แต่กลุ่มเกษียณรวมต้องไม่เกิน 500,000 และใช้ PVD ไปแล้ว 150,000 → RMF ได้ไม่เกิน <b>350,000</b> (ต่ำกว่า 450,000 จึงใช้ 350,000)<br>
+• รวมลดหย่อนจากกลุ่มนี้ได้ 300,000 + 500,000 = <b>800,000 บาท</b></div>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> ThaiESG แยกวงเงินจากกลุ่ม 500,000 / RMF ต้องครบทั้ง 5 ปีและ 55 ปี / ระงับซื้อ RMF ได้ไม่เกิน 1 ปีติดต่อกัน / ผิดเงื่อนไขต้องคืนภาษี + เงินเพิ่ม 1.5% ต่อเดือน</div>
+<p class="note">กฎหมายภาษีเปลี่ยนได้ทุกปี ข้อมูลนี้สรุปเงื่อนไข ณ ปีภาษี 2569 ก่อนสอบและก่อนแนะนำลูกค้าควรตรวจสอบประกาศล่าสุดจากกรมสรรพากรและ ก.ล.ต.</p>
+`,
+quiz:[
+{q:"ThaiESG ที่ซื้อในปี 2569 ต้องถือครองอย่างน้อยกี่ปีจึงจะไม่ผิดเงื่อนไข",o:["3 ปี","5 ปี นับแบบวันชนวัน","8 ปี","10 ปี นับแบบปีปฏิทิน"],a:1,e:"หน่วยลงทุน ThaiESG ที่ซื้อตั้งแต่ปี 2567–2569 ต้องถือไม่น้อยกว่า 5 ปีนับจากวันที่ซื้อแบบวันชนวัน ส่วนที่ซื้อในปี 2566 ต้องถือ 8 ปี"},
+{q:"ข้อใดถูกต้องเกี่ยวกับเงื่อนไขการขายคืน RMF",o:["ถือครบ 5 ปีก็ขายได้ทันทีไม่ว่าอายุเท่าไร","อายุครบ 55 ปีก็ขายได้ทันทีแม้เพิ่งซื้อ","ต้องถือไม่น้อยกว่า 5 ปี และมีอายุไม่ต่ำกว่า 55 ปีบริบูรณ์ ครบทั้งสองเงื่อนไข","ต้องถือ 10 ปีเสมอ"],a:2,e:"RMF ออกแบบเพื่อการเกษียณ จึงกำหนดทั้งระยะเวลาขั้นต่ำ (5 ปี) และอายุ (55 ปี) ต้องครบทั้งสองข้อ เช่น เริ่มซื้อตอน 53 ปีต้องถือถึง 58 ปี"},
+{q:"นาย ก มีเงินได้ 600,000 บาท ไม่มีเงินออมเพื่อเกษียณอื่น ซื้อ RMF ได้สิทธิลดหย่อนสูงสุดเท่าใด",o:["500,000 บาท","300,000 บาท","180,000 บาท","200,000 บาท"],a:2,e:"RMF ลดหย่อนได้ไม่เกิน 30% ของเงินได้ = 30% × 600,000 = 180,000 บาท ซึ่งต่ำกว่าเพดานรวม 500,000 บาท จึงใช้ 180,000 บาท"},
+{q:"วงเงินลดหย่อน ThaiESG สัมพันธ์กับวงเงินกลุ่มเกษียณ 500,000 บาทอย่างไร",o:["นับรวมอยู่ใน 500,000 บาท","แยกต่างหาก ไม่นับรวม","นับรวมครึ่งหนึ่ง","นับรวมเฉพาะผู้ที่มี PVD"],a:1,e:"ThaiESG มีวงเงินแยกต่างหาก (30% ไม่เกิน 300,000 บาท) ไม่นับรวมกับกลุ่ม RMF, PVD, กบข., กอช., ประกันบำนาญ ทำให้ผู้มีรายได้สูงใช้สิทธิได้ทั้งสองกลุ่ม"},
+{q:"ผู้ลงทุนขาย RMF ก่อนครบเงื่อนไข ผลที่ตามมาคือข้อใด",o:["ไม่มีผลใดๆ","ต้องคืนภาษีที่เคยได้รับยกเว้นพร้อมเงินเพิ่ม 1.5% ต่อเดือน และกำไรจากการขายต้องเสียภาษี","ถูกห้ามซื้อกองทุนตลอดชีวิต","เสียค่าปรับให้ บลจ. 10%"],a:1,e:"การผิดเงื่อนไขทำให้ต้องคืนสิทธิประโยชน์ภาษีที่ใช้ไปพร้อมเงินเพิ่มตามประมวลรัษฎากร 1.5% ต่อเดือน และกำไรส่วนที่เคยได้รับยกเว้นกลายเป็นเงินได้ที่ต้องเสียภาษี"},
+{q:"ผู้ลงทุนซื้อ RMF ปี 2566 และ 2567 แต่ไม่ได้ซื้อปี 2568 และ 2569 (มีเงินได้ทั้งสองปี) สถานะคือข้อใด",o:["ไม่ผิดเงื่อนไข เพราะไม่กำหนดขั้นต่ำ","ผิดเงื่อนไข เพราะระงับการซื้อเกิน 1 ปีติดต่อกัน","ไม่ผิดถ้าซื้อเพิ่มในปี 2570","ผิดเฉพาะเมื่ออายุเกิน 55 ปี"],a:1,e:"RMF ไม่กำหนดเงินขั้นต่ำแล้ว แต่ยังต้องซื้อต่อเนื่อง โดยเว้นได้ไม่เกิน 1 ปีติดต่อกัน การไม่ซื้อ 2 ปีติดกันในขณะที่มีเงินได้จึงผิดเงื่อนไข"}
+]});
+
+CH.push({
+id:"bond", part:3, title:"ลักษณะและประเภทของตราสารหนี้ (หุ้นกู้/พันธบัตร)",
+lead:"ศัพท์สำคัญ ประเภทผู้ออก อันดับเครดิต และความเสี่ยงของตราสารหนี้",
+body:`
+<h3>7.1 ตราสารหนี้คืออะไร</h3>
+<p><b>ตราสารหนี้</b> คือหลักฐานว่าผู้ถือ <b>เป็นเจ้าหนี้</b> ของผู้ออก ผู้ออกสัญญาว่าจะจ่าย <b>ดอกเบี้ย (คูปอง)</b> ตามงวด และ <b>คืนเงินต้น</b> เมื่อครบกำหนด ผู้ถือไม่มีสิทธิออกเสียงในบริษัท แต่มีสิทธิได้รับชำระหนี้ก่อนผู้ถือหุ้น</p>
+<div class="pic"><b>ภาพจำ:</b> คุณให้เพื่อนยืมเงิน 1,000 บาท เขียนสัญญาว่าจะจ่ายค่าตอบแทนปีละ 50 บาท และคืน 1,000 บาทใน 3 ปี กระดาษสัญญานั้นคือตราสารหนี้ ถ้าคุณอยากได้เงินคืนก่อน 3 ปี ก็ “ขายสัญญา” ให้คนอื่นแทน (ตลาดรอง) ราคาที่ขายได้ขึ้นกับว่าคนซื้อมั่นใจในเพื่อนคนนี้แค่ไหน และดอกเบี้ยในตลาดตอนนั้นเป็นเท่าไร</div>
+
+<h3>7.2 ศัพท์ที่ต้องแม่น</h3>
+<div class="tbl"><table>
+<tr><th>ศัพท์</th><th>ความหมาย</th></tr>
+<tr><td>มูลค่าที่ตราไว้ (Par/Face Value)</td><td>เงินต้นที่จะได้คืนเมื่อครบกำหนด ตราสารหนี้ไทยส่วนใหญ่ 1,000 บาทต่อหน่วย</td></tr>
+<tr><td>อัตราดอกเบี้ยหน้าตั๋ว (Coupon Rate)</td><td>อัตราดอกเบี้ยต่อปีคิดจากมูลค่าที่ตราไว้ เช่น 5% ของ 1,000 = ปีละ 50 บาท</td></tr>
+<tr><td>วันครบกำหนดไถ่ถอน (Maturity)</td><td>วันที่ผู้ออกต้องคืนเงินต้น</td></tr>
+<tr><td>อัตราผลตอบแทนจนครบกำหนด (YTM)</td><td>ผลตอบแทนต่อปีที่ได้จริงถ้าซื้อที่ราคาปัจจุบันและถือจนครบกำหนด (สมมติว่านำคูปองไปลงทุนต่อได้ที่อัตราเดียวกัน)</td></tr>
+<tr><td>อัตราผลตอบแทนปัจจุบัน (Current Yield)</td><td>ดอกเบี้ยต่อปี ÷ ราคาตลาด</td></tr>
+<tr><td>อายุคงเหลือ</td><td>ระยะเวลาจากวันนี้ถึงวันครบกำหนด</td></tr>
+</table></div>
+
+<h3>7.3 แบ่งตามผู้ออก</h3>
+<div class="tbl"><table>
+<tr><th>ตราสาร</th><th>ผู้ออก</th><th>ความเสี่ยงเครดิต</th></tr>
+<tr><td>ตั๋วเงินคลัง (Treasury Bill)</td><td>กระทรวงการคลัง อายุไม่เกิน 1 ปี ขายแบบ <b>ราคาลด (Discount)</b> ไม่จ่ายคูปอง</td><td>ต่ำที่สุด</td></tr>
+<tr><td>พันธบัตรรัฐบาล</td><td>กระทรวงการคลัง ระยะกลางถึงยาว</td><td>ต่ำที่สุด (ในสกุลเงินบาท)</td></tr>
+<tr><td>พันธบัตร ธปท.</td><td>ธนาคารแห่งประเทศไทย ใช้ดูดซับสภาพคล่อง</td><td>ต่ำมาก</td></tr>
+<tr><td>พันธบัตรรัฐวิสาหกิจ</td><td>รัฐวิสาหกิจ เช่น การไฟฟ้า อาจมีหรือไม่มีกระทรวงการคลังค้ำประกัน</td><td>ต่ำ (ถ้าคลังค้ำ ใกล้เคียงรัฐบาล)</td></tr>
+<tr><td>หุ้นกู้ (Debenture)</td><td>บริษัทเอกชน</td><td>ขึ้นกับฐานะของบริษัทและอันดับเครดิต</td></tr>
+<tr><td>ตั๋วแลกเงิน (B/E)</td><td>เอกชน ระยะสั้น</td><td>ขึ้นกับผู้ออก</td></tr>
+</table></div>
+
+<h3>7.4 ประเภทหุ้นกู้ตามลักษณะพิเศษ</h3>
+<div class="tbl"><table>
+<tr><th>ประเภท</th><th>ลักษณะ</th><th>ใครได้ประโยชน์/ผลต่อผู้ลงทุน</th></tr>
+<tr><td>หุ้นกู้มีประกัน (Secured)</td><td>มีทรัพย์สินเป็นหลักประกัน</td><td>เสี่ยงต่ำกว่า ดอกเบี้ยมักต่ำกว่า</td></tr>
+<tr><td>หุ้นกู้ไม่มีประกัน (Unsecured)</td><td>อาศัยเครดิตผู้ออกอย่างเดียว</td><td>เสี่ยงสูงกว่าแบบมีประกัน</td></tr>
+<tr><td>หุ้นกู้ไม่ด้อยสิทธิ (Senior)</td><td>ได้รับชำระเท่าเทียมกับเจ้าหนี้สามัญทั่วไป</td><td>ลำดับสิทธิดีกว่าหุ้นกู้ด้อยสิทธิ</td></tr>
+<tr><td>หุ้นกู้ด้อยสิทธิ (Subordinated)</td><td>ได้รับชำระหลังเจ้าหนี้สามัญ แต่ก่อนผู้ถือหุ้น</td><td>ดอกเบี้ยสูงกว่าเพื่อชดเชยความเสี่ยง</td></tr>
+<tr><td>หุ้นกู้แปลงสภาพ (Convertible)</td><td>ผู้ถือมีสิทธิแปลงเป็นหุ้นสามัญตามอัตราที่กำหนด</td><td>ได้ทั้งความมั่นคงของหนี้และโอกาสกำไรจากหุ้น ดอกเบี้ยจึงต่ำกว่า</td></tr>
+<tr><td>หุ้นกู้ที่ผู้ออกไถ่ถอนก่อนได้ (Callable)</td><td>ผู้ออกเลือกไถ่ถอนก่อนกำหนดได้</td><td>ผู้ออกได้ประโยชน์ (ไถ่ถอนเมื่อดอกเบี้ยตลาดลด) ผู้ลงทุนเสี่ยงต้องนำเงินไปลงทุนใหม่ที่ดอกเบี้ยต่ำลง จึงเรียกร้องดอกเบี้ยสูงกว่า</td></tr>
+<tr><td>หุ้นกู้ที่ผู้ถือขายคืนก่อนได้ (Puttable)</td><td>ผู้ถือเลือกขายคืนให้ผู้ออกก่อนกำหนดได้</td><td>ผู้ลงทุนได้ประโยชน์ ดอกเบี้ยจึงต่ำกว่า</td></tr>
+<tr><td>หุ้นกู้ไม่มีดอกเบี้ย (Zero Coupon)</td><td>ไม่จ่ายคูปอง ขายต่ำกว่าราคาที่ตราไว้</td><td>ผลตอบแทนมาจากส่วนลด</td></tr>
+<tr><td>อัตราดอกเบี้ยลอยตัว (Floating Rate)</td><td>ดอกเบี้ยอ้างอิงอัตราตลาด + ส่วนเพิ่ม</td><td>ราคาผันผวนตามอัตราดอกเบี้ยน้อยกว่าแบบคงที่</td></tr>
+</table></div>
+<div class="pic"><b>ภาพจำเรื่อง “สิทธิ”:</b> ใครถือสิทธิเลือก คนนั้นได้เปรียบ และอีกฝ่ายจะขอค่าชดเชยผ่านอัตราดอกเบี้ย Callable — ผู้ออกถือสิทธิ → ผู้ลงทุนขอดอกเบี้ย <b>สูงขึ้น</b> / Puttable และ Convertible — ผู้ลงทุนถือสิทธิ → ผู้ลงทุนยอมรับดอกเบี้ย <b>ต่ำลง</b></div>
+
+<h3>7.5 อันดับความน่าเชื่อถือ (Credit Rating)</h3>
+<p>สถาบันจัดอันดับเครดิต (เช่น TRIS Rating, Fitch Ratings (Thailand)) ประเมินความสามารถในการชำระหนี้ของผู้ออก</p>
+<div class="tbl"><table>
+<tr><th>อันดับ</th><th>กลุ่ม</th><th>ความหมาย</th></tr>
+<tr><td>AAA, AA, A</td><td rowspan="2"><b>Investment Grade</b> (ระดับน่าลงทุน)</td><td>ความสามารถชำระหนี้สูงถึงสูงมาก</td></tr>
+<tr><td>BBB (ถึง BBB−)</td><td>ความสามารถชำระหนี้เพียงพอ แต่ไวต่อภาวะเศรษฐกิจกว่า</td></tr>
+<tr><td>BB, B, CCC … D</td><td><b>Non-investment Grade</b> (ระดับเก็งกำไร/High Yield)</td><td>ความเสี่ยงผิดนัดสูง D = ผิดนัดชำระหนี้แล้ว</td></tr>
+</table></div>
+<p>เครื่องหมาย <b>+ / −</b> แสดงสถานะในอันดับเดียวกัน และ <b>แนวโน้ม (Outlook)</b> เช่น Positive, Stable, Negative บอกทิศทางที่อันดับอาจเปลี่ยน <b>อันดับเครดิตไม่ใช่การรับประกัน</b> ว่าจะไม่ผิดนัด</p>
+
+<h3>7.6 ความเสี่ยงของตราสารหนี้</h3>
+<ul>
+<li><b>ความเสี่ยงด้านเครดิต (Credit/Default Risk)</b> — ผู้ออกไม่จ่ายดอกเบี้ยหรือเงินต้น</li>
+<li><b>ความเสี่ยงอัตราดอกเบี้ย (Interest Rate Risk)</b> — ดอกเบี้ยตลาดขึ้น ราคาตราสารลง (ดูบทที่ 9)</li>
+<li><b>ความเสี่ยงการนำเงินไปลงทุนต่อ (Reinvestment Risk)</b> — ดอกเบี้ยตลาดลด ทำให้คูปองที่ได้มาไปลงทุนต่อได้ผลตอบแทนต่ำลง</li>
+<li><b>ความเสี่ยงสภาพคล่อง (Liquidity Risk)</b> — หาผู้ซื้อยาก ต้องขายลดราคา หุ้นกู้เอกชนมักมีสภาพคล่องต่ำกว่าพันธบัตรรัฐบาล</li>
+<li><b>ความเสี่ยงจากเงินเฟ้อ</b> — ดอกเบี้ยคงที่ อำนาจซื้อลดลงเมื่อเงินเฟ้อสูง</li>
+<li><b>ความเสี่ยงจากการไถ่ถอนก่อนกำหนด (Call Risk)</b> — สำหรับ Callable Bond</li>
+<li><b>ความเสี่ยงอัตราแลกเปลี่ยน</b> — ถ้าเป็นตราสารสกุลเงินต่างประเทศ</li>
+</ul>
+
+<h3>7.7 การซื้อขายและภาษี</h3>
+<p>ตลาดแรก: ซื้อตอนเสนอขายครั้งแรกผ่านผู้จัดจำหน่าย (เช่น ธนาคาร) / ตลาดรอง: ซื้อขายนอกตลาดหลักทรัพย์ (OTC) ระหว่างสถาบัน โดยมี <b>สมาคมตลาดตราสารหนี้ไทย (ThaiBMA)</b> เป็นศูนย์ข้อมูลราคาอ้างอิง สำหรับบุคคลธรรมดา <b>ดอกเบี้ยจะถูกหักภาษี ณ ที่จ่าย 15%</b></p>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> ตั๋วเงินคลังขายแบบราคาลด / BBB− คือขั้นต่ำสุดของ Investment Grade / Callable ดอกเบี้ยสูงกว่า Puttable ดอกเบี้ยต่ำกว่า / หุ้นกู้ด้อยสิทธิได้รับชำระหลังเจ้าหนี้สามัญแต่ก่อนผู้ถือหุ้น</div>
+`,
+quiz:[
+{q:"ข้อใดเป็นลักษณะของตั๋วเงินคลัง",o:["อายุมากกว่า 10 ปี จ่ายดอกเบี้ยทุก 6 เดือน","ออกโดยบริษัทเอกชน","อายุไม่เกิน 1 ปี ขายในราคาต่ำกว่ามูลค่าที่ตราไว้ (Discount)","ผู้ถือมีสิทธิออกเสียงในกระทรวงการคลัง"],a:2,e:"ตั๋วเงินคลังเป็นตราสารหนี้ระยะสั้นของกระทรวงการคลัง ไม่จ่ายคูปอง ผลตอบแทนคือส่วนต่างระหว่างราคาซื้อที่ต่ำกว่ากับมูลค่าที่ได้รับเมื่อครบกำหนด"},
+{q:"อันดับเครดิตใดเป็นอันดับต่ำสุดที่ยังถือเป็น Investment Grade",o:["A−","BBB−","BB+","B"],a:1,e:"Investment Grade ครอบคลุม AAA ถึง BBB− ตั้งแต่ BB+ ลงไปถือเป็น Non-investment Grade หรือระดับเก็งกำไร"},
+{q:"เมื่อเทียบกับหุ้นกู้ทั่วไปของผู้ออกรายเดียวกัน หุ้นกู้ที่ผู้ออกมีสิทธิไถ่ถอนก่อนกำหนด (Callable) มักให้ดอกเบี้ยอย่างไร และเพราะอะไร",o:["ต่ำกว่า เพราะผู้ลงทุนได้สิทธิพิเศษ","สูงกว่า เพราะผู้ออกได้สิทธิเลือก ผู้ลงทุนจึงต้องการค่าชดเชยความเสี่ยง","เท่ากัน เพราะผู้ออกรายเดียวกัน","ไม่มีดอกเบี้ย"],a:1,e:"ผู้ออกจะไถ่ถอนเมื่อดอกเบี้ยตลาดลดลง ซึ่งเป็นเวลาที่ผู้ลงทุนเสียเปรียบเพราะต้องนำเงินไปลงทุนใหม่ในอัตราต่ำกว่า ผู้ลงทุนจึงเรียกร้องดอกเบี้ยที่สูงกว่าเพื่อชดเชยความเสี่ยงนี้"},
+{q:"หุ้นกู้มูลค่าที่ตราไว้ 1,000 บาท คูปอง 4% ต่อปี ซื้อขายที่ราคา 800 บาท อัตราผลตอบแทนปัจจุบัน (Current Yield) เท่ากับเท่าใด",o:["4.0%","3.2%","5.0%","8.0%"],a:2,e:"คูปองต่อปี = 4% × 1,000 = 40 บาท Current Yield = 40 ÷ 800 = 5.0% สังเกตว่าคิดจากราคาตลาด ไม่ใช่มูลค่าที่ตราไว้"},
+{q:"ความเสี่ยงที่ผู้ถือตราสารหนี้ต้องนำดอกเบี้ยรับไปลงทุนต่อในอัตราที่ต่ำลง เรียกว่าอะไร",o:["Credit Risk","Liquidity Risk","Reinvestment Risk","Default Risk"],a:2,e:"Reinvestment Risk เกิดเมื่ออัตราดอกเบี้ยตลาดลดลง คูปองหรือเงินต้นที่ได้รับคืนจึงนำไปลงทุนต่อได้ผลตอบแทนน้อยลง เป็นความเสี่ยงที่ตรงข้ามกับความเสี่ยงด้านราคา"}
+]});
+
+CH.push({
+id:"claim", part:3, title:"ลำดับการเรียกร้องสินทรัพย์เมื่อบริษัทล้มละลาย",
+lead:"ใครได้เงินก่อน ใครได้ทีหลัง และทำไมลำดับนี้กำหนดผลตอบแทนที่ต้องการ",
+body:`
+<h3>8.1 หลักคิด</h3>
+<p>เมื่อบริษัทล้มละลาย ทรัพย์สินที่เหลือจะถูกขายแล้วนำมาชำระตามลำดับสิทธิ <b>เจ้าหนี้ได้ก่อนเจ้าของเสมอ</b> และในกลุ่มเจ้าหนี้ <b>ผู้มีหลักประกันหรือมีสิทธิพิเศษตามกฎหมายได้ก่อน</b> ลำดับต่อไปจะได้ก็ต่อเมื่อลำดับก่อนหน้าได้รับครบแล้ว</p>
+<div class="pic"><b>ภาพจำ “แก้วแชมเปญซ้อนชั้น”:</b> เทแชมเปญจากชั้นบนสุด แก้วชั้นบนต้องเต็มก่อนน้ำจึงไหลลงชั้นล่าง ถ้าแชมเปญ (ทรัพย์สิน) มีน้อย แก้วชั้นล่าง (ผู้ถือหุ้นสามัญ) อาจไม่ได้อะไรเลย</div>
+<div class="stack">
+<div class="st s1"><b>1. เจ้าหนี้มีประกัน</b> (เช่น ผู้ถือหุ้นกู้มีประกัน ธนาคารที่รับจำนอง) — ได้ชำระจากทรัพย์สินที่เป็นหลักประกันก่อน</div>
+<div class="st s2"><b>2. เจ้าหนี้บุริมสิทธิตามกฎหมาย</b> — ค่าใช้จ่ายในการจัดการทรัพย์สินในคดีล้มละลาย ภาษีอากร ค่าจ้างลูกจ้าง</div>
+<div class="st s3"><b>3. เจ้าหนี้สามัญไม่มีประกัน</b> — หุ้นกู้ไม่มีประกัน (ไม่ด้อยสิทธิ) เจ้าหนี้การค้า</div>
+<div class="st s4"><b>4. ผู้ถือหุ้นกู้ด้อยสิทธิ</b></div>
+<div class="st s5"><b>5. ผู้ถือหุ้นบุริมสิทธิ</b></div>
+<div class="st s6"><b>6. ผู้ถือหุ้นสามัญ</b> — ได้สิ่งที่เหลือ (Residual Claim) ถ้ามี</div>
+</div>
+<p class="note">ข้อสอบมักถามแบบย่อว่า <b>หุ้นกู้มีประกัน → หุ้นกู้ไม่มีประกัน → หุ้นกู้ด้อยสิทธิ → หุ้นบุริมสิทธิ → หุ้นสามัญ</b> ให้จำลำดับนี้เป็นแกน</p>
+
+<h3>8.2 ประเด็นที่มักสับสน</h3>
+<ul>
+<li><b>เจ้าหนี้มีประกันได้ก่อนเฉพาะจากหลักประกันของตน</b> ถ้าขายหลักประกันแล้วไม่พอ ส่วนที่ขาดจะไปเป็น <b>เจ้าหนี้ไม่มีประกัน</b> รอรับร่วมกับคนอื่น</li>
+<li><b>หุ้นกู้ด้อยสิทธิยังเป็นหนี้</b> จึงอยู่ก่อนหุ้นบุริมสิทธิเสมอ แม้ชื่อจะมีคำว่า “ด้อย”</li>
+<li><b>หุ้นบุริมสิทธิเป็นส่วนของเจ้าของ</b> ได้ก่อนหุ้นสามัญ แต่หลังเจ้าหนี้ทุกประเภท</li>
+<li>ในลำดับเดียวกัน ถ้าเงินไม่พอ จะได้ <b>ตามสัดส่วนของมูลหนี้ (Pro Rata)</b></li>
+</ul>
+
+<h3>8.3 ตัวอย่างคำนวณ</h3>
+<div class="calc">บริษัท Z ล้มละลาย ขายทรัพย์สินได้ทั้งหมด <b>120 ล้านบาท</b> โดยในจำนวนนี้มีทรัพย์ที่เป็นหลักประกันหุ้นกู้มีประกันขายได้ 30 ล้านบาท<br>
+หนี้: หุ้นกู้มีประกัน 40 / ภาษีและค่าจ้างค้าง 10 / หุ้นกู้ไม่มีประกันและเจ้าหนี้การค้า 50 / หุ้นกู้ด้อยสิทธิ 30 / หุ้นบุริมสิทธิ 20 (ล้านบาท)<br><br>
+① หุ้นกู้มีประกันได้จากหลักประกัน <b>30</b> ยังขาด 10 → ส่วนที่ขาดไปเป็นเจ้าหนี้ไม่มีประกัน<br>
+② เหลือเงิน 120 − 30 = 90 → จ่ายภาษีและค่าจ้าง <b>10</b> เหลือ 80<br>
+③ เจ้าหนี้ไม่มีประกันรวม 50 + 10 = 60 → ได้ครบ <b>60</b> เหลือ 20<br>
+④ หุ้นกู้ด้อยสิทธิมีหนี้ 30 ได้ <b>20</b> (ได้คืน 66.7%)<br>
+⑤ หุ้นบุริมสิทธิ <b>0</b> / ⑥ หุ้นสามัญ <b>0</b></div>
+
+<h3>8.4 ทำไมลำดับนี้สำคัญต่อการลงทุน</h3>
+<p>ลำดับยิ่งท้าย ความเสี่ยงยิ่งสูง ผู้ลงทุนจึง <b>เรียกร้องผลตอบแทนสูงขึ้น</b> ตามลำดับ ทำให้ต้นทุนเงินทุนของบริษัทเรียงเป็น <b>หนี้มีประกัน &lt; หนี้ไม่มีประกัน &lt; หนี้ด้อยสิทธิ &lt; หุ้นบุริมสิทธิ &lt; หุ้นสามัญ</b> นี่คือเหตุผลที่หุ้นกู้ด้อยสิทธิให้ดอกเบี้ยสูงกว่าหุ้นกู้ทั่วไปของบริษัทเดียวกัน</p>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> เปรียบเทียบ “หุ้นกู้ด้อยสิทธิ vs หุ้นบุริมสิทธิ” (หุ้นกู้ด้อยสิทธิได้ก่อน) และ “เจ้าหนี้มีประกันได้ไม่ครบ” (ส่วนที่ขาดเป็นเจ้าหนี้สามัญ)</div>
+`,
+quiz:[
+{q:"เมื่อบริษัทล้มละลาย ข้อใดเรียงลำดับสิทธิได้รับชำระจากก่อนไปหลังได้ถูกต้อง",o:["หุ้นสามัญ → หุ้นบุริมสิทธิ → หุ้นกู้","หุ้นกู้มีประกัน → หุ้นกู้ไม่มีประกัน → หุ้นกู้ด้อยสิทธิ → หุ้นบุริมสิทธิ → หุ้นสามัญ","หุ้นกู้ไม่มีประกัน → หุ้นกู้มีประกัน → หุ้นบุริมสิทธิ → หุ้นสามัญ","หุ้นบุริมสิทธิ → หุ้นกู้ด้อยสิทธิ → หุ้นสามัญ"],a:1,e:"เจ้าหนี้ได้ก่อนเจ้าของ ในกลุ่มเจ้าหนี้ผู้มีหลักประกันได้ก่อน หุ้นกู้ด้อยสิทธิยังเป็นหนี้จึงได้ก่อนหุ้นบุริมสิทธิ และหุ้นสามัญได้เป็นลำดับสุดท้าย"},
+{q:"ข้อใดถูกต้องเกี่ยวกับหุ้นกู้ด้อยสิทธิกับหุ้นบุริมสิทธิ",o:["หุ้นบุริมสิทธิได้รับชำระก่อนเพราะมีคำว่า “บุริมสิทธิ”","หุ้นกู้ด้อยสิทธิได้รับชำระก่อน เพราะเป็นเจ้าหนี้ ส่วนหุ้นบุริมสิทธิเป็นเจ้าของ","ได้รับพร้อมกันตามสัดส่วน","ทั้งคู่ไม่ได้รับชำระเลย"],a:1,e:"คำว่า “บุริมสิทธิ” หมายถึงสิทธิก่อนหุ้นสามัญเท่านั้น ส่วนหุ้นกู้ด้อยสิทธิแม้ได้หลังเจ้าหนี้สามัญ แต่ยังมีสถานะเป็นเจ้าหนี้ซึ่งได้ก่อนผู้ถือหุ้นทุกประเภท"},
+{q:"ผู้ถือหุ้นกู้มีประกันมูลหนี้ 100 ล้านบาท ขายหลักประกันได้ 70 ล้านบาท ส่วนที่ขาด 30 ล้านบาทมีสถานะอย่างไร",o:["สูญไปทั้งหมด","กลายเป็นเจ้าหนี้ไม่มีประกัน รอรับชำระร่วมกับเจ้าหนี้สามัญ","ได้รับก่อนภาษีอากร","แปลงเป็นหุ้นสามัญ"],a:1,e:"สิทธิพิเศษของเจ้าหนี้มีประกันจำกัดอยู่ที่มูลค่าหลักประกัน ส่วนเกินที่ยังไม่ได้รับชำระจะเข้าไปเป็นเจ้าหนี้สามัญร่วมกับเจ้าหนี้ไม่มีประกันรายอื่น"},
+{q:"ทำไมหุ้นกู้ด้อยสิทธิจึงมักให้อัตราดอกเบี้ยสูงกว่าหุ้นกู้ไม่ด้อยสิทธิของบริษัทเดียวกัน",o:["เพราะมีหลักประกันมากกว่า","เพราะอยู่ลำดับการรับชำระหลังกว่า ความเสี่ยงสูงกว่า","เพราะมีสิทธิออกเสียง","เพราะได้รับการค้ำประกันจากรัฐ"],a:1,e:"เมื่อบริษัทมีปัญหา ผู้ถือหุ้นกู้ด้อยสิทธิมีโอกาสได้รับเงินคืนน้อยกว่า ผู้ลงทุนจึงเรียกร้องผลตอบแทนส่วนเพิ่มเพื่อชดเชยความเสี่ยงที่สูงกว่า"},
+{q:"บริษัทล้มละลายมีเงินเหลือหลังชำระเจ้าหนี้มีประกันและบุริมสิทธิแล้ว 40 ล้านบาท มีเจ้าหนี้ไม่มีประกัน 2 ราย มูลหนี้ 60 และ 20 ล้านบาท รายที่มีหนี้ 60 ล้านบาทจะได้รับเท่าใด",o:["40 ล้านบาท","20 ล้านบาท","30 ล้านบาท","60 ล้านบาท"],a:2,e:"เจ้าหนี้ลำดับเดียวกันได้รับตามสัดส่วนมูลหนี้ หนี้รวม 80 ล้านบาท มีเงิน 40 ล้านบาท คิดเป็น 50% รายที่มีหนี้ 60 ล้านบาทจึงได้ 30 ล้านบาท"}
+]});
+
+CH.push({
+id:"rate", part:3, title:"ความสัมพันธ์ระหว่างอัตราดอกเบี้ยและราคาตราสารหนี้",
+lead:"ทำไมดอกเบี้ยขึ้นแล้วราคาพันธบัตรลง และตราสารแบบไหนอ่อนไหวกว่า",
+body:`
+<h3>9.1 กฎข้อเดียวที่ต้องจำ</h3>
+<p class="big-rule">อัตราดอกเบี้ยตลาด ↑ ราคาตราสารหนี้ ↓ &nbsp;|&nbsp; อัตราดอกเบี้ยตลาด ↓ ราคาตราสารหนี้ ↑</p>
+<p><b>เหตุผล:</b> ตราสารหนี้ที่ออกไปแล้วจ่ายคูปองคงที่ ถ้าตลาดมีตราสารใหม่ให้ดอกเบี้ยสูงกว่า ไม่มีใครอยากซื้อตราสารเก่าที่ดอกเบี้ยต่ำในราคาเดิม ราคาตราสารเก่าจึงต้อง <b>ลดลงจนผลตอบแทนเทียบเท่าตลาด</b></p>
+<div class="pic"><b>ภาพจำ “กระดานหก”:</b> ฝั่งหนึ่งคือดอกเบี้ย อีกฝั่งคือราคา เมื่อฝั่งหนึ่งขึ้น อีกฝั่งต้องลง หรือคิดแบบ <b>ห้องเช่า</b> ห้องคุณทำสัญญาค่าเช่าคงที่เดือนละ 5,000 บาท ถ้าห้องแบบเดียวกันในตึกตอนนี้ให้เช่าได้ 6,000 บาท สัญญาของคุณก็มีค่าน้อยลงในสายตาคนที่อยากรับช่วงต่อ</div>
+
+<h3>9.2 ราคาตราสารหนี้คำนวณอย่างไร</h3>
+<div class="calc"><b>ราคา = มูลค่าปัจจุบันของคูปองทุกงวด + มูลค่าปัจจุบันของเงินต้น</b> คิดลดด้วยอัตราผลตอบแทนตลาด (Yield)<br><br>
+ตัวอย่าง: หุ้นกู้ 1,000 บาท คูปอง 5% จ่ายปีละครั้ง อายุ 3 ปี<br>
+• ถ้า Yield ตลาด = 5% → ราคา = <b>1,000 บาท</b> (ราคาพาร์)<br>
+• ถ้า Yield ตลาด = 6% → ราคา = 50/1.06 + 50/1.06² + 1,050/1.06³ = 47.17 + 44.50 + 881.60 = <b>973.27 บาท</b> (ต่ำกว่าพาร์)<br>
+• ถ้า Yield ตลาด = 4% → ราคา = 50/1.04 + 50/1.04² + 1,050/1.04³ = 48.08 + 46.23 + 933.44 = <b>1,027.75 บาท</b> (สูงกว่าพาร์)</div>
+<div class="tbl"><table>
+<tr><th>เงื่อนไข</th><th>ราคาเทียบมูลค่าที่ตราไว้</th><th>ชื่อเรียก</th></tr>
+<tr><td>คูปอง = Yield ตลาด</td><td>เท่ากัน</td><td>At Par</td></tr>
+<tr><td>คูปอง &gt; Yield ตลาด</td><td>สูงกว่า</td><td>Premium</td></tr>
+<tr><td>คูปอง &lt; Yield ตลาด</td><td>ต่ำกว่า</td><td>Discount</td></tr>
+</table></div>
+<p>เมื่อเวลาผ่านไปจนใกล้ครบกำหนด ราคาตราสารที่เป็น Premium หรือ Discount จะ <b>เคลื่อนเข้าหาราคาพาร์</b> เพราะสุดท้ายผู้ออกต้องคืน 1,000 บาทเท่ากัน</p>
+
+<h3>9.3 ตราสารแบบไหนราคาเปลี่ยนแรงกว่า</h3>
+<div class="tbl"><table>
+<tr><th>ปัจจัย</th><th>ผลต่อความอ่อนไหวของราคา</th><th>เหตุผล</th></tr>
+<tr><td>อายุคงเหลือยาวขึ้น</td><td>อ่อนไหวมากขึ้น</td><td>ต้องรับดอกเบี้ยที่ “ล้าสมัย” เป็นเวลานานกว่า</td></tr>
+<tr><td>คูปองต่ำลง</td><td>อ่อนไหวมากขึ้น</td><td>เงินส่วนใหญ่มาตอนท้าย ถูกคิดลดหลายงวด</td></tr>
+<tr><td>Zero Coupon</td><td>อ่อนไหวมากที่สุดเมื่ออายุเท่ากัน</td><td>เงินทั้งหมดมาตอนครบกำหนดครั้งเดียว</td></tr>
+<tr><td>ระดับ Yield ต่ำ</td><td>อ่อนไหวมากขึ้น</td><td>การเปลี่ยนแปลงเท่ากันคิดเป็นสัดส่วนที่ใหญ่กว่า</td></tr>
+<tr><td>ดอกเบี้ยลอยตัว</td><td>อ่อนไหวน้อย</td><td>คูปองปรับตามตลาด</td></tr>
+</table></div>
+
+<h3>9.4 Duration — ตัววัดความอ่อนไหว</h3>
+<p><b>Duration</b> คือระยะเวลาเฉลี่ยถ่วงน้ำหนักที่ผู้ลงทุนจะได้รับกระแสเงินสด และใช้วัดว่า <b>ราคาจะเปลี่ยนกี่ % เมื่อ Yield เปลี่ยน 1%</b></p>
+<div class="calc"><b>%การเปลี่ยนแปลงของราคา ≈ − Modified Duration × การเปลี่ยนแปลงของ Yield</b><br>
+ตัวอย่าง: Modified Duration = 6 ถ้า Yield เพิ่ม 0.50% → ราคาเปลี่ยน ≈ −6 × 0.50% = <b>−3%</b><br>
+ถ้า Yield ลด 0.25% → ราคาเปลี่ยน ≈ +6 × 0.25% = <b>+1.5%</b><br>
+Zero Coupon มี Macaulay Duration เท่ากับอายุคงเหลือพอดี ส่วนตราสารที่มีคูปองจะมี Duration สั้นกว่าอายุ</div>
+
+<h3>9.5 นำไปใช้แนะนำลูกค้า</h3>
+<ul>
+<li>คาดว่า <b>ดอกเบี้ยจะลดลง</b> → ถือตราสารหรือกองทุนตราสารหนี้ที่ <b>Duration ยาว</b> เพื่อรับกำไรจากราคา</li>
+<li>คาดว่า <b>ดอกเบี้ยจะขึ้น</b> → ลด Duration เลือกตราสารระยะสั้น หรือกองทุนตลาดเงิน</li>
+<li>ลูกค้าที่ <b>ถือจนครบกำหนด</b> และผู้ออกไม่ผิดนัด จะได้เงินต้นคืนเต็ม การขึ้นลงของราคาระหว่างทางจึงสำคัญกับคนที่ต้องขายก่อนกำหนด</li>
+<li>NAV ของกองทุนตราสารหนี้ <b>ลดลงได้</b> เมื่อดอกเบี้ยขึ้น ต้องอธิบายลูกค้าที่เข้าใจว่า “กองตราสารหนี้ไม่มีวันขาดทุน”</li>
+</ul>
+
+<h3>9.6 เส้นอัตราผลตอบแทน (Yield Curve)</h3>
+<p>กราฟแสดง Yield ของพันธบัตรรัฐบาลแต่ละอายุ <b>ปกติ (Normal)</b> จะชันขึ้น เพราะเงินที่ให้ยืมนานกว่าต้องได้ผลตอบแทนสูงกว่า <b>หัวกลับ (Inverted)</b> คือระยะสั้นสูงกว่าระยะยาว มักสะท้อนการคาดการณ์ว่าเศรษฐกิจจะชะลอและดอกเบี้ยจะลดในอนาคต</p>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> ทิศทางราคากับดอกเบี้ย / คูปองสูงกว่า Yield = Premium / ตราสารที่อ่อนไหวที่สุดคือ Zero Coupon อายุยาว / คำนวณ %ราคาด้วย Duration</div>
+`,
+quiz:[
+{q:"ถ้าอัตราดอกเบี้ยในตลาดปรับสูงขึ้น ราคาของพันธบัตรที่ออกไปแล้วซึ่งจ่ายคูปองคงที่จะเป็นอย่างไร",o:["สูงขึ้น","ลดลง","ไม่เปลี่ยนแปลง","เปลี่ยนเฉพาะพันธบัตรระยะสั้น"],a:1,e:"เมื่อตลาดให้ผลตอบแทนสูงขึ้น พันธบัตรเดิมที่จ่ายคูปองต่ำกว่าจะน่าสนใจน้อยลง ราคาต้องลดลงจนผลตอบแทนของผู้ซื้อรายใหม่เทียบเท่าอัตราตลาด"},
+{q:"หุ้นกู้คูปอง 6% ขณะที่อัตราผลตอบแทนตลาดของตราสารลักษณะเดียวกันคือ 4% หุ้นกู้นี้จะซื้อขายในราคาอย่างไร",o:["ต่ำกว่าราคาพาร์ (Discount)","เท่ากับราคาพาร์","สูงกว่าราคาพาร์ (Premium)","ไม่สามารถบอกได้"],a:2,e:"คูปองที่สูงกว่าอัตราตลาดทำให้หุ้นกู้มีค่ามากกว่าตราสารใหม่ ผู้ซื้อยอมจ่ายแพงกว่าพาร์ ส่วนต่างราคาที่จ่ายเพิ่มจะชดเชยคูปองที่สูงกว่าจนผลตอบแทนรวมเท่ากับ 4%"},
+{q:"ตราสารใดมีราคาอ่อนไหวต่อการเปลี่ยนแปลงอัตราดอกเบี้ยมากที่สุด",o:["พันธบัตรอายุ 2 ปี คูปอง 5%","พันธบัตรอายุ 10 ปี คูปอง 5%","พันธบัตรอายุ 10 ปี ไม่มีคูปอง (Zero Coupon)","หุ้นกู้อัตราดอกเบี้ยลอยตัวอายุ 10 ปี"],a:2,e:"อายุยาวและคูปองต่ำทำให้ราคาอ่อนไหวมาก Zero Coupon ได้เงินทั้งหมดตอนครบกำหนด Duration จึงเท่ากับอายุคงเหลือ 10 ปี สูงที่สุดในตัวเลือก ส่วนแบบลอยตัวคูปองปรับตามตลาดจึงอ่อนไหวน้อย"},
+{q:"กองทุนตราสารหนี้มี Modified Duration 4 ปี หากอัตราผลตอบแทนตลาดลดลง 0.75% NAV โดยประมาณจะเปลี่ยนแปลงอย่างไร",o:["ลดลง 3%","เพิ่มขึ้น 3%","เพิ่มขึ้น 0.75%","ลดลง 4%"],a:1,e:"%ΔP ≈ −MD × ΔY = −4 × (−0.75%) = +3% Yield ลดลงจึงทำให้ราคาเพิ่มขึ้น"},
+{q:"หากคาดการณ์ว่าอัตราดอกเบี้ยนโยบายจะลดลงต่อเนื่อง กลยุทธ์ใดเหมาะสมที่สุดสำหรับผู้ต้องการกำไรจากราคาตราสารหนี้",o:["ย้ายไปกองทุนตลาดเงิน","ลงทุนในตราสารหนี้ที่มี Duration ยาว","ลงทุนในหุ้นกู้อัตราลอยตัว","ถือเงินสด"],a:1,e:"เมื่อดอกเบี้ยลด ราคาตราสารหนี้เพิ่มขึ้น และตราสาร Duration ยาวจะได้ประโยชน์มากที่สุด ส่วนตลาดเงินและอัตราลอยตัวได้รับผลจากราคาน้อยมาก"}
+]});
+
+CH.push({
+id:"equity", part:3, title:"ลักษณะของตราสารทุน (หุ้นสามัญ/หุ้นบุริมสิทธิ) และสิทธิประโยชน์ (XD, XR)",
+lead:"สิทธิของผู้ถือหุ้น เครื่องหมาย X ต่างๆ และการคำนวณราคาหลังสิทธิ",
+body:`
+<h3>10.1 ตราสารทุนคืออะไร</h3>
+<p><b>หุ้น</b> คือหลักฐานความเป็น <b>เจ้าของ</b> บริษัทตามสัดส่วน ผู้ถือหุ้นได้ประโยชน์จาก <b>เงินปันผล</b> และ <b>กำไรจากส่วนต่างราคา (Capital Gain)</b> แต่ไม่มีการรับประกันทั้งสองอย่าง และได้รับคืนเป็นลำดับสุดท้ายเมื่อบริษัทล้มละลาย</p>
+<div class="pic"><b>ภาพจำ:</b> ร้านกาแฟของเพื่อนแบ่งเป็น 100 ส่วน คุณซื้อ 10 ส่วน = เป็นเจ้าของ 10% ปีไหนร้านกำไรดีอาจได้ส่วนแบ่ง (ปันผล) ถ้าร้านดังขึ้นคนอยากซื้อส่วนของคุณแพงขึ้น (Capital Gain) แต่ถ้าร้านเจ๊ง ต้องจ่ายหนี้ซัพพลายเออร์และธนาคารก่อน เหลือเท่าไรถึงตกมาถึงคุณ</div>
+
+<h3>10.2 หุ้นสามัญ vs หุ้นบุริมสิทธิ</h3>
+<div class="tbl"><table>
+<tr><th>หัวข้อ</th><th>หุ้นสามัญ (Common Stock)</th><th>หุ้นบุริมสิทธิ (Preferred Stock)</th></tr>
+<tr><td>เงินปันผล</td><td>ไม่แน่นอน ขึ้นกับกำไรและมติที่ประชุม</td><td>มักกำหนดอัตราไว้ และได้รับก่อนหุ้นสามัญ</td></tr>
+<tr><td>สิทธิออกเสียง</td><td>มี 1 หุ้น 1 เสียง</td><td>อาจมีหรือถูกจำกัด ตามข้อบังคับบริษัท</td></tr>
+<tr><td>ลำดับสิทธิเมื่อเลิกกิจการ</td><td>สุดท้าย</td><td>ก่อนหุ้นสามัญ หลังเจ้าหนี้</td></tr>
+<tr><td>สิทธิจองซื้อหุ้นเพิ่มทุนตามสัดส่วน</td><td>มี (Pre-emptive Right)</td><td>ขึ้นกับเงื่อนไข</td></tr>
+<tr><td>โอกาสกำไรจากราคา</td><td>สูง ไม่จำกัด</td><td>จำกัดกว่า ราคามักเคลื่อนไหวคล้ายตราสารหนี้</td></tr>
+</table></div>
+<h4>ประเภทย่อยของหุ้นบุริมสิทธิ</h4>
+<ul>
+<li><b>สะสมเงินปันผล (Cumulative)</b> — ปีที่ไม่ได้จ่ายจะถูกสะสม ต้องจ่ายย้อนหลังให้ครบก่อนจ่ายหุ้นสามัญ</li>
+<li><b>ไม่สะสมเงินปันผล (Non-cumulative)</b> — ปีที่ไม่ได้จ่ายถือว่าหมดไป</li>
+<li><b>ร่วมรับเงินปันผล (Participating)</b> — ได้อัตราที่กำหนด และมีสิทธิได้ส่วนแบ่งเพิ่มเมื่อบริษัทกำไรมาก</li>
+<li><b>แปลงสภาพได้ (Convertible)</b> — แปลงเป็นหุ้นสามัญได้ตามอัตราที่กำหนด</li>
+</ul>
+
+<h3>10.3 สิทธิประโยชน์และเครื่องหมาย X</h3>
+<p>เมื่อบริษัทให้สิทธิแก่ผู้ถือหุ้น จะกำหนด <b>วันกำหนดรายชื่อผู้มีสิทธิ (Record Date)</b> และตลาดจะขึ้นเครื่องหมาย <b>X (Excluding)</b> ในวันที่ผู้ซื้อ <b>จะไม่ได้รับสิทธินั้นแล้ว</b></p>
+<div class="tbl"><table>
+<tr><th>เครื่องหมาย</th><th>ย่อมาจาก</th><th>ผู้ซื้อตั้งแต่วันนี้ไม่ได้สิทธิ</th></tr>
+<tr><td><b>XD</b></td><td>Excluding Dividend</td><td>รับเงินปันผล</td></tr>
+<tr><td><b>XR</b></td><td>Excluding Right</td><td>จองซื้อหุ้นเพิ่มทุน</td></tr>
+<tr><td><b>XM</b></td><td>Excluding Meeting</td><td>เข้าประชุมผู้ถือหุ้น</td></tr>
+<tr><td><b>XW</b></td><td>Excluding Warrant</td><td>รับใบสำคัญแสดงสิทธิ</td></tr>
+<tr><td><b>XI</b></td><td>Excluding Interest</td><td>รับดอกเบี้ย (ตราสารหนี้)</td></tr>
+<tr><td><b>XA</b></td><td>Excluding All</td><td>รับสิทธิทุกประเภทที่ประกาศพร้อมกัน</td></tr>
+</table></div>
+<h4>นับวันอย่างไร (ระบบชำระราคา T+2)</h4>
+<p>ผู้ซื้อหุ้นวันนี้ (T) จะมีชื่อเป็นผู้ถือหุ้นในวันทำการที่ 2 ถัดไป (T+2) ดังนั้น <b>วัน XD จะอยู่ก่อน Record Date 1 วันทำการ</b></p>
+<div class="calc">Record Date = วันศุกร์ที่ 15 → วัน XD = วันพฤหัสบดีที่ 14<br>
+ซื้อ <b>วันพุธที่ 13</b> → ชำระและมีชื่อวันศุกร์ที่ 15 → <b>ได้ปันผล</b><br>
+ซื้อ <b>วันพฤหัสบดีที่ 14 (วัน XD)</b> → มีชื่อวันจันทร์ที่ 18 → <b>ไม่ได้ปันผล</b><br>
+ดังนั้นวันสุดท้ายที่ซื้อแล้วยังได้สิทธิคือ <b>วันทำการก่อนวัน XD</b></div>
+<h4>ทำไมราคาหุ้นมักลดลงในวัน XD</h4>
+<p>เงินปันผลคือเงินที่ออกจากบริษัทไปสู่ผู้ถือหุ้น มูลค่าบริษัทจึงลดลงประมาณเท่าเงินปันผล <b>ราคาทางทฤษฎีวัน XD ≈ ราคาปิดก่อน XD − เงินปันผลต่อหุ้น</b> เช่น ปิด 50 บาท ปันผล 2 บาท → ราคาทางทฤษฎี 48 บาท ผู้ถือหุ้นจึง “ไม่ได้รวยขึ้นทันที” จากปันผล แต่ได้เปลี่ยนมูลค่าจากราคาหุ้นเป็นเงินสด</p>
+
+<h3>10.4 การเพิ่มทุนและราคาหลัง XR</h3>
+<div class="calc"><b>ราคาทางทฤษฎีหลัง XR = (N × P + n × S) ÷ (N + n)</b><br>
+N = จำนวนหุ้นเดิม, P = ราคาก่อน XR, n = หุ้นใหม่ที่ได้สิทธิซื้อ, S = ราคาจองซื้อ<br><br>
+ตัวอย่าง: สิทธิ 4 หุ้นเดิม : 1 หุ้นใหม่ ราคาจอง 8 บาท ราคาหุ้นก่อน XR 12 บาท<br>
+ราคาหลัง XR = (4 × 12 + 1 × 8) ÷ 5 = 56 ÷ 5 = <b>11.20 บาท</b><br>
+มูลค่าสิทธิต่อหุ้นเดิม ≈ 12 − 11.20 = <b>0.80 บาท</b></div>
+<p><b>ผลต่อผู้ถือหุ้นเดิม:</b> ถ้าไม่ใช้สิทธิจองซื้อ สัดส่วนความเป็นเจ้าของจะลดลง (Dilution) และราคาหุ้นที่ถืออยู่อาจลดลงตามราคาทางทฤษฎี บางบริษัทจึงออก <b>ใบแสดงสิทธิที่โอนได้ (TSR)</b> ให้ขายสิทธิได้</p>
+
+<h3>10.5 ปันผลเป็นหุ้นและการแตกพาร์</h3>
+<ul>
+<li><b>หุ้นปันผล (Stock Dividend)</b> — จ่ายปันผลเป็นหุ้นใหม่ จำนวนหุ้นเพิ่ม ราคาปรับลดตามสัดส่วน มูลค่ารวมเท่าเดิม</li>
+<li><b>แตกพาร์ (Stock Split)</b> — ลดมูลค่าที่ตราไว้ต่อหุ้น เช่น พาร์ 10 → 1 บาท จำนวนหุ้นเพิ่ม 10 เท่า ราคาลด 10 เท่า มูลค่ารวมเท่าเดิม ช่วยให้ซื้อขายสะดวกขึ้น</li>
+<li><b>รวมพาร์ (Reverse Split)</b> — ตรงข้ามกับแตกพาร์</li>
+</ul>
+<div class="calc">ถือ 1,000 หุ้น ราคา 100 บาท แตกพาร์จาก 5 บาทเป็น 1 บาท → ได้ 5,000 หุ้น ราคาทางทฤษฎี 20 บาท มูลค่ารวม 100,000 บาทเท่าเดิม</div>
+
+<h3>10.6 ใบสำคัญแสดงสิทธิ (Warrant)</h3>
+<p>ให้สิทธิผู้ถือ <b>ซื้อหุ้นสามัญ</b> ในราคาและช่วงเวลาที่กำหนด ไม่ใช่ภาระผูกพัน ราคาวอร์แรนต์มักเคลื่อนไหวแรงกว่าหุ้นแม่ และหมดค่าเมื่อหมดอายุถ้าราคาใช้สิทธิสูงกว่าราคาหุ้น</p>
+
+<h3>10.7 ข้อมูลการซื้อขายหุ้นไทยที่ควรรู้</h3>
+<ul>
+<li>ตลาดหลักทรัพย์แห่งประเทศไทย (SET) สำหรับบริษัทขนาดใหญ่ และ mai สำหรับบริษัทขนาดกลางและเล็ก</li>
+<li>หน่วยการซื้อขายปกติ (Board Lot) 100 หุ้น</li>
+<li>ชำระราคาและส่งมอบ T+2</li>
+<li>ช่วงราคาสูงสุด/ต่ำสุดต่อวัน (Ceiling/Floor) ±30% จากราคาปิดวันก่อน</li>
+</ul>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> ความหมาย XD/XR/XM / วัน XD อยู่ก่อน Record Date 1 วันทำการ / คำนวณราคาหลัง XR / หุ้นบุริมสิทธิแบบสะสม / แตกพาร์ไม่เปลี่ยนมูลค่ารวม</div>
+`,
+quiz:[
+{q:"เครื่องหมาย XD หมายความว่าอย่างไร",o:["ผู้ซื้อหุ้นในวันนั้นได้รับเงินปันผลสองเท่า","ผู้ซื้อหุ้นตั้งแต่วันนั้นจะไม่ได้รับสิทธิในเงินปันผลรอบนั้น","บริษัทงดจ่ายปันผล","หุ้นถูกพักการซื้อขาย"],a:1,e:"XD = Excluding Dividend ผู้ที่ซื้อตั้งแต่วัน XD จะชำระราคาและมีชื่อหลัง Record Date จึงไม่ได้สิทธิรับเงินปันผลรอบนั้น"},
+{q:"หุ้นราคา 15 บาท บริษัทให้สิทธิจองซื้อหุ้นเพิ่มทุน 2 หุ้นเดิมต่อ 1 หุ้นใหม่ ราคาจอง 9 บาท ราคาทางทฤษฎีหลัง XR เท่ากับเท่าใด",o:["12.00 บาท","13.00 บาท","14.00 บาท","11.50 บาท"],a:1,e:"ราคาหลัง XR = (2 × 15 + 1 × 9) ÷ 3 = 39 ÷ 3 = 13.00 บาท ใช้หลักถัวเฉลี่ยถ่วงน้ำหนักระหว่างหุ้นเดิมกับหุ้นใหม่ที่ราคาจอง"},
+{q:"หุ้นบุริมสิทธิชนิดสะสมเงินปันผล (Cumulative) มีลักษณะอย่างไร",o:["ได้ปันผลหลังหุ้นสามัญ","ปันผลที่ไม่ได้จ่ายในปีใดจะถูกสะสม และต้องจ่ายย้อนหลังให้ครบก่อนจ่ายหุ้นสามัญ","ได้สิทธิออกเสียงสะสมทุกปี","สะสมเงินต้นคืนเมื่อครบกำหนด"],a:1,e:"Cumulative Preferred ปกป้องผู้ถือหุ้นบุริมสิทธิ ถ้าบริษัทงดจ่ายปันผลบางปี ยอดนั้นจะค้างไว้ บริษัทต้องจ่ายคืนครบก่อนจึงจ่ายปันผลหุ้นสามัญได้"},
+{q:"Record Date ของหุ้น A คือวันอังคาร (ไม่มีวันหยุดในสัปดาห์นั้น) วันสุดท้ายที่ซื้อแล้วยังได้รับเงินปันผลคือวันใด",o:["วันอังคาร","วันจันทร์","วันศุกร์ของสัปดาห์ก่อน","วันพุธ"],a:2,e:"ด้วยระบบ T+2 วัน XD = 1 วันทำการก่อน Record Date คือวันจันทร์ วันสุดท้ายที่ซื้อแล้วได้สิทธิคือวันทำการก่อนวัน XD คือวันศุกร์ ซึ่งชำระราคาครบในวันอังคารพอดี"},
+{q:"นักลงทุนถือหุ้น 2,000 หุ้น ราคา 60 บาท บริษัทแตกพาร์จาก 10 บาทเป็น 5 บาท ข้อใดถูกต้องทางทฤษฎี",o:["ถือ 4,000 หุ้น ราคา 30 บาท มูลค่ารวมเท่าเดิม","ถือ 1,000 หุ้น ราคา 120 บาท","ถือ 4,000 หุ้น ราคา 60 บาท มูลค่าเพิ่มเป็นสองเท่า","ถือ 2,000 หุ้น ราคา 30 บาท"],a:0,e:"พาร์ลดลงครึ่งหนึ่ง จำนวนหุ้นจึงเพิ่มเป็นสองเท่าเป็น 4,000 หุ้น และราคาปรับเหลือครึ่งหนึ่งเป็น 30 บาท มูลค่ารวมยังเป็น 120,000 บาท การแตกพาร์ไม่สร้างมูลค่าใหม่"}
+]});
+
+CH.push({
+id:"risk", part:1, title:"การคำนวณอัตราผลตอบแทนและความเสี่ยง (Expected Return, S.D., Beta)",
+lead:"วัดผลตอบแทน วัดความผันผวน แยกความเสี่ยงที่กระจายได้และกระจายไม่ได้",
+body:`
+<h3>11.1 อัตราผลตอบแทนจากการถือครอง (Holding Period Return)</h3>
+<div class="calc"><b>HPR = (ราคาขาย − ราคาซื้อ + รายได้ระหว่างถือ) ÷ ราคาซื้อ</b><br>
+ซื้อหุ้น 40 บาท ได้ปันผล 2 บาท ขาย 44 บาท → HPR = (44 − 40 + 2) ÷ 40 = 6 ÷ 40 = <b>15%</b><br>
+แยกเป็น Capital Gain Yield 10% + Dividend Yield 5%</div>
+
+<h3>11.2 ผลตอบแทนเฉลี่ย: เลขคณิต vs เรขาคณิต</h3>
+<div class="calc">ปีที่ 1 กำไร +50% ปีที่ 2 ขาดทุน −50%<br>
+• เฉลี่ยเลขคณิต = (50 − 50) ÷ 2 = <b>0%</b><br>
+• เฉลี่ยเรขาคณิต = √(1.5 × 0.5) − 1 = √0.75 − 1 = <b>−13.4%</b> ต่อปี<br>
+เงิน 100 บาท → 150 → 75 บาท จริงๆ แล้ว <b>ขาดทุน</b> ค่าเฉลี่ยเรขาคณิตจึงสะท้อนผลตอบแทนทบต้นที่ได้จริง</div>
+<p>ค่าเฉลี่ยเรขาคณิต <b>น้อยกว่าหรือเท่ากับ</b> ค่าเฉลี่ยเลขคณิตเสมอ และยิ่งผันผวนมาก ส่วนต่างยิ่งมาก</p>
+
+<h3>11.3 ผลตอบแทนที่คาดหวัง (Expected Return)</h3>
+<p>คือ <b>ค่าเฉลี่ยถ่วงน้ำหนักด้วยความน่าจะเป็น</b> ของผลตอบแทนในแต่ละสถานการณ์</p>
+<div class="calc"><b>E(R) = Σ (ความน่าจะเป็น × ผลตอบแทน)</b><br>
+<table class="mini"><tr><th>ภาวะเศรษฐกิจ</th><th>ความน่าจะเป็น</th><th>ผลตอบแทน</th><th>p × R</th></tr>
+<tr><td>ขยายตัว</td><td>0.3</td><td>20%</td><td>6.0%</td></tr>
+<tr><td>ปกติ</td><td>0.5</td><td>10%</td><td>5.0%</td></tr>
+<tr><td>ถดถอย</td><td>0.2</td><td>−5%</td><td>−1.0%</td></tr></table>
+E(R) = 6 + 5 − 1 = <b>10%</b></div>
+
+<h3>11.4 ความเสี่ยง: ความแปรปรวนและส่วนเบี่ยงเบนมาตรฐาน (S.D.)</h3>
+<p>S.D. วัดว่าผลตอบแทนจริง <b>กระจายห่างจากค่าที่คาดหวังมากแค่ไหน</b> ยิ่งมาก ยิ่งผันผวน</p>
+<div class="calc"><b>Variance = Σ p × (R − E(R))²</b> และ <b>S.D. = √Variance</b><br>
+จากตารางข้างบน: 0.3 × (20 − 10)² + 0.5 × (10 − 10)² + 0.2 × (−5 − 10)²<br>
+= 0.3 × 100 + 0 + 0.2 × 225 = 30 + 45 = 75 → S.D. = √75 = <b>8.66%</b></div>
+<div class="pic"><b>ภาพจำ:</b> นักธนูสองคน ยิงได้คะแนนเฉลี่ยเท่ากัน แต่คนแรกลูกธนูกระจุกกันใกล้เป้า อีกคนกระจายทั่วกระดาน S.D. คือ “ความกระจาย” ของลูกธนู ไม่ใช่ “ค่าเฉลี่ย”</div>
+<p>ถ้าผลตอบแทนกระจายแบบปกติ ประมาณ <b>68%</b> ของโอกาสจะอยู่ในช่วง E(R) ± 1 S.D. และประมาณ <b>95%</b> อยู่ในช่วง ± 2 S.D. เช่น E(R) 10% S.D. 8.66% → มีโอกาสราว 68% ที่ผลตอบแทนอยู่ระหว่าง 1.34% ถึง 18.66%</p>
+<h4>สัมประสิทธิ์ความแปรปรวน (Coefficient of Variation)</h4>
+<div class="calc"><b>CV = S.D. ÷ E(R)</b> = ความเสี่ยงต่อผลตอบแทน 1 หน่วย ยิ่งต่ำยิ่งดี<br>
+หลักทรัพย์ A: E(R) 12%, S.D. 18% → CV = 1.5 / หลักทรัพย์ B: E(R) 8%, S.D. 10% → CV = 1.25 → <b>B คุ้มค่าความเสี่ยงกว่า</b></div>
+
+<h3>11.5 พอร์ตการลงทุนและการกระจายความเสี่ยง</h3>
+<div class="calc"><b>ผลตอบแทนพอร์ต = Σ (น้ำหนัก × ผลตอบแทนแต่ละตัว)</b><br>
+<b>Variance พอร์ต 2 หลักทรัพย์ = w₁²σ₁² + w₂²σ₂² + 2w₁w₂ρσ₁σ₂</b><br><br>
+ลงทุน 50/50 ในหลักทรัพย์ S.D. 20% และ 10%<br>
+• ρ = +1 → S.D. พอร์ต = 0.5×20 + 0.5×10 = <b>15%</b> (ไม่ได้ลดความเสี่ยง)<br>
+• ρ = 0 → Variance = 0.25×400 + 0.25×100 = 125 → S.D. = <b>11.18%</b><br>
+• ρ = −1 → S.D. = |0.5×20 − 0.5×10| = <b>5%</b></div>
+<p><b>ค่าสหสัมพันธ์ (Correlation, ρ)</b> อยู่ระหว่าง −1 ถึง +1 ยิ่ง <b>ต่ำ</b> ยิ่งกระจายความเสี่ยงได้ดี ตราบใดที่ ρ &lt; +1 การกระจายการลงทุนจะทำให้ S.D. พอร์ตต่ำกว่าค่าเฉลี่ยถ่วงน้ำหนักของ S.D. แต่ละตัว</p>
+
+<h3>11.6 ความเสี่ยง 2 ประเภท</h3>
+<div class="tbl"><table>
+<tr><th></th><th>ความเสี่ยงที่เป็นระบบ (Systematic)</th><th>ความเสี่ยงที่ไม่เป็นระบบ (Unsystematic)</th></tr>
+<tr><td>ชื่ออื่น</td><td>Market Risk, กระจายไม่ได้</td><td>Specific/Diversifiable Risk, กระจายได้</td></tr>
+<tr><td>สาเหตุ</td><td>ดอกเบี้ย เงินเฟ้อ เศรษฐกิจ การเมือง โรคระบาด</td><td>ปัญหาเฉพาะบริษัท เช่น ผู้บริหารทุจริต โรงงานไฟไหม้</td></tr>
+<tr><td>วัดด้วย</td><td>Beta</td><td>—</td></tr>
+<tr><td>ได้ผลตอบแทนชดเชยหรือไม่</td><td>ได้ (ตลาดให้ค่าตอบแทนความเสี่ยงนี้)</td><td>ไม่ได้ เพราะกำจัดได้ด้วยการกระจาย</td></tr>
+</table></div>
+<p>ความเสี่ยงรวม = ความเสี่ยงที่เป็นระบบ + ไม่เป็นระบบ เมื่อเพิ่มจำนวนหลักทรัพย์ในพอร์ต ความเสี่ยงที่ไม่เป็นระบบจะลดลงจนเหลือเพียงความเสี่ยงที่เป็นระบบ</p>
+
+<h3>11.7 Beta (β)</h3>
+<p><b>Beta วัดความอ่อนไหวของผลตอบแทนหลักทรัพย์ต่อผลตอบแทนตลาด</b> = Cov(Rᵢ, Rₘ) ÷ Var(Rₘ)</p>
+<div class="tbl"><table>
+<tr><th>ค่า Beta</th><th>ความหมาย</th><th>ตัวอย่าง</th></tr>
+<tr><td>β = 1</td><td>เคลื่อนไหวเท่าตลาด</td><td>ตลาด +10% → หุ้น +10%</td></tr>
+<tr><td>β &gt; 1</td><td>ผันผวนมากกว่าตลาด (Aggressive)</td><td>β 1.5: ตลาด −10% → หุ้นประมาณ −15%</td></tr>
+<tr><td>0 &lt; β &lt; 1</td><td>ผันผวนน้อยกว่าตลาด (Defensive)</td><td>β 0.6: ตลาด +10% → หุ้นประมาณ +6%</td></tr>
+<tr><td>β = 0</td><td>ไม่มีความสัมพันธ์กับตลาด</td><td>สินทรัพย์ปลอดความเสี่ยง</td></tr>
+<tr><td>β &lt; 0</td><td>เคลื่อนไหวสวนทางตลาด</td><td>พบได้น้อย</td></tr>
+</table></div>
+<p><b>Beta ของพอร์ต</b> = ค่าเฉลี่ยถ่วงน้ำหนักของ Beta แต่ละตัว เช่น 60% ใน β 1.2 + 40% ใน β 0.7 → β พอร์ต = 0.72 + 0.28 = <b>1.00</b></p>
+
+<h3>11.8 CAPM — ผลตอบแทนที่ควรได้รับ</h3>
+<div class="calc"><b>E(Rᵢ) = Rf + β × (Rₘ − Rf)</b><br>
+Rf = ผลตอบแทนปลอดความเสี่ยง, (Rₘ − Rf) = ส่วนชดเชยความเสี่ยงตลาด (Market Risk Premium)<br><br>
+Rf 2%, Rₘ 8%, β 1.5 → E(R) = 2% + 1.5 × 6% = <b>11%</b><br>
+ถ้านักวิเคราะห์คาดว่าหุ้นนี้ให้ 13% (สูงกว่า 11%) → อยู่ <b>เหนือเส้น SML</b> = ราคาถูกเกินไป (Undervalued) น่าซื้อ<br>
+ถ้าคาดว่าให้ 9% (ต่ำกว่า 11%) → อยู่ <b>ใต้เส้น SML</b> = ราคาแพงเกินไป (Overvalued)</div>
+
+<h3>11.9 Sharpe Ratio — ผลตอบแทนต่อความเสี่ยงรวม</h3>
+<div class="calc"><b>Sharpe = (Rp − Rf) ÷ S.D.p</b> ยิ่งสูงยิ่งดี<br>
+กองทุน A: ผลตอบแทน 12%, S.D. 10% / กองทุน B: 10%, S.D. 6% / Rf 2%<br>
+A = 10 ÷ 10 = 1.00 / B = 8 ÷ 6 = 1.33 → <b>B ดีกว่า</b> แม้ผลตอบแทนต่ำกว่า</div>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> คำนวณ E(R) และ S.D. จากตาราง / Beta วัดความเสี่ยงที่เป็นระบบ / กระจายการลงทุนลดได้เฉพาะความเสี่ยงที่ไม่เป็นระบบ / CAPM / Sharpe ใช้ S.D. ส่วน Treynor ใช้ Beta</div>
+`,
+quiz:[
+{q:"หลักทรัพย์มีโอกาสให้ผลตอบแทน 25% ด้วยความน่าจะเป็น 0.4 และ 5% ด้วยความน่าจะเป็น 0.6 ผลตอบแทนที่คาดหวังเท่ากับเท่าใด",o:["15%","13%","12%","10%"],a:1,e:"E(R) = 0.4 × 25% + 0.6 × 5% = 10% + 3% = 13% เป็นค่าเฉลี่ยถ่วงน้ำหนักด้วยความน่าจะเป็น ไม่ใช่ค่าเฉลี่ยธรรมดา (15%)"},
+{q:"หุ้นที่มี Beta เท่ากับ 1.3 หมายความว่าอย่างไร",o:["มีความเสี่ยงที่ไม่เป็นระบบสูงกว่าตลาด 30%","เมื่อตลาดเปลี่ยนแปลง 10% หุ้นมีแนวโน้มเปลี่ยนแปลงประมาณ 13% ในทิศทางเดียวกัน","ให้ผลตอบแทนสูงกว่าตลาด 1.3% ทุกปี","มีความผันผวนน้อยกว่าตลาด"],a:1,e:"Beta วัดความอ่อนไหวต่อตลาด β 1.3 เคลื่อนไหวแรงกว่าตลาด 1.3 เท่าในทิศเดียวกัน Beta วัดความเสี่ยงที่เป็นระบบ ไม่ใช่ความเสี่ยงเฉพาะตัว"},
+{q:"Rf = 3% ผลตอบแทนตลาด = 9% หุ้น X มี Beta 0.8 ตาม CAPM ผลตอบแทนที่ควรได้รับเท่ากับเท่าใด",o:["7.2%","7.8%","9.0%","10.2%"],a:1,e:"E(R) = 3% + 0.8 × (9% − 3%) = 3% + 4.8% = 7.8% Beta คูณกับส่วนชดเชยความเสี่ยงตลาด ไม่ใช่คูณกับผลตอบแทนตลาดทั้งหมด (ซึ่งจะได้ 7.2% ซึ่งผิด)"},
+{q:"การกระจายการลงทุนในหลักทรัพย์จำนวนมาก ช่วยลดความเสี่ยงประเภทใด",o:["ความเสี่ยงที่เป็นระบบ","ความเสี่ยงที่ไม่เป็นระบบ","ความเสี่ยงจากอัตราดอกเบี้ยทั้งระบบ","ความเสี่ยงจากภาวะเศรษฐกิจถดถอย"],a:1,e:"ปัญหาเฉพาะบริษัทหนึ่งจะถูกหักล้างด้วยบริษัทอื่นในพอร์ต จึงลดลงได้ด้วยการกระจาย แต่ดอกเบี้ย เศรษฐกิจ และปัจจัยมหภาคกระทบทุกหลักทรัพย์พร้อมกัน จึงกระจายไม่ได้"},
+{q:"กองทุน P ให้ผลตอบแทน 14% S.D. 16% กองทุน Q ให้ผลตอบแทน 9% S.D. 7% Rf = 2% กองทุนใดมี Sharpe Ratio สูงกว่า",o:["P (0.75)","Q (1.00)","เท่ากัน","P (0.88)"],a:1,e:"Sharpe P = (14 − 2) ÷ 16 = 0.75, Sharpe Q = (9 − 2) ÷ 7 = 1.00 กองทุน Q ให้ผลตอบแทนส่วนเกินต่อความเสี่ยงรวมสูงกว่า"},
+{q:"พอร์ตลงทุนสองหลักทรัพย์ 50:50 มี S.D. 20% เท่ากัน ค่าสหสัมพันธ์เท่าใดทำให้ S.D. พอร์ตต่ำที่สุด",o:["+1","+0.5","0","−1"],a:3,e:"ρ = −1 หมายถึงเคลื่อนไหวสวนทางกันสมบูรณ์ เมื่อสัดส่วนเหมาะสม (กรณีนี้ 50:50 และ S.D. เท่ากัน) ความผันผวนหักล้างกันหมด S.D. พอร์ต = |0.5 × 20 − 0.5 × 20| = 0%"}
+]});
+
+CH.push({
+id:"ratio", part:3, title:"การคำนวณอัตราส่วนทางการเงินพื้นฐาน (P/E, P/BV, Dividend Yield)",
+lead:"อ่านความถูกแพงของหุ้นจากตัวเลขในงบการเงิน",
+body:`
+<h3>12.1 ตัวเลขตั้งต้นที่ต้องรู้</h3>
+<div class="tbl"><table>
+<tr><th>ตัวเลข</th><th>สูตร</th><th>ความหมาย</th></tr>
+<tr><td>EPS (กำไรต่อหุ้น)</td><td>(กำไรสุทธิ − เงินปันผลหุ้นบุริมสิทธิ) ÷ จำนวนหุ้นสามัญ</td><td>กำไรที่เป็นของผู้ถือหุ้นสามัญต่อ 1 หุ้น</td></tr>
+<tr><td>BVPS (มูลค่าทางบัญชีต่อหุ้น)</td><td>ส่วนของผู้ถือหุ้นสามัญ ÷ จำนวนหุ้นสามัญ</td><td>ทรัพย์สินสุทธิ (สินทรัพย์ − หนี้สิน) ต่อ 1 หุ้นตามบัญชี</td></tr>
+<tr><td>DPS (เงินปันผลต่อหุ้น)</td><td>เงินปันผลจ่ายหุ้นสามัญ ÷ จำนวนหุ้นสามัญ</td><td>เงินสดที่ผู้ถือหุ้นได้รับต่อหุ้น</td></tr>
+</table></div>
+
+<h3>12.2 อัตราส่วนหลัก</h3>
+<div class="tbl"><table>
+<tr><th>อัตราส่วน</th><th>สูตร</th><th>อ่านอย่างไร</th></tr>
+<tr><td><b>P/E</b></td><td>ราคาหุ้น ÷ EPS</td><td>ผู้ลงทุนยอมจ่ายกี่บาทเพื่อกำไร 1 บาท หรือต้องใช้กำไรกี่ปีจึงคืนทุน (ถ้ากำไรคงที่) P/E สูงอาจสะท้อนความคาดหวังการเติบโต หรือราคาแพง</td></tr>
+<tr><td><b>P/BV</b></td><td>ราคาหุ้น ÷ BVPS</td><td>ราคาตลาดเป็นกี่เท่าของมูลค่าทางบัญชี &lt; 1 = ซื้อต่ำกว่ามูลค่าทางบัญชี (อาจถูก หรือตลาดกังวลคุณภาพสินทรัพย์) เหมาะกับธุรกิจที่มีสินทรัพย์มาก เช่น ธนาคาร</td></tr>
+<tr><td><b>Dividend Yield</b></td><td>DPS ÷ ราคาหุ้น</td><td>ผลตอบแทนจากเงินปันผลต่อราคาที่จ่าย ราคาหุ้นลด → Dividend Yield เพิ่ม (ถ้าปันผลเท่าเดิม)</td></tr>
+<tr><td>Payout Ratio</td><td>DPS ÷ EPS</td><td>สัดส่วนกำไรที่จ่ายเป็นปันผล ส่วนที่เหลือ (Retention) เก็บไว้ลงทุนต่อ</td></tr>
+<tr><td>Earnings Yield</td><td>EPS ÷ ราคา = 1 ÷ P/E</td><td>ใช้เทียบกับดอกเบี้ยพันธบัตร</td></tr>
+<tr><td>ROE</td><td>กำไรสุทธิ ÷ ส่วนของผู้ถือหุ้น</td><td>บริษัทสร้างกำไรจากเงินของผู้ถือหุ้นได้ดีแค่ไหน</td></tr>
+<tr><td>ROA</td><td>กำไรสุทธิ ÷ สินทรัพย์รวม</td><td>ประสิทธิภาพการใช้สินทรัพย์ทั้งหมด</td></tr>
+<tr><td>D/E</td><td>หนี้สินรวม ÷ ส่วนของผู้ถือหุ้น</td><td>ระดับการก่อหนี้ ยิ่งสูงยิ่งเสี่ยงทางการเงิน</td></tr>
+<tr><td>Current Ratio</td><td>สินทรัพย์หมุนเวียน ÷ หนี้สินหมุนเวียน</td><td>สภาพคล่องระยะสั้น</td></tr>
+</table></div>
+
+<h3>12.3 ตัวอย่างครบวงจร</h3>
+<div class="calc">บริษัท ABC: กำไรสุทธิ 500 ล้านบาท (ไม่มีหุ้นบุริมสิทธิ) หุ้นสามัญ 250 ล้านหุ้น ส่วนของผู้ถือหุ้น 2,500 ล้านบาท ราคาหุ้น 30 บาท จ่ายปันผล 1.20 บาท/หุ้น<br><br>
+• EPS = 500 ÷ 250 = <b>2.00 บาท</b><br>
+• P/E = 30 ÷ 2 = <b>15 เท่า</b><br>
+• BVPS = 2,500 ÷ 250 = <b>10 บาท</b> → P/BV = 30 ÷ 10 = <b>3 เท่า</b><br>
+• Dividend Yield = 1.20 ÷ 30 = <b>4%</b><br>
+• Payout Ratio = 1.20 ÷ 2.00 = <b>60%</b><br>
+• ROE = 500 ÷ 2,500 = <b>20%</b><br>
+• ตรวจสอบ: P/BV = P/E × ROE = 15 × 0.20 = 3 ✓</div>
+<div class="pic"><b>ภาพจำ P/E:</b> ซื้อร้านชาไข่มุกราคา 1.5 ล้าน ร้านทำกำไรปีละ 1 แสน P/E = 15 คือ “ใช้ 15 ปีคืนทุนถ้ากำไรไม่โต” คนยอมจ่าย P/E สูงเมื่อเชื่อว่ากำไรจะโตเร็ว<br><b>ภาพจำ P/BV:</b> ซื้อบ้านมือสองราคา 3 ล้าน ทั้งที่มูลค่าตามบัญชี 1 ล้าน = P/BV 3 เท่า ยอมจ่ายแพงกว่าบัญชีเพราะทำเลดีหรือหาเงินได้เก่ง</div>
+
+<h3>12.4 ข้อควรระวังในการตีความ</h3>
+<ul>
+<li>เปรียบเทียบอัตราส่วน <b>ภายในอุตสาหกรรมเดียวกัน</b> เพราะธุรกิจต่างประเภทมีระดับปกติต่างกัน</li>
+<li>P/E ใช้ไม่ได้เมื่อบริษัทขาดทุน (EPS ติดลบ)</li>
+<li>Dividend Yield สูงผิดปกติ อาจเกิดจากราคาหุ้นดิ่งเพราะปัญหาธุรกิจ และปันผลอาจถูกลดในอนาคต</li>
+<li>ต้องหักเงินปันผลหุ้นบุริมสิทธิออกก่อนคำนวณ EPS ของหุ้นสามัญเสมอ</li>
+</ul>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> คำนวณ P/E, P/BV, DY จากข้อมูลที่ให้ / EPS ต้องหักปันผลหุ้นบุริมสิทธิ / ราคาหุ้นลดลงแต่ปันผลเท่าเดิม Dividend Yield สูงขึ้น / Earnings Yield = 1/PE</div>
+`,
+quiz:[
+{q:"หุ้นราคา 48 บาท มี EPS 4 บาท P/E เท่ากับเท่าใด",o:["8 เท่า","12 เท่า","16 เท่า","0.083 เท่า"],a:1,e:"P/E = ราคา ÷ EPS = 48 ÷ 4 = 12 เท่า หมายความว่าผู้ลงทุนจ่าย 12 บาทเพื่อแลกกับกำไร 1 บาทต่อปี"},
+{q:"บริษัทมีกำไรสุทธิ 220 ล้านบาท จ่ายปันผลหุ้นบุริมสิทธิ 20 ล้านบาท มีหุ้นสามัญ 100 ล้านหุ้น EPS ของหุ้นสามัญเท่ากับเท่าใด",o:["2.20 บาท","2.00 บาท","2.40 บาท","1.80 บาท"],a:1,e:"EPS = (220 − 20) ÷ 100 = 2.00 บาท ต้องหักส่วนที่เป็นของผู้ถือหุ้นบุริมสิทธิออกก่อน เพราะ EPS วัดกำไรที่เป็นของหุ้นสามัญ"},
+{q:"หุ้นราคา 25 บาท ส่วนของผู้ถือหุ้น 1,500 ล้านบาท มีหุ้น 300 ล้านหุ้น P/BV เท่ากับเท่าใด",o:["5 เท่า","0.2 เท่า","2.5 เท่า","6 เท่า"],a:0,e:"BVPS = 1,500 ÷ 300 = 5 บาท P/BV = 25 ÷ 5 = 5 เท่า"},
+{q:"หุ้นจ่ายปันผลปีละ 1.50 บาท หากราคาหุ้นลดลงจาก 30 บาทเป็น 25 บาท โดยปันผลเท่าเดิม Dividend Yield เปลี่ยนแปลงอย่างไร",o:["ลดลงจาก 6% เป็น 5%","เพิ่มขึ้นจาก 5% เป็น 6%","คงที่ 5%","เพิ่มขึ้นจาก 5% เป็น 7.5%"],a:1,e:"เดิม DY = 1.50 ÷ 30 = 5% ใหม่ = 1.50 ÷ 25 = 6% ราคาที่ต่ำลงทำให้ปันผลเท่าเดิมคิดเป็นสัดส่วนสูงขึ้น"},
+{q:"บริษัทมี EPS 5 บาท จ่ายปันผล 3 บาทต่อหุ้น อัตราการจ่ายปันผล (Payout Ratio) เท่ากับเท่าใด",o:["40%","60%","166.7%","15%"],a:1,e:"Payout = DPS ÷ EPS = 3 ÷ 5 = 60% อีก 40% คือกำไรสะสมที่บริษัทเก็บไว้ลงทุนต่อ"}
+]});
+
+CH.push({
+id:"macro", part:1, title:"กลไกตลาดการเงินและปัจจัยเศรษฐกิจมหภาค",
+lead:"ตลาดการเงินทำงานอย่างไร ใครกำกับ และเศรษฐกิจกระทบราคาสินทรัพย์ทางไหน",
+body:`
+<h3>13.1 ระบบการเงินทำหน้าที่อะไร</h3>
+<p>ระบบการเงินเป็น <b>สะพานเชื่อมระหว่างผู้มีเงินออมส่วนเกิน</b> (ครัวเรือน) <b>กับผู้ต้องการเงินทุน</b> (ธุรกิจ รัฐบาล) ผ่าน 2 ช่องทาง</p>
+<div class="tbl"><table>
+<tr><th>ช่องทาง</th><th>วิธีการ</th><th>ตัวอย่าง</th></tr>
+<tr><td>การระดมทุนทางอ้อม</td><td>ผ่านตัวกลางทางการเงินที่รับความเสี่ยงไว้เอง</td><td>ฝากเงินธนาคาร ธนาคารนำไปปล่อยกู้</td></tr>
+<tr><td>การระดมทุนทางตรง</td><td>ผู้ออมซื้อหลักทรัพย์ของผู้ระดมทุนโดยตรง รับความเสี่ยงเอง</td><td>ซื้อหุ้น หุ้นกู้ พันธบัตร</td></tr>
+</table></div>
+
+<h3>13.2 ประเภทของตลาด</h3>
+<div class="tbl"><table>
+<tr><th>แบ่งตาม</th><th>ประเภท</th><th>ลักษณะ</th></tr>
+<tr><td rowspan="2">อายุของเงินทุน</td><td>ตลาดเงิน (Money Market)</td><td>ระยะสั้นไม่เกิน 1 ปี เช่น ตั๋วเงินคลัง ตลาดซื้อคืนพันธบัตร (Repo)</td></tr>
+<tr><td>ตลาดทุน (Capital Market)</td><td>ระยะยาวเกิน 1 ปี เช่น หุ้น หุ้นกู้ระยะยาว</td></tr>
+<tr><td rowspan="2">ขั้นตอนการขาย</td><td>ตลาดแรก (Primary)</td><td>ผู้ออกขายครั้งแรก เงินเข้าผู้ออกโดยตรง เช่น IPO</td></tr>
+<tr><td>ตลาดรอง (Secondary)</td><td>ผู้ลงทุนซื้อขายกันเอง เงินไม่เข้าผู้ออก แต่สร้างสภาพคล่องและราคาอ้างอิง</td></tr>
+<tr><td rowspan="2">รูปแบบการซื้อขาย</td><td>ตลาดที่มีศูนย์กลาง (Exchange)</td><td>SET, mai, TFEX</td></tr>
+<tr><td>ตลาดซื้อขายนอกตลาด (OTC)</td><td>ตราสารหนี้ส่วนใหญ่ ซื้อขายผ่านการเจรจา</td></tr>
+</table></div>
+
+<h3>13.3 ผู้กำกับดูแลและผู้เกี่ยวข้องในไทย</h3>
+<ul>
+<li><b>ก.ล.ต. (สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์)</b> — กำกับตลาดทุน ออกใบอนุญาต อนุมัติการเสนอขายหลักทรัพย์ ให้ความเห็นชอบ IC</li>
+<li><b>ธปท. (ธนาคารแห่งประเทศไทย)</b> — ดูแลนโยบายการเงิน เสถียรภาพระบบการเงิน และกำกับสถาบันการเงิน</li>
+<li><b>กนง. (คณะกรรมการนโยบายการเงิน)</b> — กำหนดอัตราดอกเบี้ยนโยบาย ภายใต้กรอบเป้าหมายเงินเฟ้อ</li>
+<li><b>ตลาดหลักทรัพย์แห่งประเทศไทย</b> — จัดระบบซื้อขาย ดูแลบริษัทจดทะเบียนและสมาชิก</li>
+<li><b>ThaiBMA</b> — ศูนย์ข้อมูลและราคาอ้างอิงตราสารหนี้</li>
+<li><b>กระทรวงการคลัง</b> — นโยบายการคลัง ออกพันธบัตรรัฐบาล</li>
+</ul>
+
+<h3>13.4 ตัวชี้วัดเศรษฐกิจหลัก</h3>
+<h4>ผลิตภัณฑ์มวลรวมในประเทศ (GDP)</h4>
+<div class="calc"><b>GDP = C + I + G + (X − M)</b><br>C = การบริโภคภาคเอกชน, I = การลงทุนภาคเอกชน, G = การใช้จ่ายภาครัฐ, X − M = ส่งออกสุทธิ</div>
+<h4>เงินเฟ้อ (Inflation)</h4>
+<p>การเพิ่มขึ้นของระดับราคาสินค้าทั่วไป วัดด้วย <b>ดัชนีราคาผู้บริโภค (CPI)</b> <b>เงินเฟ้อทั่วไป (Headline)</b> รวมอาหารสดและพลังงาน ส่วน <b>เงินเฟ้อพื้นฐาน (Core)</b> ตัดสองหมวดนี้ออกเพราะผันผวนสูง</p>
+<div class="calc"><b>ผลตอบแทนที่แท้จริง ≈ ผลตอบแทนที่เป็นตัวเงิน − อัตราเงินเฟ้อ</b><br>
+แบบแม่นยำ: (1 + ผลตอบแทนตัวเงิน) = (1 + ผลตอบแทนแท้จริง) × (1 + เงินเฟ้อ)<br>
+เงินฝากได้ 2% เงินเฟ้อ 3% → ผลตอบแทนแท้จริงประมาณ <b>−1%</b> อำนาจซื้อลดลงแม้เงินในบัญชีเพิ่ม</div>
+
+<h3>13.5 นโยบายการเงินและนโยบายการคลัง</h3>
+<div class="tbl"><table>
+<tr><th></th><th>นโยบายการเงิน</th><th>นโยบายการคลัง</th></tr>
+<tr><td>ผู้ดูแล</td><td>ธปท./กนง.</td><td>รัฐบาล/กระทรวงการคลัง</td></tr>
+<tr><td>เครื่องมือ</td><td>อัตราดอกเบี้ยนโยบาย ปริมาณเงิน</td><td>ภาษี งบประมาณรายจ่าย การก่อหนี้สาธารณะ</td></tr>
+<tr><td>แบบผ่อนคลาย/ขยายตัว</td><td>ลดดอกเบี้ย เพิ่มสภาพคล่อง</td><td>ลดภาษี เพิ่มรายจ่าย (งบขาดดุล)</td></tr>
+<tr><td>แบบเข้มงวด/หดตัว</td><td>ขึ้นดอกเบี้ย ลดสภาพคล่อง</td><td>ขึ้นภาษี ลดรายจ่าย</td></tr>
+</table></div>
+
+<h3>13.6 ปัจจัยมหภาคกระทบสินทรัพย์อย่างไร</h3>
+<div class="tbl"><table>
+<tr><th>เหตุการณ์</th><th>ตราสารหนี้</th><th>หุ้น</th><th>เหตุผล</th></tr>
+<tr><td>ดอกเบี้ยนโยบายขึ้น</td><td>ราคาลง</td><td>มักลง</td><td>อัตราคิดลดสูงขึ้น ต้นทุนการกู้ของบริษัทเพิ่ม เงินไหลไปเงินฝาก</td></tr>
+<tr><td>ดอกเบี้ยนโยบายลด</td><td>ราคาขึ้น</td><td>มักขึ้น</td><td>ตรงข้ามกับข้างบน</td></tr>
+<tr><td>เงินเฟ้อสูงขึ้นมาก</td><td>ราคาลง</td><td>ผสม</td><td>ผู้ลงทุนเรียกร้องผลตอบแทนสูงขึ้น ธนาคารกลางมักขึ้นดอกเบี้ย</td></tr>
+<tr><td>เศรษฐกิจขยายตัวดี</td><td>อาจลง</td><td>ขึ้น</td><td>กำไรบริษัทเพิ่ม ดอกเบี้ยมีแนวโน้มขึ้น</td></tr>
+<tr><td>เงินบาทอ่อนค่า</td><td>—</td><td>ผู้ส่งออกได้ประโยชน์ ผู้นำเข้าเสียประโยชน์</td><td>รายได้สกุลต่างประเทศแปลงเป็นบาทได้มากขึ้น</td></tr>
+<tr><td>เงินบาทแข็งค่า</td><td>—</td><td>ผู้นำเข้าได้ประโยชน์ ผู้ส่งออกเสียประโยชน์</td><td>ต้นทุนนำเข้าถูกลง</td></tr>
+</table></div>
+
+<h3>13.7 วัฏจักรเศรษฐกิจ</h3>
+<p>เศรษฐกิจเคลื่อนเป็นวงรอบ <b>ฟื้นตัว → ขยายตัว (เฟื่องฟู) → ชะลอตัว → ถดถอย</b> ช่วงฟื้นตัวหุ้นกลุ่มวัฏจักร (Cyclical) เช่น ธนาคาร วัสดุก่อสร้าง มักโดดเด่น ช่วงถดถอยหุ้นกลุ่มปลอดภัย (Defensive) เช่น อาหาร สาธารณูปโภค และตราสารหนี้ภาครัฐมักให้ผลดีกว่า</p>
+<div class="pic"><b>ภาพจำ:</b> ดอกเบี้ยเหมือน <b>แรงโน้มถ่วงของราคาสินทรัพย์</b> ยิ่งแรง ราคาทุกอย่างยิ่งถูกดึงลง เพราะเงินในอนาคตถูกคิดลดมากขึ้น และเงินฝากธรรมดาก็ให้ผลตอบแทนที่แข่งได้</div>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> ตลาดแรก vs ตลาดรอง / หน่วยงานใดกำหนดดอกเบี้ยนโยบาย / ผลของดอกเบี้ยขึ้นต่อตราสารหนี้และหุ้น / ผลตอบแทนที่แท้จริง / ส่วนประกอบ GDP / ค่าเงินกับผู้ส่งออก</div>
+`,
+quiz:[
+{q:"บริษัทเสนอขายหุ้นต่อประชาชนเป็นครั้งแรก (IPO) เกิดขึ้นในตลาดใด",o:["ตลาดรอง","ตลาดแรก","ตลาดเงิน","ตลาดซื้อขายล่วงหน้า"],a:1,e:"ตลาดแรกคือการขายหลักทรัพย์ครั้งแรกจากผู้ออกไปยังผู้ลงทุน เงินที่ระดมได้เข้าบริษัทโดยตรง หลังจากนั้นการซื้อขายระหว่างผู้ลงทุนเกิดในตลาดรอง"},
+{q:"หน่วยงานใดเป็นผู้กำหนดอัตราดอกเบี้ยนโยบายของไทย",o:["ก.ล.ต.","กระทรวงการคลัง","คณะกรรมการนโยบายการเงิน (กนง.)","ตลาดหลักทรัพย์แห่งประเทศไทย"],a:2,e:"กนง. ซึ่งอยู่ภายใต้ ธปท. เป็นผู้กำหนดอัตราดอกเบี้ยนโยบายเพื่อดูแลเงินเฟ้อและเสถียรภาพเศรษฐกิจ ก.ล.ต. กำกับตลาดทุน กระทรวงการคลังดูแลนโยบายการคลัง"},
+{q:"เงินฝากประจำให้ดอกเบี้ย 1.5% ต่อปี อัตราเงินเฟ้อ 2.5% ผลตอบแทนที่แท้จริงโดยประมาณเท่ากับเท่าใด",o:["+4.0%","+1.0%","−1.0%","−4.0%"],a:2,e:"ผลตอบแทนแท้จริง ≈ 1.5% − 2.5% = −1.0% แม้ตัวเลขเงินจะเพิ่ม แต่อำนาจซื้อลดลงเพราะราคาสินค้าเพิ่มเร็วกว่า"},
+{q:"ถ้า ธปท. ปรับขึ้นอัตราดอกเบี้ยนโยบาย ผลที่น่าจะเกิดขึ้นคือข้อใด",o:["ราคาพันธบัตรเพิ่มขึ้น","ราคาพันธบัตรลดลง และราคาหุ้นมีแรงกดดัน","สภาพคล่องในระบบเพิ่มขึ้น","ต้นทุนการกู้ยืมของบริษัทลดลง"],a:1,e:"ดอกเบี้ยที่สูงขึ้นทำให้อัตราคิดลดสูงขึ้น ราคาตราสารหนี้ลดลง ต้นทุนเงินกู้ของธุรกิจเพิ่ม และเงินฝากน่าสนใจขึ้น ราคาหุ้นจึงมักถูกกดดัน"},
+{q:"เงินบาทอ่อนค่าลงอย่างมาก บริษัทประเภทใดมีแนวโน้มได้ประโยชน์",o:["ผู้นำเข้าน้ำมัน","บริษัทที่มีหนี้สกุลดอลลาร์สูง","ผู้ส่งออกที่มีรายได้เป็นสกุลเงินต่างประเทศ","ผู้นำเข้าสินค้าฟุ่มเฟือย"],a:2,e:"เมื่อบาทอ่อน รายได้ดอลลาร์แลกเป็นบาทได้มากขึ้น และสินค้าไทยราคาถูกลงในสายตาต่างชาติ ส่วนผู้นำเข้าและผู้มีหนี้ต่างประเทศมีภาระสูงขึ้น"}
+]});
+
+CH.push({
+id:"tvm", part:1, title:"การคำนวณมูลค่าเงินตามเวลา (Time Value of Money)",
+lead:"เงินวันนี้มีค่ามากกว่าเงินในอนาคต — FV, PV, Annuity, Perpetuity, EAR",
+body:`
+<h3>14.1 หลักคิด</h3>
+<p><b>เงิน 1 บาทวันนี้มีค่ามากกว่าเงิน 1 บาทในอนาคต</b> เพราะ (1) นำไปลงทุนให้งอกเงยได้ (2) เงินเฟ้อทำให้อำนาจซื้อลดลง (3) อนาคตมีความไม่แน่นอน การนำเงินในเวลาต่างกันมาเปรียบเทียบจึงต้อง <b>ปรับให้อยู่ในเวลาเดียวกันก่อน</b></p>
+<div class="pic"><b>ภาพจำ “เครื่องย้อนเวลา”:</b> <b>FV (Future Value)</b> คือส่งเงินไปอนาคตด้วยการ <b>คูณ</b> (1+r) ทุกปี ส่วน <b>PV (Present Value)</b> คือดึงเงินอนาคตกลับมาวันนี้ด้วยการ <b>หาร</b> (1+r) ทุกปี</div>
+
+<h3>14.2 มูลค่าในอนาคต (FV) — เงินก้อนเดียว</h3>
+<div class="calc"><b>FV = PV × (1 + r)ⁿ</b><br>
+ฝาก 100,000 บาท ดอกเบี้ย 5% ทบต้นปีละครั้ง 3 ปี<br>
+FV = 100,000 × 1.05³ = 100,000 × 1.157625 = <b>115,762.50 บาท</b><br>
+เทียบดอกเบี้ยแบบไม่ทบต้น: 100,000 + 3 × 5,000 = 115,000 ส่วนต่าง 762.50 บาทคือ “ดอกเบี้ยของดอกเบี้ย”</div>
+
+<h3>14.3 มูลค่าปัจจุบัน (PV) — เงินก้อนเดียว</h3>
+<div class="calc"><b>PV = FV ÷ (1 + r)ⁿ</b><br>
+ต้องการเงิน 1,000,000 บาทในอีก 10 ปี ผลตอบแทน 6% ต่อปี ต้องลงทุนวันนี้<br>
+PV = 1,000,000 ÷ 1.06¹⁰ = 1,000,000 ÷ 1.790848 = <b>558,394.78 บาท</b></div>
+<p>ยิ่ง <b>อัตราคิดลดสูง</b> หรือ <b>ระยะเวลายาว</b> PV ยิ่งต่ำ (นี่คือเหตุผลเดียวกับที่ราคาตราสารหนี้ลดลงเมื่อดอกเบี้ยขึ้น)</p>
+
+<h3>14.4 การทบต้นมากกว่าปีละครั้ง และอัตราผลตอบแทนที่แท้จริงต่อปี (EAR)</h3>
+<div class="calc"><b>FV = PV × (1 + r/m)^(m×n)</b> และ <b>EAR = (1 + r/m)^m − 1</b> (m = จำนวนครั้งที่ทบต้นต่อปี)<br>
+ดอกเบี้ย 12% ต่อปี ทบต้นรายเดือน → EAR = (1 + 0.01)¹² − 1 = <b>12.68%</b><br>
+ดอกเบี้ย 6% ต่อปี ทบต้นรายไตรมาส → EAR = (1.015)⁴ − 1 = <b>6.14%</b><br>
+ยิ่งทบต้นถี่ EAR ยิ่งสูงกว่าอัตราที่ประกาศ (Nominal)</div>
+
+<h3>14.5 เงินงวด (Annuity)</h3>
+<p>กระแสเงินสด <b>เท่ากันทุกงวด</b> และ <b>ช่วงห่างเท่ากัน</b> มี 2 แบบ</p>
+<ul>
+<li><b>Ordinary Annuity</b> — จ่าย/รับ <b>ปลายงวด</b> เช่น ผ่อนบ้าน ดอกเบี้ยหุ้นกู้</li>
+<li><b>Annuity Due</b> — จ่าย/รับ <b>ต้นงวด</b> เช่น ค่าเช่า เบี้ยประกัน มีค่ามากกว่าแบบปลายงวด 1 งวดดอกเบี้ย คือ × (1 + r)</li>
+</ul>
+<div class="calc"><b>FV ของเงินงวด = PMT × [((1 + r)ⁿ − 1) ÷ r]</b><br>
+ออมปีละ 10,000 บาท ปลายปี 5 ปี ผลตอบแทน 5% → FV = 10,000 × [(1.276282 − 1) ÷ 0.05] = 10,000 × 5.525631 = <b>55,256.31 บาท</b><br>
+ถ้าออมต้นปี (Annuity Due) → 55,256.31 × 1.05 = <b>58,019.13 บาท</b><br><br>
+<b>PV ของเงินงวด = PMT × [(1 − (1 + r)⁻ⁿ) ÷ r]</b><br>
+รับปีละ 10,000 บาท 3 ปี (ปลายปี) อัตราคิดลด 6% → PV = 10,000 × [(1 − 1/1.191016) ÷ 0.06] = 10,000 × 2.673012 = <b>26,730.12 บาท</b></div>
+
+<h3>14.6 เงินงวดตลอดไป (Perpetuity)</h3>
+<div class="calc"><b>PV = PMT ÷ r</b><br>
+หุ้นบุริมสิทธิจ่ายปันผลคงที่ปีละ 6 บาทตลอดไป ผลตอบแทนที่ต้องการ 4% → มูลค่า = 6 ÷ 0.04 = <b>150 บาท</b><br><br>
+<b>กรณีเติบโตคงที่ (Gordon Growth Model):</b> P₀ = D₁ ÷ (k − g)<br>
+ปันผลล่าสุด D₀ = 2 บาท เติบโต 5% ต่อปี ผลตอบแทนที่ต้องการ 10% → D₁ = 2 × 1.05 = 2.10 → P₀ = 2.10 ÷ (0.10 − 0.05) = <b>42 บาท</b></div>
+
+<h3>14.7 กฎ 72 (คิดในใจ)</h3>
+<div class="calc"><b>จำนวนปีที่เงินเพิ่มเป็น 2 เท่า ≈ 72 ÷ อัตราผลตอบแทน (%)</b><br>
+ผลตอบแทน 8% → ประมาณ 9 ปี / ผลตอบแทน 6% → ประมาณ 12 ปี / ต้องการให้เงินเป็น 2 เท่าใน 4 ปี → ต้องได้ประมาณ 18% ต่อปี</div>
+<div class="hot"><b>จุดที่ออกสอบบ่อย:</b> FV/PV เงินก้อนเดียว / EAR เมื่อทบต้นรายเดือนหรือรายไตรมาส / แยก Ordinary vs Due / Perpetuity และ Gordon Model / กฎ 72 — ในห้องสอบใช้เครื่องคิดเลขได้ ให้ฝึกกดยกกำลังให้คล่อง</div>
+`,
+quiz:[
+{q:"ลงทุน 50,000 บาท ผลตอบแทน 8% ต่อปี ทบต้นปีละครั้ง เป็นเวลา 2 ปี มูลค่าในอนาคตเท่ากับเท่าใด",o:["58,000 บาท","58,320 บาท","54,000 บาท","58,640 บาท"],a:1,e:"FV = 50,000 × 1.08² = 50,000 × 1.1664 = 58,320 บาท ถ้าตอบ 58,000 คือคิดแบบไม่ทบต้น ซึ่งขาดดอกเบี้ยของดอกเบี้ยไป 320 บาท"},
+{q:"ต้องการเงิน 500,000 บาทในอีก 5 ปี ผลตอบแทน 5% ต่อปี ต้องลงทุนวันนี้ประมาณเท่าใด",o:["391,763 บาท","400,000 บาท","475,000 บาท","638,141 บาท"],a:0,e:"PV = 500,000 ÷ 1.05⁵ = 500,000 ÷ 1.276282 ≈ 391,763 บาท ส่วน 638,141 คือการคูณแทนการหาร ซึ่งเป็นการหา FV"},
+{q:"เงินฝากประกาศดอกเบี้ย 8% ต่อปี ทบต้นรายไตรมาส อัตราผลตอบแทนที่แท้จริงต่อปี (EAR) เท่ากับเท่าใด",o:["8.00%","8.16%","8.24%","8.30%"],a:2,e:"EAR = (1 + 0.08/4)⁴ − 1 = 1.02⁴ − 1 = 1.082432 − 1 = 8.24% สูงกว่า 8% เพราะดอกเบี้ยแต่ละไตรมาสถูกนำไปทบต้นต่อ"},
+{q:"หุ้นบุริมสิทธิจ่ายเงินปันผลคงที่ 5 บาทต่อปีตลอดไป ผู้ลงทุนต้องการผลตอบแทน 8% มูลค่าที่เหมาะสมคือเท่าใด",o:["40.00 บาท","62.50 บาท","50.00 บาท","5.40 บาท"],a:1,e:"Perpetuity: PV = 5 ÷ 0.08 = 62.50 บาท ยิ่งผลตอบแทนที่ต้องการสูง มูลค่ายิ่งต่ำ"},
+{q:"ตามกฎ 72 ถ้าต้องการให้เงินเพิ่มเป็น 2 เท่าภายใน 6 ปี ต้องได้ผลตอบแทนประมาณกี่เปอร์เซ็นต์ต่อปี",o:["6%","10%","12%","15%"],a:2,e:"อัตราผลตอบแทน ≈ 72 ÷ 6 = 12% ต่อปี (ค่าที่แม่นยำคือประมาณ 12.25%)"},
+{q:"เงินงวดแบบใดมีมูลค่าในอนาคตสูงกว่า เมื่อจำนวนเงิน อัตราผลตอบแทน และจำนวนงวดเท่ากัน",o:["Ordinary Annuity (ปลายงวด)","Annuity Due (ต้นงวด)","เท่ากัน","ขึ้นกับเงินเฟ้อ"],a:1,e:"Annuity Due ลงเงินตั้งแต่ต้นงวด ทุกงวดจึงได้ทบต้นนานกว่าแบบปลายงวด 1 งวด มูลค่าจึงสูงกว่า (1 + r) เท่า"}
+]});
+
+const MOCK = [];
+MOCK.push({id:"mock1", title:"ชุดที่ 1", q:[
+{"s":1,"q":"ลงทุน 50,000 บาท ผลตอบแทน 4% ต่อปี ทบต้นปีละครั้ง เป็นเวลา 5 ปี จะได้เงินรวมประมาณเท่าใด","o":["60,000.00 บาท","58,000.00 บาท","60,832.65 บาท","61,250.00 บาท"],"a":2,"e":"FV = 50,000 × 1.04⁵ = 50,000 × 1.216653 = 60,832.65 บาท ตัวเลือก 60,000 คือคิดดอกเบี้ยแบบไม่ทบต้น"},
+{"s":1,"q":"ต้องการเงิน 200,000 บาทในอีก 4 ปี ผลตอบแทน 5% ต่อปี ต้องลงทุนวันนี้ประมาณเท่าใด","o":["164,540.50 บาท","160,000.00 บาท","243,101.25 บาท","190,476.19 บาท"],"a":0,"e":"PV = 200,000 ÷ 1.05⁴ = 200,000 ÷ 1.215506 = 164,540.50 บาท ตัวเลือก 243,101.25 บาทคือการคูณแทนการหาร"},
+{"s":1,"q":"อัตราดอกเบี้ย 6% ต่อปี ทบต้นรายไตรมาส มีอัตราผลตอบแทนที่แท้จริงต่อปี (EAR) เท่าใด","o":["6.00%","6.09%","6.17%","6.14%"],"a":3,"e":"EAR = (1 + 0.06/4)⁴ − 1 = 1.015⁴ − 1 = 6.14% ส่วน 6.09% คือทบต้นรายครึ่งปี และ 6.17% คือทบต้นรายเดือน"},
+{"s":1,"q":"อัตราผลตอบแทนปลอดความเสี่ยง 2.5% ผลตอบแทนตลาด 9% หุ้นมี Beta 0.8 ตาม CAPM ผลตอบแทนที่ควรได้รับคือเท่าใด","o":["7.2%","7.7%","5.2%","9.7%"],"a":1,"e":"E(R) = 2.5% + 0.8 × (9% − 2.5%) = 2.5% + 5.2% = 7.7%"},
+{"s":1,"q":"หลักทรัพย์มีโอกาส 40% ที่จะให้ผลตอบแทน 15% และ 60% ที่จะให้ 5% ผลตอบแทนที่คาดหวังคือเท่าใด","o":["10%","8%","9%","7%"],"a":2,"e":"E(R) = 0.4 × 15% + 0.6 × 5% = 6% + 3% = 9%"},
+{"s":1,"q":"ข้อใดเป็นความเสี่ยงที่เป็นระบบ (Systematic Risk)","o":["บริษัทแห่งหนึ่งแพ้คดีสิทธิบัตร","ผู้บริหารบริษัทแห่งหนึ่งทุจริต","โรงงานของบริษัทแห่งหนึ่งเกิดไฟไหม้","ธนาคารกลางปรับขึ้นอัตราดอกเบี้ยนโยบาย"],"a":3,"e":"การเปลี่ยนดอกเบี้ยนโยบายกระทบทุกหลักทรัพย์ในตลาดพร้อมกัน จึงกระจายความเสี่ยงไม่ได้ ตัวเลือกอื่นเป็นเหตุการณ์เฉพาะบริษัท (ไม่เป็นระบบ)"},
+{"s":1,"q":"ตามกฎ 72 เงินลงทุนที่ให้ผลตอบแทน 8% ต่อปีจะเพิ่มเป็น 2 เท่าภายในประมาณกี่ปี","o":["9 ปี","8 ปี","12 ปี","6 ปี"],"a":0,"e":"72 ÷ 8 = 9 ปี"},
+{"s":1,"q":"ผลตอบแทนที่เป็นตัวเงิน 5% อัตราเงินเฟ้อ 2% ผลตอบแทนที่แท้จริงโดยประมาณคือเท่าใด","o":["7%","3%","2.5%","10%"],"a":1,"e":"ผลตอบแทนแท้จริง ≈ 5% − 2% = 3% (ค่าแม่นยำ = 1.05/1.02 − 1 ≈ 2.94%)"},
+{"s":1,"q":"พอร์ตลงทุน 60% ในหุ้น Beta 1.2 และ 40% ในหุ้น Beta 0.7 Beta ของพอร์ตคือเท่าใด","o":["1.90","0.95","1.00","0.84"],"a":2,"e":"β พอร์ต = 0.6 × 1.2 + 0.4 × 0.7 = 0.72 + 0.28 = 1.00"},
+{"s":1,"q":"ข้อใดถูกต้องเกี่ยวกับตลาดรอง","o":["เป็นตลาดที่ผู้ลงทุนซื้อขายหลักทรัพย์ที่ออกแล้วระหว่างกัน ช่วยสร้างสภาพคล่อง","เงินจากการซื้อขายเข้าบริษัทผู้ออกโดยตรง","มีเฉพาะการซื้อขายหุ้น IPO","บริษัทใช้ระดมทุนครั้งแรก"],"a":0,"e":"ตลาดรองเป็นการเปลี่ยนมือระหว่างผู้ลงทุน เงินไม่เข้าผู้ออก แต่ทำให้ผู้ลงทุนเปลี่ยนหลักทรัพย์เป็นเงินสดได้และมีราคาอ้างอิง"},
+{"s":1,"q":"หน่วยงานใดให้ความเห็นชอบบุคคลเป็นผู้แนะนำการลงทุน","o":["ธนาคารแห่งประเทศไทย","สมาคมตลาดตราสารหนี้ไทย","กรมสรรพากร","สำนักงาน ก.ล.ต."],"a":3,"e":"ก.ล.ต. กำกับตลาดทุนและให้ความเห็นชอบบุคลากรในธุรกิจหลักทรัพย์ รวมถึง IC โดยบริษัทต้นสังกัดเป็นผู้ยื่นขอ"},
+{"s":1,"q":"ในสมการ GDP = C + I + G + (X − M) ตัว G หมายถึงอะไร","o":["การลงทุนภาคเอกชน","การใช้จ่ายของภาครัฐ","รายได้จากภาษี","การส่งออก"],"a":1,"e":"G = Government Spending หรือการใช้จ่ายภาครัฐ ส่วนรายได้ภาษีไม่ได้อยู่ในสมการด้านรายจ่ายของ GDP"},
+{"s":1,"q":"ตราสารใดเป็นตราสารในตลาดเงิน","o":["หุ้นสามัญ","พันธบัตรรัฐบาลอายุ 10 ปี","ตั๋วเงินคลังอายุ 3 เดือน","หุ้นกู้อายุ 5 ปี"],"a":2,"e":"ตลาดเงินคือตลาดของตราสารอายุไม่เกิน 1 ปี ตั๋วเงินคลังอายุ 3 เดือนจึงเป็นตราสารตลาดเงิน"},
+{"s":1,"q":"ส่วนเบี่ยงเบนมาตรฐาน (S.D.) ของผลตอบแทนใช้วัดอะไร","o":["ผลตอบแทนเฉลี่ย","สภาพคล่องของหลักทรัพย์","ความเสี่ยงที่เป็นระบบเท่านั้น","ความผันผวนหรือการกระจายตัวของผลตอบแทนรอบค่าเฉลี่ย"],"a":3,"e":"S.D. วัดความเสี่ยงรวม (ทั้งที่เป็นระบบและไม่เป็นระบบ) ในรูปของความผันผวนรอบค่าคาดหวัง ส่วนความเสี่ยงที่เป็นระบบวัดด้วย Beta"},
+{"s":1,"q":"การจับคู่หลักทรัพย์ที่มีค่าสหสัมพันธ์เท่าใด ช่วยลดความเสี่ยงของพอร์ตได้มากที่สุด","o":["−0.8","+0.6","0","+1.0"],"a":0,"e":"ค่าสหสัมพันธ์ยิ่งต่ำ (ติดลบมาก) ยิ่งเคลื่อนไหวสวนทางกัน ความผันผวนหักล้างกันได้มาก"},
+{"s":2,"q":"ลูกค้ามอบเงินสดให้ IC ที่ร้านกาแฟเพื่อให้นำไปซื้อหุ้นกู้ IC ควรทำอย่างไร","o":["รับเงินแล้วนำเข้าบัญชีบริษัทภายในวันนั้น","ไม่รับเงิน แนะนำให้ลูกค้าชำระผ่านช่องทางของบริษัทโดยตรง","รับเงินและถ่ายรูปไว้เป็นหลักฐาน","รับเงินเฉพาะลูกค้าที่รู้จักกันดี"],"a":1,"e":"IC ห้ามรับเงินหรือทรัพย์สินของลูกค้าไว้กับตัวทุกกรณี หลักฐานหรือความสนิทสนมไม่ได้ทำให้กลายเป็นสิ่งที่ทำได้"},
+{"s":2,"q":"ข้อใดเป็นการกระทำที่ IC ทำได้","o":["บอกลูกค้าว่ากองทุนนี้จะไม่ขาดทุนแน่นอน","ตกลงแบ่งกำไรกับลูกค้าครึ่งหนึ่ง","อธิบายระดับความเสี่ยงและค่าธรรมเนียมตามหนังสือชี้ชวน","ซื้อขายในบัญชีลูกค้าเมื่อเห็นจังหวะดี"],"a":2,"e":"การให้ข้อมูลความเสี่ยงและค่าธรรมเนียมอย่างครบถ้วนเป็นหน้าที่ของ IC ส่วนตัวเลือกอื่นเป็นข้อห้าม"},
+{"s":2,"q":"ลูกค้ามีผลประเมินความเสี่ยงระดับ 4 สามารถลงทุนในกองทุนระดับใดได้โดยไม่ต้องลงนามรับทราบความเสี่ยงเพิ่ม","o":["ระดับ 1–7","ระดับ 1–6","ระดับ 1–5","ระดับ 1–8"],"a":0,"e":"ระดับ 4 (เสี่ยงสูง) จับคู่กับกองทุนระดับ 1–7 ส่วนระดับ 8 (ทรัพย์สินทางเลือก) สำหรับลูกค้าระดับ 5"},
+{"s":2,"q":"IC ทราบว่าลูกค้ารายใหญ่จะส่งคำสั่งขายหุ้นจำนวนมาก จึงขายหุ้นตัวเดียวกันในพอร์ตตนเองก่อน พฤติกรรมนี้คือ","o":["Churning","Insider Trading โดยกรรมการ","Wash Trading","Front Running"],"a":3,"e":"การใช้ข้อมูลคำสั่งของลูกค้าที่ยังไม่ได้ส่ง เพื่อส่งคำสั่งของตนเองก่อน คือ Front Running"},
+{"s":2,"q":"หลักการจัดการความขัดแย้งทางผลประโยชน์ข้อแรกที่ควรทำคืออะไร","o":["เปิดเผยให้ลูกค้าทราบ","หลีกเลี่ยงหากทำได้","ขออนุญาตหัวหน้า","ลดค่าธรรมเนียมให้ลูกค้า"],"a":1,"e":"ลำดับคือ หลีกเลี่ยง → ถ้าเลี่ยงไม่ได้ให้เปิดเผย → และยึดประโยชน์ลูกค้าเป็นหลักเสมอ"},
+{"s":2,"q":"ลูกค้าโทรมาขอให้ IC ช่วยตัดสินใจและซื้อขายกองทุนแทนตลอดช่วงที่ไปต่างประเทศ 3 เดือน IC ควรทำอย่างไร","o":["ตกลงเพราะลูกค้าขอเอง","ตกลงโดยให้ลูกค้าเซ็นมอบอำนาจกับ IC เป็นการส่วนตัว","ปฏิเสธการตัดสินใจแทน แนะนำให้ลูกค้าสั่งผ่านช่องทางออนไลน์ด้วยตนเอง","ตกลงเฉพาะกองทุนตลาดเงิน"],"a":2,"e":"IC ไม่มีอำนาจตัดสินใจแทนลูกค้าไม่ว่ากรณีใด ลูกค้าสามารถส่งคำสั่งเองได้ผ่านช่องทางที่บริษัทรองรับ"},
+{"s":2,"q":"การทบทวนแบบประเมิน Suitability ต้องทำอย่างน้อยทุกกี่ปี","o":["1 ปี","5 ปี","3 ปี","2 ปี"],"a":3,"e":"ต้องทบทวนอย่างน้อยทุก 2 ปี หรือเร็วกว่านั้นเมื่อข้อมูลของลูกค้าเปลี่ยนแปลงอย่างมีนัยสำคัญ"},
+{"s":2,"q":"IC ได้รับกระเช้าผลไม้ในช่วงปีใหม่จากลูกค้า มูลค่าตามประเพณีนิยม ข้อใดเหมาะสม","o":["รับได้ตามนโยบายของบริษัท และรายงานหากนโยบายกำหนด","ห้ามรับทุกกรณี","รับแล้วต้องให้ส่วนลดค่าธรรมเนียมคืนลูกค้า","รับได้เฉพาะเงินสด"],"a":0,"e":"ของขวัญตามประเพณีที่มูลค่าไม่สูงรับได้ตามนโยบายบริษัท สิ่งที่ต้องหลีกเลี่ยงคือผลประโยชน์ที่อาจกระทบความเป็นกลาง"},
+{"s":2,"q":"ลูกค้าอายุ 80 ปีต้องการซื้อกองทุนหุ้นต่างประเทศ ทั้งที่ผลประเมินอยู่ระดับ 2 IC ควรทำอย่างไร","o":["ปฏิเสธเพราะลูกค้าอายุมาก","อธิบายความเสี่ยงที่สูงกว่าระดับที่รับได้อย่างละเอียด ตรวจความเข้าใจ เสนอให้คนที่ไว้ใจร่วมฟัง และให้ลงนามรับทราบหากยังยืนยัน","ขายได้ทันทีเพราะเป็นสิทธิของลูกค้า","ให้ทำแบบประเมินใหม่จนได้ระดับ 4"],"a":1,"e":"ลูกค้ามีสิทธิเลือก แต่ในกลุ่มเปราะบาง IC ต้องดูแลเป็นพิเศษให้เข้าใจความเสี่ยงจริงก่อนตัดสินใจ การทำแบบประเมินใหม่เพื่อดันคะแนนเป็นสิ่งที่ห้ามทำ"},
+{"s":2,"q":"ข้อใดไม่ใช่สถานการณ์ที่ถือเป็นความขัดแย้งทางผลประโยชน์","o":["IC ถือหุ้นตัวที่กำลังแนะนำ","บริษัทได้ค่าธรรมเนียมจัดจำหน่ายจากผู้ออกหุ้นกู้ที่แนะนำ","IC แนะนำกองทุนที่เหมาะสมที่สุดโดยได้ค่าตอบแทนเท่ากันทุกกอง และไม่มีส่วนได้เสียอื่น","ผู้ออกตราสารพา IC ไปเที่ยวฟรี"],"a":2,"e":"เมื่อค่าตอบแทนไม่ต่างกันและไม่มีผลประโยชน์ส่วนตัว จึงไม่มีแรงจูงใจให้ลำเอียง ตัวเลือกอื่นล้วนสร้างแรงจูงใจที่อาจขัดกับประโยชน์ลูกค้า"},
+{"s":3,"q":"กองทุนรวมพันธบัตรรัฐบาลจัดอยู่ในระดับความเสี่ยงใด","o":["ระดับ 3","ระดับ 2","ระดับ 1","ระดับ 4"],"a":0,"e":"ระดับ 1–2 คือกองทุนตลาดเงิน ระดับ 3 คือพันธบัตรรัฐบาล และระดับ 4 คือกองทุนตราสารหนี้ทั่วไปที่มีหุ้นกู้เอกชน"},
+{"s":3,"q":"กองทุนรวมผสมจัดอยู่ในระดับความเสี่ยงใด","o":["ระดับ 4","ระดับ 7","ระดับ 6","ระดับ 5"],"a":3,"e":"กองทุนผสมลงทุนทั้งตราสารหนี้และหุ้น ความผันผวนจึงอยู่ระหว่างกองทุนตราสารหนี้ (4) และกองทุนหุ้น (6)"},
+{"s":3,"q":"ข้อใดเป็นหน้าที่ของผู้ดูแลผลประโยชน์ของกองทุนรวม","o":["เลือกหุ้นที่กองทุนจะลงทุน","เก็บรักษาทรัพย์สินและดูแลให้ บลจ. ปฏิบัติตามโครงการ","ขายหน่วยลงทุนให้ผู้ลงทุน","กำหนดอัตราดอกเบี้ยนโยบาย"],"a":1,"e":"ผู้ดูแลผลประโยชน์ทำหน้าที่ถ่วงดุล บลจ. โดยเก็บรักษาทรัพย์สินและตรวจสอบการปฏิบัติตามโครงการ ส่วนการเลือกหลักทรัพย์เป็นหน้าที่ของ บลจ."},
+{"s":3,"q":"กองทุนมีทรัพย์สิน 1,240 ล้านบาท หนี้สิน 40 ล้านบาท หน่วยลงทุน 100 ล้านหน่วย NAV ต่อหน่วยเท่าใด","o":["12.40 บาท","12.80 บาท","12.00 บาท","11.60 บาท"],"a":2,"e":"NAV = (1,240 − 40) ÷ 100 = 12.00 บาท"},
+{"s":3,"q":"นาย ข มีเงินได้ 2,000,000 บาท ซื้อ ThaiESG ได้สิทธิลดหย่อนสูงสุดเท่าใด","o":["600,000 บาท","500,000 บาท","200,000 บาท","300,000 บาท"],"a":3,"e":"30% × 2,000,000 = 600,000 บาท แต่ ThaiESG มีเพดาน 300,000 บาท จึงลดหย่อนได้ 300,000 บาท"},
+{"s":3,"q":"นาง ค มีเงินได้ 800,000 บาท จ่ายเงินสะสมกองทุนสำรองเลี้ยงชีพ 50,000 บาท ซื้อ RMF ได้สิทธิลดหย่อนสูงสุดเท่าใด","o":["240,000 บาท","450,000 บาท","190,000 บาท","500,000 บาท"],"a":0,"e":"RMF ลดหย่อนได้ 30% × 800,000 = 240,000 บาท เมื่อรวม PVD 50,000 เป็น 290,000 บาท ยังไม่เกินเพดานรวม 500,000 จึงใช้ได้เต็ม 240,000 บาท"},
+{"s":3,"q":"ข้อใดถูกต้องเกี่ยวกับ ThaiESG ที่ซื้อในปี 2569","o":["ต้องซื้อต่อเนื่องทุกปี","ต้องถือครองไม่น้อยกว่า 5 ปีนับจากวันที่ซื้อ แบบวันชนวัน","นับรวมอยู่ในวงเงิน 500,000 บาทของกลุ่มเกษียณ","ต้องถือจนอายุ 55 ปี"],"a":1,"e":"ThaiESG ไม่บังคับซื้อต่อเนื่อง มีวงเงินแยกจากกลุ่มเกษียณ และต้องถือ 5 ปีวันชนวัน ส่วนเงื่อนไขอายุ 55 ปีเป็นของ RMF"},
+{"s":3,"q":"ตราสารใดมีความเสี่ยงด้านเครดิตต่ำที่สุด","o":["หุ้นกู้อันดับเครดิต A","ตั๋วแลกเงินของบริษัทเอกชน","พันธบัตรรัฐบาลไทย","หุ้นกู้ด้อยสิทธิของธนาคาร"],"a":2,"e":"พันธบัตรรัฐบาลในสกุลเงินบาทถือว่ามีความเสี่ยงผิดนัดต่ำที่สุดในประเทศ เพราะรัฐมีอำนาจเก็บภาษีและบริหารนโยบายการคลัง"},
+{"s":3,"q":"หุ้นกู้แปลงสภาพ (Convertible Bond) มักให้ดอกเบี้ยต่ำกว่าหุ้นกู้ทั่วไปของบริษัทเดียวกัน เพราะเหตุใด","o":["ผู้ถือได้สิทธิแปลงเป็นหุ้นสามัญ ซึ่งมีมูลค่า","มีความเสี่ยงสูงกว่า","บริษัทมีสิทธิไถ่ถอนก่อน","ไม่มีวันครบกำหนด"],"a":0,"e":"สิทธิในการแปลงสภาพเป็นประโยชน์ของผู้ถือ ผู้ลงทุนจึงยอมรับดอกเบี้ยที่ต่ำกว่าเพื่อแลกกับโอกาสได้กำไรจากราคาหุ้น"},
+{"s":3,"q":"อันดับเครดิตใดจัดเป็น Non-investment Grade","o":["AA","A−","BBB−","BB+"],"a":3,"e":"Investment Grade คือ BBB− ขึ้นไป ตั้งแต่ BB+ ลงมาเป็นระดับเก็งกำไร"},
+{"s":3,"q":"เมื่อบริษัทล้มละลาย ผู้ถือหลักทรัพย์ใดได้รับชำระเป็นลำดับสุดท้าย","o":["ผู้ถือหุ้นกู้ด้อยสิทธิ","ผู้ถือหุ้นสามัญ","ผู้ถือหุ้นบุริมสิทธิ","เจ้าหนี้การค้า"],"a":1,"e":"ผู้ถือหุ้นสามัญเป็นเจ้าของที่มีสิทธิในส่วนที่เหลือ (Residual Claim) จึงได้รับเป็นลำดับสุดท้ายหลังเจ้าหนี้และผู้ถือหุ้นบุริมสิทธิ"},
+{"s":3,"q":"ข้อใดเรียงลำดับสิทธิเรียกร้องจากก่อนไปหลังได้ถูกต้อง","o":["หุ้นบุริมสิทธิ → หุ้นกู้ด้อยสิทธิ → หุ้นสามัญ","หุ้นกู้ด้อยสิทธิ → หุ้นกู้มีประกัน → หุ้นสามัญ","หุ้นกู้ไม่มีประกัน → หุ้นกู้ด้อยสิทธิ → หุ้นบุริมสิทธิ","หุ้นสามัญ → หุ้นบุริมสิทธิ → หุ้นกู้"],"a":2,"e":"เจ้าหนี้ไม่ด้อยสิทธิได้ก่อนเจ้าหนี้ด้อยสิทธิ และเจ้าหนี้ทุกประเภทได้ก่อนผู้ถือหุ้นบุริมสิทธิ"},
+{"s":3,"q":"หุ้นกู้ Zero Coupon มูลค่าที่ตราไว้ 1,000 บาท อายุคงเหลือ 2 ปี อัตราผลตอบแทนตลาด 5% ราคาที่เหมาะสมคือเท่าใด","o":["900.00 บาท","1,000.00 บาท","952.38 บาท","907.03 บาท"],"a":3,"e":"ราคา = 1,000 ÷ 1.05² = 1,000 ÷ 1.1025 = 907.03 บาท"},
+{"s":3,"q":"กองทุนตราสารหนี้มี Modified Duration 4 ปี ถ้าอัตราผลตอบแทนตลาดลดลง 0.5% NAV จะเปลี่ยนแปลงประมาณเท่าใด","o":["+2%","−2%","+0.5%","+4%"],"a":0,"e":"%ΔP ≈ −4 × (−0.5%) = +2%"},
+{"s":3,"q":"หุ้นกู้คูปอง 3% ในขณะที่อัตราผลตอบแทนตลาดเพิ่มขึ้นเป็น 5% หุ้นกู้นี้จะซื้อขายในลักษณะใด","o":["Premium","Discount","At Par","ไม่มีผู้ซื้อ"],"a":1,"e":"คูปองต่ำกว่าอัตราตลาด ราคาจึงต้องต่ำกว่ามูลค่าที่ตราไว้ เพื่อให้ผลตอบแทนรวมของผู้ซื้อใหม่เท่ากับอัตราตลาด"},
+{"s":3,"q":"หุ้นราคา 16 บาท บริษัทให้สิทธิจองซื้อหุ้นเพิ่มทุน 5 หุ้นเดิมต่อ 1 หุ้นใหม่ ราคาจอง 10 บาท ราคาทางทฤษฎีหลัง XR คือเท่าใด","o":["13.00 บาท","14.00 บาท","15.00 บาท","15.50 บาท"],"a":2,"e":"(5 × 16 + 1 × 10) ÷ 6 = 90 ÷ 6 = 15.00 บาท"},
+{"s":3,"q":"เครื่องหมาย XM หมายความว่าอย่างไร","o":["ผู้ซื้อไม่ได้สิทธิเข้าประชุมผู้ถือหุ้น","ผู้ซื้อไม่ได้สิทธิรับเงินปันผล","ผู้ซื้อไม่ได้สิทธิจองหุ้นเพิ่มทุน","หุ้นถูกพักการซื้อขาย"],"a":0,"e":"XM = Excluding Meeting ผู้ซื้อตั้งแต่วันนั้นจะไม่มีชื่อในทะเบียนทันวันกำหนดรายชื่อผู้มีสิทธิเข้าประชุม"},
+{"s":3,"q":"ข้อใดเป็นสิทธิของผู้ถือหุ้นสามัญที่ผู้ถือหุ้นกู้ไม่มี","o":["ได้รับดอกเบี้ยตามกำหนด","ได้รับเงินต้นคืนเมื่อครบกำหนด","ได้รับชำระก่อนเมื่อบริษัทล้มละลาย","ออกเสียงลงมติในที่ประชุมผู้ถือหุ้น"],"a":3,"e":"ผู้ถือหุ้นสามัญเป็นเจ้าของจึงมีสิทธิออกเสียง ส่วนดอกเบี้ย เงินต้น และลำดับการรับชำระก่อนเป็นสิทธิของเจ้าหนี้"},
+{"s":3,"q":"หุ้นราคา 45 บาท มี EPS 3 บาท P/E คือเท่าใด","o":["12 เท่า","15 เท่า","13.5 เท่า","0.067 เท่า"],"a":1,"e":"P/E = 45 ÷ 3 = 15 เท่า"},
+{"s":3,"q":"หุ้นราคา 36 บาท จ่ายปันผล 1.80 บาทต่อหุ้น Dividend Yield คือเท่าใด","o":["6.5%","2.0%","5.0%","20%"],"a":2,"e":"Dividend Yield = 1.80 ÷ 36 = 5.0%"},
+{"s":3,"q":"P/BV ต่ำกว่า 1 เท่า หมายความว่าอย่างไร","o":["ราคาหุ้นสูงกว่ากำไรต่อหุ้น","บริษัทขาดทุนแน่นอน","บริษัทไม่มีหนี้สิน","ราคาตลาดต่ำกว่ามูลค่าทางบัญชีต่อหุ้น"],"a":3,"e":"P/BV < 1 หมายถึงราคาที่จ่ายต่ำกว่าส่วนของผู้ถือหุ้นต่อหุ้นตามบัญชี อาจถูกจริงหรือสะท้อนความกังวลของตลาดต่อคุณภาพสินทรัพย์"},
+{"s":3,"q":"กองทุนรวมดัชนี (Index Fund) มีลักษณะเด่นข้อใด","o":["บริหารเชิงรับเพื่อให้ผลตอบแทนใกล้เคียงดัชนีอ้างอิง ค่าธรรมเนียมมักต่ำ","บริหารเชิงรุกเพื่อชนะดัชนี","รับประกันผลตอบแทนเท่าดัชนี","ลงทุนในทองคำเท่านั้น"],"a":0,"e":"Index Fund ไม่ได้พยายามเลือกหุ้นให้ชนะตลาด จึงมีต้นทุนบริหารต่ำ แต่ไม่ได้รับประกันผลตอบแทน"},
+{"s":3,"q":"ข้อใดเป็นความเสี่ยงเพิ่มเติมของกองทุนรวมที่ลงทุนต่างประเทศโดยไม่ป้องกันความเสี่ยงค่าเงิน","o":["ความเสี่ยงจาก บลจ. ล้มละลาย","ความเสี่ยงอัตราแลกเปลี่ยน","ความเสี่ยงจากผู้ดูแลผลประโยชน์","ไม่มีความเสี่ยงเพิ่ม"],"a":1,"e":"มูลค่าเงินลงทุนเมื่อแปลงกลับเป็นบาทจะขึ้นลงตามอัตราแลกเปลี่ยน ถ้าเงินบาทแข็งค่า ผลตอบแทนเป็นบาทจะลดลง"},
+{"s":3,"q":"หุ้นปิดที่ 50 บาทในวันก่อนขึ้นเครื่องหมาย XD บริษัทจ่ายปันผล 2 บาทต่อหุ้น ราคาทางทฤษฎีในวัน XD คือเท่าใด","o":["52 บาท","50 บาท","48 บาท","46 บาท"],"a":2,"e":"ราคาทางทฤษฎีวัน XD ≈ 50 − 2 = 48 บาท เพราะเงินปันผลเป็นมูลค่าที่ออกจากบริษัทไปสู่ผู้ถือหุ้น"},
+{"s":3,"q":"กองทุนรวมแบบสะสมมูลค่า (ไม่จ่ายปันผล) มีประโยชน์ทางภาษีสำหรับผู้ลงทุนบุคคลธรรมดาอย่างไร","o":["กำไรจากการขายคืนหน่วยลงทุนได้รับยกเว้นภาษีเงินได้","ลดหย่อนภาษีได้ 30% ของเงินได้","ได้รับเครดิตภาษีเงินปันผล","ไม่มีความแตกต่างจากกองทุนปันผล"],"a":0,"e":"บุคคลธรรมดาที่ขายคืนหน่วยลงทุนกองทุนรวมทั่วไปได้รับยกเว้นภาษีจากกำไรส่วนต่าง ขณะที่เงินปันผลจากกองทุนจะถูกหักภาษี ณ ที่จ่าย 10%"}
+]});
+
+MOCK.push({id:"mock2", title:"ชุดที่ 2", q:[
+{s:1,q:"ออมเงินปลายปีทุกปี ปีละ 12,000 บาท เป็นเวลา 3 ปี ผลตอบแทน 5% ต่อปี ทบต้นรายปี ณ สิ้นปีที่ 3 จะมีเงินรวมเท่าใด",o:["36,000.00 บาท","37,830.00 บาท","39,721.50 บาท","34,000.00 บาท"],a:1,e:"FV ของเงินงวด (Ordinary Annuity) = 12,000 × [(1.05³ − 1) ÷ 0.05] = 12,000 × 3.1525 = 37,830 บาท ส่วน 39,721.50 คือกรณีฝากต้นงวด (Annuity Due) ซึ่งคูณ 1.05 เพิ่มอีกหนึ่งครั้ง และ 36,000 คือไม่คิดผลตอบแทนเลย"},
+{s:1,q:"สัญญาจะได้รับเงินปลายปี ปีละ 20,000 บาท เป็นเวลา 2 ปี อัตราคิดลด 5% มูลค่าปัจจุบันของกระแสเงินนี้เท่าใด",o:["40,000.00 บาท","38,095.24 บาท","36,281.18 บาท","37,188.21 บาท"],a:3,e:"PV = 20,000/1.05 + 20,000/1.05² = 19,047.62 + 18,140.59 = 37,188.21 บาท เงินในอนาคตมีค่าน้อยกว่าเงินวันนี้ จึงต้องน้อยกว่า 40,000 แน่นอน ตัวเลือก 38,095.24 คือหารด้วย 1.05 ครั้งเดียวทั้งก้อน"},
+{s:1,q:"หุ้นบุริมสิทธิจ่ายเงินปันผลคงที่ปีละ 5,000 บาทตลอดไป ผู้ลงทุนต้องการผลตอบแทน 5% มูลค่าที่เหมาะสมคือเท่าใด",o:["100,000 บาท","250,000 บาท","50,000 บาท","105,000 บาท"],a:0,e:"กระแสเงินคงที่ตลอดไป = Perpetuity → PV = C ÷ r = 5,000 ÷ 0.05 = 100,000 บาท"},
+{s:1,q:"ซื้อหุ้นราคา 20 บาท ถือ 1 ปี ได้เงินปันผล 1 บาท แล้วขายที่ 22 บาท อัตราผลตอบแทนจากการถือครอง (HPR) เท่าใด",o:["10%","5%","15%","13.64%"],a:2,e:"HPR = (ราคาขาย − ราคาซื้อ + เงินปันผล) ÷ ราคาซื้อ = (22 − 20 + 1) ÷ 20 = 15% ถ้าลืมเงินปันผลจะได้ 10% และถ้าใช้ราคาขายเป็นฐานจะได้ 13.64% ซึ่งผิด"},
+{s:1,q:"หลักทรัพย์มีโอกาส 50% ให้ผลตอบแทน 20% และโอกาส 50% ให้ผลตอบแทน 0% ส่วนเบี่ยงเบนมาตรฐาน (S.D.) เท่าใด",o:["20%","10%","5%","14.14%"],a:1,e:"E(R) = 0.5×20 + 0.5×0 = 10% ความแปรปรวน = 0.5×(20−10)² + 0.5×(0−10)² = 100 → S.D. = √100 = 10%"},
+{s:1,q:"กองทุน A ผลตอบแทน 12% S.D. 10% กองทุน B ผลตอบแทน 10% S.D. 6% อัตราผลตอบแทนปราศจากความเสี่ยง 2% ข้อใดถูกต้องตามหลัก Sharpe Ratio",o:["A ดีกว่าเพราะผลตอบแทนสูงกว่า","ทั้งสองเท่ากัน","A ดีกว่าเพราะ Sharpe = 1.2","B ดีกว่าเพราะ Sharpe ≈ 1.33 สูงกว่า A ที่เท่ากับ 1.0"],a:3,e:"Sharpe = (R − Rf) ÷ S.D. → A = (12−2)/10 = 1.0, B = (10−2)/6 = 1.33 B ให้ผลตอบแทนส่วนเกินต่อความเสี่ยงหนึ่งหน่วยได้มากกว่า ผลตอบแทนสูงกว่าไม่ได้แปลว่าดีกว่าเสมอ"},
+{s:1,q:"กองทุนให้ผลตอบแทนปีแรก +20% ปีที่สอง −10% อัตราผลตอบแทนเฉลี่ยเรขาคณิตต่อปีประมาณเท่าใด",o:["3.92%","5.00%","10.00%","8.00%"],a:0,e:"Geometric mean = √(1.20 × 0.90) − 1 = √1.08 − 1 = 3.92% ส่วน 5% คือค่าเฉลี่ยเลขคณิต (20 − 10)/2 ซึ่งให้ภาพเกินจริง เงิน 100 → 120 → 108 คือโตจริงแค่ 8% ใน 2 ปี"},
+{s:1,q:"ฝากเงิน 10,000 บาท ดอกเบี้ย 6% ต่อปี ทบต้นรายเดือน ครบ 1 ปีจะได้เงินรวมเท่าใด",o:["10,600.00 บาท","10,609.00 บาท","10,616.78 บาท","10,618.37 บาท"],a:2,e:"FV = 10,000 × (1 + 0.06/12)¹² = 10,000 × 1.005¹² = 10,616.78 บาท ยิ่งทบต้นถี่ เงินยิ่งโตกว่า 10,600 (ทบปีละครั้ง) และ 10,609 (ทบรายครึ่งปี)"},
+{s:1,q:"หุ้นคาดว่าจะจ่ายปันผลปีหน้า 3 บาท ปันผลโตคงที่ 4% ต่อปี ผู้ลงทุนต้องการผลตอบแทน 12% มูลค่าหุ้นตาม Gordon Growth Model เท่าใด",o:["25.00 บาท","37.50 บาท","39.00 บาท","18.75 บาท"],a:1,e:"P₀ = D₁ ÷ (k − g) = 3 ÷ (0.12 − 0.04) = 3 ÷ 0.08 = 37.50 บาท ระวัง: โจทย์ให้ D₁ (ปีหน้า) แล้ว ไม่ต้องคูณ (1+g) ซ้ำ ถ้าคูณจะได้ 39 ซึ่งผิด"},
+{s:1,q:"ธนาคารกลางปรับขึ้นอัตราดอกเบี้ยนโยบาย ผลกระทบที่มักเกิดขึ้นคือข้อใด",o:["ราคาพันธบัตรเดิมในตลาดสูงขึ้น","เงินเฟ้อเร่งตัวขึ้นทันที","การกู้ยืมเพื่อลงทุนเพิ่มขึ้น","ต้นทุนการกู้ยืมสูงขึ้น ราคาพันธบัตรเดิมลดลง และช่วยชะลอเงินเฟ้อ"],a:3,e:"ดอกเบี้ยนโยบายขึ้น = นโยบายการเงินแบบเข้มงวด ต้นทุนเงินแพงขึ้น การใช้จ่ายและลงทุนชะลอ เงินเฟ้อจึงชะลอตาม และพันธบัตรเดิมที่จ่ายดอกเบี้ยต่ำกว่าตลาดใหม่ราคาลดลง"},
+{s:1,q:"เงินฝากให้ดอกเบี้ย 5% ต่อปี อัตราเงินเฟ้อ 3% อัตราผลตอบแทนที่แท้จริงโดยประมาณเท่าใด",o:["2%","8%","5%","−2%"],a:0,e:"Real return ≈ Nominal − Inflation = 5% − 3% = 2% (สูตรแม่นยำคือ 1.05/1.03 − 1 = 1.94%) อำนาจซื้อเพิ่มขึ้นจริงเพียงราว 2%"},
+{s:1,q:"หุ้นมี Beta 1.5 หากตลาดปรับขึ้น 10% คาดว่าหุ้นนี้จะปรับขึ้นประมาณเท่าใด",o:["10%","6.67%","15%","1.5%"],a:2,e:"Beta วัดความไวต่อตลาด Beta 1.5 = เคลื่อนไหวแรงกว่าตลาด 1.5 เท่า → 1.5 × 10% = 15% (ขาลงก็แรงกว่าเช่นกัน)"},
+{s:1,q:"การกระจายการลงทุนในหลักทรัพย์หลายตัวช่วยลดความเสี่ยงประเภทใดได้",o:["ความเสี่ยงที่เป็นระบบ (Systematic Risk)","ความเสี่ยงที่ไม่เป็นระบบ (Unsystematic Risk)","ความเสี่ยงจากอัตราดอกเบี้ยทั้งระบบ","ความเสี่ยงจากเงินเฟ้อ"],a:1,e:"ความเสี่ยงเฉพาะตัวบริษัท (เช่น ผู้บริหารลาออก โรงงานไฟไหม้) หักล้างกันได้เมื่อถือหลายตัว ส่วนความเสี่ยงที่เป็นระบบ (ดอกเบี้ย เงินเฟ้อ การเมือง) กระทบทั้งตลาด กระจายไม่ได้"},
+{s:1,q:"ค่าสหสัมพันธ์ (ρ) ระหว่างหลักทรัพย์สองตัวเท่าใด ที่ให้ประโยชน์จากการกระจายความเสี่ยงสูงสุด",o:["+1","0","+0.5","−1"],a:3,e:"ρ = −1 คือเคลื่อนไหวสวนทางกันสมบูรณ์ ตัวหนึ่งขึ้นอีกตัวลง จึงหักล้างความผันผวนได้มากที่สุด ส่วน ρ = +1 ไม่ช่วยลดความเสี่ยงเลย"},
+{s:1,q:"ตามกฎ 72 (Rule of 72) เงินลงทุนที่ได้ผลตอบแทน 8% ต่อปี จะเพิ่มเป็นสองเท่าในเวลาประมาณกี่ปี",o:["9 ปี","8 ปี","12 ปี","6 ปี"],a:0,e:"จำนวนปี ≈ 72 ÷ อัตราผลตอบแทน = 72 ÷ 8 = 9 ปี เป็นสูตรลัดสำหรับประมาณการทบต้น"},
+{s:2,q:"ลูกค้าถามว่า “กองทุนตราสารหนี้นี้การันตีได้ 3% ใช่ไหม” ทั้งที่กองทุนไม่ใช่กองทุนคุ้มครองเงินต้นหรือมีประกันผลตอบแทน IC ควรตอบอย่างไร",o:["ยืนยันว่าได้แน่นอนเพราะผลงานย้อนหลังดี","บอกว่าได้ไม่ต่ำกว่า 3% เพื่อให้ลูกค้าสบายใจ","อธิบายว่าเป็นผลตอบแทนที่คาดหวัง ไม่มีการรับประกัน ผลการดำเนินงานในอดีตไม่ได้ยืนยันผลในอนาคต และชี้แจงความเสี่ยง","ให้ลูกค้าโทรถาม บลจ. เองเพื่อเลี่ยงความรับผิดชอบ"],a:2,e:"ห้าม IC รับประกันหรือชี้นำว่าจะได้ผลตอบแทนแน่นอน ต้องให้ข้อมูลถูกต้อง ครบถ้วน ไม่บิดเบือน และเปิดเผยความเสี่ยง ผลงานในอดีตใช้อ้างเป็นคำมั่นไม่ได้"},
+{s:2,q:"บริษัทจัดแคมเปญให้รางวัลพิเศษแก่ IC ที่ขายกองทุนของ บลจ. ในเครือได้มากที่สุด IC ควรปฏิบัติอย่างไร",o:["เสนอกองทุนในเครือให้ลูกค้าทุกรายโดยไม่ต้องบอกเหตุผล","ยังคงแนะนำตามความเหมาะสมของลูกค้าเป็นหลัก และเปิดเผยความขัดแย้งทางผลประโยชน์ที่อาจมี","ปฏิเสธไม่ขายกองทุนในเครือเลย","เสนอเฉพาะลูกค้าที่ไม่ค่อยถามรายละเอียด"],a:1,e:"แรงจูงใจทางการขายคือความขัดแย้งทางผลประโยชน์ หลักคือ ประโยชน์ลูกค้ามาก่อน (Client First) ต้องจัดการด้วยการเปิดเผยข้อมูลและแนะนำตามความเหมาะสม ไม่จำเป็นต้องห้ามขายของในเครือ หากเหมาะสมกับลูกค้าจริง"},
+{s:2,q:"ลูกค้าปฏิเสธที่จะให้ข้อมูลเพื่อทำแบบประเมินความเหมาะสม (Suitability Test) IC ควรทำอย่างไร",o:["แจ้งลูกค้าว่าหากไม่ให้ข้อมูล IC จะไม่สามารถให้คำแนะนำที่เหมาะสมได้ และบันทึกเหตุการณ์ไว้เป็นหลักฐาน","กรอกแบบประเมินแทนลูกค้าตามที่คาดเดา","แนะนำกองทุนความเสี่ยงสูงสุดไปเลย","ใช้ผลประเมินของลูกค้ารายอื่นที่มีอายุใกล้เคียงกัน"],a:0,e:"IC ห้ามกรอกแทนหรือเดาข้อมูลลูกค้า หากลูกค้าไม่ให้ข้อมูล ต้องแจ้งผลที่ตามมาให้ชัด และบันทึกไว้ การลงทุนต่อไปจึงเป็นการตัดสินใจของลูกค้าเองที่รับทราบข้อจำกัดแล้ว"},
+{s:2,q:"ลูกค้าผลประเมินความเสี่ยงระดับ 2 (เสี่ยงต่ำค่อนข้างต่ำ) แต่ยืนยันจะซื้อกองทุนหุ้นระดับ 6 IC ควรทำอย่างไร",o:["ปฏิเสธลูกค้าทันทีและห้ามซื้อ","ทำแบบประเมินใหม่แล้วตอบแทนลูกค้าให้ได้ระดับ 6","ขายได้เลยโดยไม่ต้องบอกอะไร","เตือนว่าการลงทุนมีความเสี่ยงสูงกว่าระดับที่ยอมรับได้ อธิบายความเสี่ยง และให้ลูกค้าลงนามรับทราบความเสี่ยงที่ไม่สอดคล้อง (Risk Mismatch)"],a:3,e:"ลูกค้ามีสิทธิตัดสินใจเอง แต่ IC ต้องเตือนและเก็บหลักฐานการรับทราบ ห้ามชี้นำให้ลูกค้าเปลี่ยนคำตอบในแบบประเมินเพื่อให้ผ่าน เพราะถือเป็นการบิดเบือน"},
+{s:2,q:"ลูกค้าสูงอายุบอกรหัสผ่านบัญชีลงทุนให้ IC เพื่อให้ช่วยซื้อขายแทนเมื่อสะดวก การกระทำใดของ IC เหมาะสมที่สุด",o:["ใช้รหัสซื้อขายแทนได้เพราะลูกค้ายินยอมด้วยวาจา","เก็บรหัสไว้แต่จะใช้เฉพาะตอนตลาดผันผวน","ไม่ใช้รหัสของลูกค้า แนะนำให้ลูกค้าเปลี่ยนรหัสและส่งคำสั่งเอง หรือทำหนังสือมอบอำนาจตามระเบียบบริษัท","ให้เพื่อนร่วมงานช่วยถือรหัสแทน"],a:2,e:"IC ห้ามใช้บัญชีหรือรหัสของลูกค้าทำรายการเอง และห้ามซื้อขายแทนโดยไม่มีหลักฐานการมอบอำนาจที่ถูกต้อง ลูกค้ากลุ่มเปราะบางยิ่งต้องได้รับการดูแลเป็นพิเศษ"},
+{s:2,q:"IC ทราบว่าลูกค้ารายใหญ่จะส่งคำสั่งซื้อหุ้น X จำนวนมาก จึงรีบซื้อหุ้น X เข้าบัญชีตนเองก่อน การกระทำนี้เรียกว่าอะไร",o:["การซื้อขายแบบ Program Trading","การซื้อขายตัดหน้าลูกค้า (Front Running) ซึ่งเป็นข้อห้าม","การถัวเฉลี่ยต้นทุน (DCA)","การป้องกันความเสี่ยงที่ทำได้"],a:1,e:"Front Running คือการใช้ข้อมูลคำสั่งของลูกค้าแสวงประโยชน์ให้ตนเอง เป็นการเอาเปรียบลูกค้าและผิดจรรยาบรรณร้ายแรง"},
+{s:2,q:"เพื่อนของ IC ขอดูรายละเอียดพอร์ตลงทุนของลูกค้าคนดังที่ IC ดูแลอยู่ IC ควรทำอย่างไร",o:["ปฏิเสธ เพราะต้องรักษาความลับข้อมูลลูกค้า เปิดเผยได้เฉพาะเมื่อลูกค้ายินยอมหรือกฎหมายกำหนด","บอกเฉพาะชื่อกองทุนที่ลูกค้าถือ ไม่บอกจำนวนเงิน","ให้ดูได้หากเพื่อนสัญญาว่าจะไม่บอกต่อ","ส่งข้อมูลได้เพราะไม่ได้เอาไปใช้ซื้อขาย"],a:0,e:"การรักษาความลับลูกค้าเป็นหน้าที่พื้นฐาน แม้ข้อมูลบางส่วนก็เปิดเผยไม่ได้ ข้อยกเว้นคือได้รับความยินยอมจากลูกค้า หรือเป็นการเปิดเผยตามที่กฎหมายหรือหน่วยงานกำกับกำหนด"},
+{s:2,q:"ตามหลักเกณฑ์ ผู้ให้บริการควรทบทวนข้อมูลและผลประเมินความเหมาะสมของลูกค้าตามรอบระยะเวลาอย่างไร",o:["ทุก 5 ปี","ทำครั้งเดียวตอนเปิดบัญชี","ทุก 10 ปี","อย่างน้อยทุก 2 ปี หรือเมื่อข้อมูลลูกค้าเปลี่ยนแปลงอย่างมีนัยสำคัญ"],a:3,e:"สถานะลูกค้าเปลี่ยนได้ เช่น อายุ รายได้ ภาระ จึงต้องทบทวนเป็นระยะ (หลักทั่วไปอย่างน้อยทุก 2 ปี) และทบทวนทันทีเมื่อรู้ว่าข้อมูลสำคัญเปลี่ยน ควรตรวจสอบรายละเอียดล่าสุดกับประกาศ ก.ล.ต. และนโยบายบริษัท"},
+{s:2,q:"ลูกค้าอายุ 78 ปี ใช้ชีวิตด้วยเงินเกษียณ ไม่คุ้นเคยกับการลงทุน ต้องการฝากเงินระยะสั้น IC ควรปฏิบัติแบบใด",o:["เสนอกองทุนหุ้นต่างประเทศเพราะผลตอบแทนสูง","รีบปิดการขายก่อนลูกหลานมาทักท้วง","อธิบายด้วยภาษาเข้าใจง่าย ตรวจสอบความเข้าใจ และเสนอผลิตภัณฑ์ที่สอดคล้องกับความต้องการและความเสี่ยงที่รับได้","ให้ลูกค้าเซ็นเอกสารเปล่าไว้ก่อนแล้วกรอกให้ภายหลัง"],a:2,e:"ลูกค้าเปราะบาง (สูงอายุ ไม่มีประสบการณ์) ต้องได้รับความระมัดระวังเป็นพิเศษ การให้เซ็นเอกสารเปล่าหรือเร่งปิดการขายเป็นการเอาเปรียบลูกค้า"},
+{s:2,q:"IC แนะนำให้ลูกค้าสับเปลี่ยนกองทุนบ่อยครั้งโดยไม่มีเหตุผลด้านการลงทุน เพื่อให้ตนได้ค่าตอบแทนจากรายการมากขึ้น พฤติกรรมนี้เรียกว่าอะไร",o:["Rebalancing","Churning ซึ่งเป็นการกระทำที่ไม่เป็นธรรมต่อลูกค้า","Asset Allocation","Dollar Cost Averaging"],a:1,e:"Churning คือการกระตุ้นการซื้อขายเกินจำเป็นเพื่อผลประโยชน์ของผู้แนะนำ ลูกค้าเสียค่าธรรมเนียมโดยไม่ได้ประโยชน์ เป็นการละเมิดหลักประโยชน์ลูกค้ามาก่อน"},
+{s:3,q:"หุ้นราคาตลาด 25 บาท บริษัทมีส่วนของผู้ถือหุ้น 1,000 ล้านบาท หุ้นสามัญ 100 ล้านหุ้น P/BV เท่าใด",o:["2.5 เท่า","0.4 เท่า","10 เท่า","25 เท่า"],a:0,e:"มูลค่าตามบัญชีต่อหุ้น (BV) = 1,000 ÷ 100 = 10 บาท → P/BV = 25 ÷ 10 = 2.5 เท่า ตลาดให้ราคาสูงกว่ามูลค่าทางบัญชี 2.5 เท่า"},
+{s:3,q:"บริษัทมีกำไรสุทธิ 300 ล้านบาท จ่ายปันผลหุ้นบุริมสิทธิ 50 ล้านบาท มีหุ้นสามัญ 125 ล้านหุ้น EPS เท่าใด",o:["2.40 บาท","2.80 บาท","2.00 บาท","0.40 บาท"],a:2,e:"EPS = (กำไรสุทธิ − ปันผลหุ้นบุริมสิทธิ) ÷ จำนวนหุ้นสามัญ = (300 − 50) ÷ 125 = 2.00 บาท ต้องหักส่วนของผู้ถือหุ้นบุริมสิทธิออกก่อน เพราะไม่ใช่กำไรของผู้ถือหุ้นสามัญ ถ้าไม่หักจะได้ 2.40"},
+{s:3,q:"บริษัทมี EPS 4 บาท จ่ายเงินปันผล 2.40 บาทต่อหุ้น อัตราการจ่ายปันผล (Payout Ratio) เท่าใด",o:["40%","60%","166.67%","2.4%"],a:1,e:"Payout = DPS ÷ EPS = 2.40 ÷ 4 = 60% ส่วนที่เหลือ 40% คือกำไรสะสม (Retention Ratio) ที่เก็บไว้ลงทุนต่อ"},
+{s:3,q:"หุ้นกู้จ่ายดอกเบี้ยหน้าตั๋ว 6% ขณะที่อัตราผลตอบแทนในตลาด (Yield) ของตราสารลักษณะเดียวกันเท่ากับ 4% ราคาหุ้นกู้จะเป็นอย่างไร",o:["ต่ำกว่าราคาตราไว้ (Discount)","เท่ากับราคาตราไว้ (Par)","เท่ากับศูนย์","สูงกว่าราคาตราไว้ (Premium)"],a:3,e:"คูปองสูงกว่าผลตอบแทนตลาด ตราสารนี้จึงน่าสนใจกว่าของใหม่ นักลงทุนยอมจ่ายแพงขึ้น ราคาจึงเกินราคาตราไว้ (Premium) จำง่าย: Coupon > Yield → Premium"},
+{s:3,q:"หุ้นกู้ราคาตราไว้ 1,000 บาท คูปองปีละ 50 บาท ราคาตลาดปัจจุบัน 1,250 บาท Current Yield เท่าใด",o:["4%","5%","6.25%","3.5%"],a:0,e:"Current Yield = ดอกเบี้ยต่อปี ÷ ราคาตลาด = 50 ÷ 1,250 = 4% ไม่ใช่ 5% ซึ่งคืออัตราคูปอง (เทียบกับราคาตราไว้)"},
+{s:3,q:"ถือหุ้น 1,000 หุ้น ราคา 100 บาท บริษัทแตกพาร์จาก 5 บาทเป็น 1 บาท ภายหลังแตกพาร์ (ราคาปรับตามทฤษฎี) จะเป็นอย่างไร",o:["1,000 หุ้น ราคา 20 บาท","5,000 หุ้น ราคา 100 บาท","5,000 หุ้น ราคา 20 บาท","200 หุ้น ราคา 500 บาท"],a:2,e:"แตกพาร์ 5 → 1 = หุ้น 1 หุ้นกลายเป็น 5 หุ้น จำนวนหุ้นเป็น 5,000 หุ้น ราคาลดลงเหลือ 100 ÷ 5 = 20 บาท มูลค่ารวมยังเท่าเดิม 100,000 บาท"},
+{s:3,q:"กองทุนรวมตลาดเงินที่ลงทุนเฉพาะในประเทศ มีระดับความเสี่ยงเท่าใด",o:["ระดับ 2","ระดับ 1","ระดับ 3","ระดับ 4"],a:1,e:"ระดับ 1 = กองทุนรวมตลาดเงินในประเทศ ระดับ 2 = กองทุนรวมตลาดเงินที่ลงทุนต่างประเทศบางส่วน (มีความเสี่ยงอัตราแลกเปลี่ยนเพิ่ม)"},
+{s:3,q:"กองทุนที่ลงทุนทั้งตราสารทุนและตราสารหนี้ (กองทุนผสม) จัดอยู่ในระดับความเสี่ยงใด",o:["ระดับ 3","ระดับ 7","ระดับ 8","ระดับ 5"],a:3,e:"ระดับ 5 = กองทุนรวมผสม อยู่ตรงกลางระหว่างกองตราสารหนี้ (ระดับ 3–4) กับกองหุ้น (ระดับ 6)"},
+{s:3,q:"กองทุนรวมทองคำจัดอยู่ในระดับความเสี่ยงใด",o:["ระดับ 8","ระดับ 6","ระดับ 4","ระดับ 2"],a:0,e:"ระดับ 8 = กองทุนที่ลงทุนในทางเลือก (Alternative) เช่น ทองคำ น้ำมัน สินค้าโภคภัณฑ์ ราคาผันผวนสูงและไม่มีกระแสเงินสดอย่างดอกเบี้ยหรือปันผล"},
+{s:3,q:"ข้อใดถูกต้องเกี่ยวกับสิทธิประโยชน์ทางภาษีของ ThaiESG ในปีภาษี 2569",o:["รวมวงเงินกับ RMF ไม่เกิน 500,000 บาท","ลดหย่อนได้ไม่จำกัดวงเงิน","ลดหย่อนได้ไม่เกิน 30% ของเงินได้ และไม่เกิน 300,000 บาท แยกจากกลุ่มเกษียณ 500,000 บาท","ต้องซื้อต่อเนื่องทุกปี"],a:2,e:"ThaiESG มีวงเงินของตัวเอง 30% ของเงินได้ สูงสุด 300,000 บาท (ปี 2569 รวมกับ ThaiESGX) ไม่ต้องนับรวมกับ RMF/PVD/ประกันบำนาญ และไม่มีเงื่อนไขซื้อต่อเนื่อง ตรวจสอบประกาศกรมสรรพากรล่าสุดก่อนสอบ"},
+{s:3,q:"เงื่อนไขการขายคืน RMF โดยไม่ผิดเงื่อนไขทางภาษีคือข้อใด",o:["ถือครบ 5 ปี โดยไม่สนใจอายุ","ถือไม่น้อยกว่า 5 ปี และผู้ลงทุนมีอายุครบ 55 ปีบริบูรณ์ (หรือทุพพลภาพ/เสียชีวิต)","ถือครบ 10 ปีเท่านั้น","อายุครบ 60 ปีโดยไม่สนใจระยะเวลาถือ"],a:1,e:"RMF คือกองทุนเพื่อการเลี้ยงชีพ ต้องผ่านทั้งสองเงื่อนไขพร้อมกัน คือถือ ≥ 5 ปี และอายุ ≥ 55 ปี เว้นแต่ทุพพลภาพหรือเสียชีวิต"},
+{s:3,q:"หน่วยลงทุน ThaiESG ที่ซื้อในปี 2569 ต้องถือครองนานเท่าใด",o:["8 ปีนับตามปีปฏิทิน","10 ปีนับวันชนวัน","จนอายุ 55 ปี","ไม่น้อยกว่า 5 ปีนับแบบวันชนวัน"],a:3,e:"ThaiESG ที่ซื้อตั้งแต่ปี 2567 เป็นต้นไป ต้องถือไม่น้อยกว่า 5 ปีนับแบบวันชนวัน (ส่วนที่ซื้อปี 2566 ต้องถือ 8 ปี)"},
+{s:3,q:"ข้อใดถูกต้องเกี่ยวกับเงื่อนไขการซื้อ RMF อย่างต่อเนื่อง",o:["ต้องซื้อต่อเนื่อง แต่เว้นการซื้อได้ไม่เกิน 1 ปีติดต่อกัน และไม่มีขั้นต่ำการซื้อ","ต้องซื้อทุกปีขั้นต่ำ 5,000 บาท","ซื้อเว้นได้กี่ปีก็ได้","ต้องซื้อขั้นต่ำ 3% ของเงินได้ทุกปี"],a:0,e:"ตั้งแต่ปี 2563 ยกเลิกเงื่อนไขซื้อขั้นต่ำแล้ว แต่ยังต้องซื้อต่อเนื่อง โดยเว้นได้ไม่เกิน 1 ปีติดต่อกัน (เช่น ซื้อปี 1 ไม่ซื้อปี 2 ต้องกลับมาซื้อปี 3)"},
+{s:3,q:"เมื่อบริษัทล้มละลาย ข้อใดเรียงลำดับสิทธิเรียกร้องในทรัพย์สินจากก่อนไปหลังได้ถูกต้อง",o:["หุ้นสามัญ → หุ้นบุริมสิทธิ → หุ้นกู้","หุ้นกู้ด้อยสิทธิ → หุ้นกู้มีประกัน → หุ้นสามัญ","เจ้าหนี้มีประกัน → หุ้นกู้ไม่ด้อยสิทธิ → หุ้นกู้ด้อยสิทธิ → หุ้นบุริมสิทธิ → หุ้นสามัญ","หุ้นบุริมสิทธิ → เจ้าหนี้มีประกัน → หุ้นสามัญ"],a:2,e:"เจ้าหนี้มาก่อนเจ้าของเสมอ ในกลุ่มเจ้าหนี้ ผู้มีหลักประกันได้ก่อน ตามด้วยเจ้าหนี้ไม่มีประกันไม่ด้อยสิทธิ แล้วจึงเป็นหุ้นกู้ด้อยสิทธิ ฝั่งเจ้าของ หุ้นบุริมสิทธิมาก่อนหุ้นสามัญ ซึ่งเป็นผู้รับส่วนที่เหลือสุดท้าย"},
+{s:3,q:"ผู้ถือหุ้นกู้ด้อยสิทธิ (Subordinated Debenture) มีสิทธิในทรัพย์สินเมื่อบริษัทล้มละลายอย่างไรเมื่อเทียบกับผู้ถือหุ้นสามัญ",o:["หลังผู้ถือหุ้นสามัญ","ก่อนผู้ถือหุ้นบุริมสิทธิและหุ้นสามัญ","เท่ากับผู้ถือหุ้นสามัญ","ไม่มีสิทธิใดๆ"],a:1,e:"หุ้นกู้ด้อยสิทธิยังเป็นเจ้าหนี้ จึงได้รับชำระก่อนผู้ถือหุ้นทุกประเภท แต่ได้หลังเจ้าหนี้อื่นที่ไม่ด้อยสิทธิ จึงเสนอดอกเบี้ยสูงกว่าเพื่อชดเชย"},
+{s:3,q:"พันธบัตรแบบไม่มีดอกเบี้ย (Zero Coupon Bond) มีลักษณะอย่างไร",o:["จ่ายดอกเบี้ยทุก 6 เดือน","ขายที่ราคาสูงกว่าราคาตราไว้เสมอ","ไม่มีวันครบกำหนด","ขายในราคาต่ำกว่าราคาตราไว้ (Discount) และได้รับคืนเต็มราคาตราไว้เมื่อครบกำหนด ส่วนต่างคือผลตอบแทน"],a:3,e:"Zero Coupon ไม่จ่ายดอกเบี้ยระหว่างทาง ผลตอบแทนมาจากส่วนต่างราคาซื้อกับราคาไถ่ถอน เช่น ตั๋วเงินคลัง และเป็นตราสารที่ราคาอ่อนไหวต่อดอกเบี้ยมากเมื่ออายุยาว"},
+{s:3,q:"หุ้นกู้ที่ผู้ออกมีสิทธิไถ่ถอนก่อนกำหนด (Callable Bond) มักมีลักษณะอย่างไรเมื่อเทียบกับหุ้นกู้ทั่วไป",o:["ให้อัตราดอกเบี้ยสูงกว่า เพื่อชดเชยความเสี่ยงที่ผู้ลงทุนอาจถูกไถ่ถอนเมื่อดอกเบี้ยตลาดลดลง","ให้ดอกเบี้ยต่ำกว่าเพราะผู้ลงทุนได้เปรียบ","ผู้ลงทุนเลือกขายคืนเมื่อไรก็ได้","ไม่มีความเสี่ยงจากการนำเงินไปลงทุนต่อ"],a:0,e:"สิทธิไถ่ถอนเป็นของผู้ออก ผู้ออกจะใช้สิทธิเมื่อดอกเบี้ยตลาดลด (กู้ใหม่ได้ถูกกว่า) ผู้ลงทุนต้องเอาเงินไปลงทุนต่อที่ดอกเบี้ยต่ำลง จึงต้องได้ดอกเบี้ยสูงกว่าชดเชย ตรงข้ามกับ Puttable Bond ซึ่งสิทธิเป็นของผู้ลงทุน"},
+{s:3,q:"หุ้นกู้แปลงสภาพ (Convertible Bond) ให้สิทธิอะไรแก่ผู้ถือ",o:["สิทธิได้รับเงินต้นคืนก่อนเจ้าหนี้มีประกัน","สิทธิเลือกสกุลเงินที่จะรับดอกเบี้ย","สิทธิแปลงหุ้นกู้เป็นหุ้นสามัญของบริษัทตามอัตราและเงื่อนไขที่กำหนด","สิทธิออกเสียงในที่ประชุมผู้ถือหุ้นตั้งแต่วันซื้อ"],a:2,e:"Convertible ให้ทางเลือกรับดอกเบี้ยแบบตราสารหนี้ และแปลงเป็นหุ้นเมื่อราคาหุ้นสูงขึ้น เพราะมี “ทางเลือก” เพิ่ม จึงมักให้ดอกเบี้ยต่ำกว่าหุ้นกู้ทั่วไป ยังไม่มีสิทธิออกเสียงจนกว่าจะแปลงเป็นหุ้น"},
+{s:3,q:"อันดับความน่าเชื่อถือขั้นต่ำที่ถือว่าเป็นระดับน่าลงทุน (Investment Grade) คือข้อใด",o:["BB+","BBB−","B","CCC"],a:1,e:"Investment Grade เริ่มที่ BBB− ขึ้นไป ต่ำกว่านั้น (BB+ ลงไป) คือ Non-Investment Grade หรือ High Yield ซึ่งมีความเสี่ยงผิดนัดชำระสูงกว่า"},
+{s:3,q:"เมื่ออัตราดอกเบี้ยตลาดปรับขึ้น ตราสารหนี้ใดน่าจะมีราคาลดลงมากที่สุด",o:["ตั๋วเงินคลังอายุ 3 เดือน","หุ้นกู้อายุ 2 ปี คูปอง 6%","พันธบัตรอายุ 5 ปี คูปอง 4%","พันธบัตรไม่มีดอกเบี้ย อายุ 20 ปี"],a:3,e:"ราคาตราสารหนี้แปรผกผันกับดอกเบี้ย และยิ่งอายุยาวกับคูปองต่ำ Duration ยิ่งสูง ยิ่งอ่อนไหว Zero Coupon อายุ 20 ปี มี Duration = 20 ปี จึงลดลงมากที่สุด"},
+{s:3,q:"ข้อใดเป็นลักษณะทั่วไปของหุ้นบุริมสิทธิ",o:["มีสิทธิได้รับเงินปันผลก่อนหุ้นสามัญ แต่โดยทั่วไปไม่มีสิทธิออกเสียง","มีสิทธิออกเสียงมากกว่าหุ้นสามัญเสมอ","บริษัทต้องจ่ายปันผลทุกปีตามกฎหมาย","ได้รับเงินคืนก่อนผู้ถือหุ้นกู้เมื่อล้มละลาย"],a:0,e:"หุ้นบุริมสิทธิ = “ลูกผสม” ได้ปันผลก่อนและได้คืนทุนก่อนหุ้นสามัญ แต่ยังอยู่หลังเจ้าหนี้ทุกกลุ่ม และมักแลกกับการไม่มีสิทธิออกเสียง"},
+{s:3,q:"นาย ก ซื้อหุ้นในวันที่ขึ้นเครื่องหมาย XD นาย ก จะได้รับเงินปันผลงวดนั้นหรือไม่",o:["ได้ เพราะซื้อก่อนวันจ่ายปันผล","ได้ครึ่งหนึ่ง","ไม่ได้ เพราะผู้ซื้อตั้งแต่วัน XD เป็นต้นไปไม่มีสิทธิรับปันผลงวดนั้น","ได้ หากถือต่อจนวันจ่าย"],a:2,e:"XD (Excluding Dividend) = ซื้อวันนี้ไม่ได้ปันผลงวดนี้ ต้องซื้ออย่างช้าวันทำการก่อนวัน XD (เพราะการชำระราคา T+2 จึงจะมีชื่อทันวันปิดสมุดทะเบียน)"},
+{s:3,q:"เมื่อหุ้นขึ้นเครื่องหมาย XR ราคาหุ้นตามทฤษฎีมักเป็นอย่างไร",o:["ปรับขึ้นเพราะบริษัทได้เงินทุนเพิ่ม","ปรับลดลง หากราคาจองซื้อหุ้นเพิ่มทุนต่ำกว่าราคาตลาด","ไม่เปลี่ยนแปลงเลย","ปรับลดลงเท่ากับเงินปันผล"],a:1,e:"XR (Excluding Right) = ผู้ซื้อไม่ได้สิทธิจองหุ้นเพิ่มทุน เมื่อราคาจองต่ำกว่าราคาตลาด ราคาจะปรับลดเหลือราคาถัวเฉลี่ยระหว่างหุ้นเดิมกับหุ้นใหม่"},
+{s:3,q:"กองทุนมีทรัพย์สินรวม 1,050 ล้านบาท หนี้สิน 50 ล้านบาท หน่วยลงทุน 100 ล้านหน่วย มูลค่าหน่วยลงทุน (NAV ต่อหน่วย) เท่าใด",o:["10.50 บาท","9.50 บาท","11.00 บาท","10.00 บาท"],a:3,e:"NAV = ทรัพย์สิน − หนี้สิน = 1,050 − 50 = 1,000 ล้านบาท → NAV ต่อหน่วย = 1,000 ÷ 100 = 10.00 บาท ต้องหักหนี้สินก่อน"},
+{s:3,q:"ผู้ดูแลผลประโยชน์ (Trustee) ของกองทุนรวมมีบทบาทหลักอย่างไร",o:["ดูแลรักษาทรัพย์สินของกองทุน และติดตามให้ บลจ. จัดการตามโครงการและกฎหมาย เพื่อคุ้มครองผู้ถือหน่วย","ตัดสินใจเลือกหุ้นที่กองทุนจะลงทุน","รับประกันผลตอบแทนแก่ผู้ถือหน่วย","ทำหน้าที่ขายหน่วยลงทุนแทน บลจ."],a:0,e:"Trustee เป็นนิติบุคคลแยกจาก บลจ. (มักเป็นธนาคาร) เก็บทรัพย์สินกองทุนแยกจากทรัพย์สินของ บลจ. และเป็นผู้ตรวจสอบถ่วงดุล ไม่ได้ตัดสินใจลงทุนและไม่รับประกันผลตอบแทน"}
+]});
+
+MOCK.push({id:"mock3", title:"ชุดที่ 3", q:[
+{s:1,q:"ลงทุน 100,000 บาท ผลตอบแทน 12% ต่อปี ทบต้นรายเดือน ครบ 1 ปีจะได้เงินรวมเท่าใด",o:["112,000.00 บาท","112,360.00 บาท","112,550.88 บาท","112,682.50 บาท"],a:3,e:"FV = 100,000 × (1 + 0.12/12)¹² = 100,000 × 1.01¹² = 112,682.50 บาท 112,000 คือทบปีละครั้ง 112,360 คือทบรายครึ่งปี และ 112,550.88 คือทบรายไตรมาส"},
+{s:1,q:"ต้องการมีเงิน 1,000,000 บาทในอีก 10 ปี ผลตอบแทน 7% ต่อปี ต้องลงทุนก้อนเดียววันนี้ประมาณเท่าใด",o:["508,349.29 บาท","700,000.00 บาท","588,235.29 บาท","1,967,151.36 บาท"],a:0,e:"PV = 1,000,000 ÷ 1.07¹⁰ = 1,000,000 ÷ 1.967151 = 508,349.29 บาท ตัวเลข 1,967,151.36 คือการคูณแทนการหาร (เป็น FV ไม่ใช่ PV)"},
+{s:1,q:"ฝากเงินต้นปีทุกปี ปีละ 10,000 บาท เป็นเวลา 2 ปี ผลตอบแทน 10% ต่อปี ณ สิ้นปีที่ 2 จะมีเงินเท่าใด",o:["20,000 บาท","21,000 บาท","23,100 บาท","22,000 บาท"],a:2,e:"ฝากต้นงวด (Annuity Due) เงินแต่ละก้อนได้ดอกเบี้ยเพิ่ม 1 งวด: ก้อนแรก 10,000 × 1.1² = 12,100 ก้อนที่สอง 10,000 × 1.1 = 11,000 รวม 23,100 บาท ถ้าฝากปลายงวดจะได้ 21,000"},
+{s:1,q:"อัตราผลตอบแทนปราศจากความเสี่ยง 3% ส่วนชดเชยความเสี่ยงตลาด (Rm − Rf) 5% หุ้นมี Beta 1.4 อัตราผลตอบแทนที่ต้องการตาม CAPM เท่าใด",o:["8.0%","10.0%","11.4%","7.0%"],a:1,e:"CAPM: E(R) = Rf + β(Rm − Rf) = 3% + 1.4 × 5% = 3% + 7% = 10% ระวังโจทย์ให้ส่วนชดเชยความเสี่ยงมาแล้ว ไม่ต้องลบ Rf ซ้ำ"},
+{s:1,q:"จากข้อที่แล้ว (ผลตอบแทนที่ต้องการ 10%) หากนักวิเคราะห์คาดว่าหุ้นนี้จะให้ผลตอบแทน 9% ควรสรุปอย่างไร",o:["หุ้นราคาต่ำกว่าที่ควร (Undervalued) ควรซื้อ","ราคาเหมาะสมพอดี","ข้อมูลไม่พอสรุป","หุ้นราคาสูงกว่าที่ควร (Overvalued) เพราะผลตอบแทนคาดการณ์ต่ำกว่าที่ควรได้รับตามความเสี่ยง"],a:3,e:"ผลตอบแทนคาดการณ์ (9%) < ผลตอบแทนที่ต้องการตาม CAPM (10%) = ได้ผลตอบแทนไม่คุ้มความเสี่ยง จุดอยู่ใต้เส้น SML แปลว่าราคาแพงเกินไป"},
+{s:1,q:"หลักทรัพย์ A และ B มี S.D. เท่ากัน ค่าสหสัมพันธ์ = −1 ลงทุนสัดส่วน 50:50 ส่วนเบี่ยงเบนมาตรฐานของพอร์ตเท่าใด",o:["0","เท่ากับ S.D. ของหลักทรัพย์แต่ละตัว","สองเท่าของ S.D. แต่ละตัว","ครึ่งหนึ่งของ S.D. แต่ละตัว"],a:0,e:"σp = |wAσA − wBσB| เมื่อ ρ = −1 → 0.5σ − 0.5σ = 0 ความผันผวนหักล้างกันหมด เป็นกรณีทางทฤษฎีที่แสดงพลังของการกระจายความเสี่ยงสูงสุด"},
+{s:1,q:"สภาวะเศรษฐกิจ: ดี (โอกาส 20%) ผลตอบแทน 25% ปกติ (50%) 10% แย่ (30%) −10% อัตราผลตอบแทนที่คาดหวังเท่าใด",o:["8.33%","10%","7%","5%"],a:2,e:"E(R) = 0.2×25 + 0.5×10 + 0.3×(−10) = 5 + 5 − 3 = 7% ต้องถ่วงน้ำหนักด้วยความน่าจะเป็น ไม่ใช่ค่าเฉลี่ยธรรมดา (8.33%)"},
+{s:1,q:"หลักทรัพย์ A: E(R) 10% S.D. 5% หลักทรัพย์ B: E(R) 20% S.D. 12% เมื่อพิจารณาด้วยสัมประสิทธิ์ความแปรปรวน (CV) ข้อใดถูกต้อง",o:["B มีความเสี่ยงต่อหน่วยผลตอบแทนต่ำกว่า","A มีความเสี่ยงต่อหน่วยผลตอบแทนต่ำกว่า (CV 0.5 เทียบกับ 0.6)","ทั้งสองเท่ากัน","A เสี่ยงกว่าเพราะผลตอบแทนต่ำกว่า"],a:1,e:"CV = S.D. ÷ E(R) → A = 5/10 = 0.5, B = 12/20 = 0.6 CV ต่ำกว่าแปลว่าแบกความเสี่ยงน้อยกว่าเพื่อแลกผลตอบแทน 1 หน่วย ใช้เทียบหลักทรัพย์ที่ผลตอบแทนต่างกันมาก"},
+{s:1,q:"กองทุนมีผลตอบแทน 11% Beta 1.6 อัตราผลตอบแทนปราศจากความเสี่ยง 3% Treynor Ratio เท่าใด",o:["8.0","0.5","6.9","5.0"],a:3,e:"Treynor = (Rp − Rf) ÷ β = (11 − 3) ÷ 1.6 = 5.0 Treynor ใช้ Beta (ความเสี่ยงที่เป็นระบบ) เหมาะกับพอร์ตที่กระจายดีแล้ว ส่วน Sharpe ใช้ S.D. (ความเสี่ยงรวม)"},
+{s:1,q:"ข้อใดเป็นลักษณะของเศรษฐกิจในช่วงถดถอย (Recession)",o:["GDP หดตัว การว่างงานเพิ่มขึ้น และกำไรบริษัทลดลง","เงินเฟ้อสูงและการจ้างงานเต็มที่","ธนาคารกลางมักขึ้นดอกเบี้ยอย่างต่อเนื่อง","ราคาหุ้นวัฏจักรมักปรับขึ้นแรง"],a:0,e:"ช่วงถดถอย ความต้องการลดลง GDP ติดลบ คนตกงานมากขึ้น ธนาคารกลางมักลดดอกเบี้ยเพื่อกระตุ้น หุ้นกลุ่มปลอดภัย (Defensive) และพันธบัตรมักได้รับความนิยม"},
+{s:1,q:"เงินบาทอ่อนค่าลงเมื่อเทียบกับดอลลาร์สหรัฐ กลุ่มใดมักได้ประโยชน์",o:["ผู้นำเข้าสินค้าจากสหรัฐฯ","คนไทยที่ไปเที่ยวสหรัฐฯ","ผู้ส่งออกที่ขายสินค้าเป็นดอลลาร์","บริษัทที่มีหนี้สกุลดอลลาร์"],a:2,e:"บาทอ่อน = 1 ดอลลาร์แลกได้บาทมากขึ้น ผู้ส่งออกที่รับเงินดอลลาร์ได้รายได้เป็นบาทมากขึ้น ส่วนผู้นำเข้า นักท่องเที่ยว และผู้มีหนี้ดอลลาร์ต้องจ่ายแพงขึ้น"},
+{s:1,q:"ข้อใดอธิบายตลาดแรก (Primary Market) ได้ถูกต้อง",o:["ตลาดที่นักลงทุนซื้อขายหุ้นกันเองหลังจดทะเบียนแล้ว","ตลาดที่บริษัทผู้ออกขายหลักทรัพย์ใหม่ครั้งแรกให้ผู้ลงทุน และได้รับเงินทุนโดยตรง เช่น IPO","ตลาดซื้อขายอนุพันธ์","ตลาดเงินระยะสั้นระหว่างธนาคารเท่านั้น"],a:1,e:"ตลาดแรก = ผู้ออกได้รับเงินโดยตรง (ระดมทุน) ตลาดรอง = ผู้ลงทุนซื้อขายเปลี่ยนมือกันเอง บริษัทไม่ได้รับเงิน แต่ตลาดรองสร้างสภาพคล่องให้ตลาดแรก"},
+{s:1,q:"เส้นอัตราผลตอบแทน (Yield Curve) ที่เป็นแบบหัวกลับ (Inverted) คือดอกเบี้ยระยะสั้นสูงกว่าระยะยาว มักถูกตีความว่าอย่างไร",o:["เศรษฐกิจกำลังร้อนแรงและจะเติบโตต่อเนื่อง","เงินเฟ้อจะสูงขึ้นในระยะยาว","ไม่มีความหมายทางเศรษฐกิจ","ตลาดคาดว่าเศรษฐกิจจะชะลอตัวหรือถดถอยและดอกเบี้ยจะลดลงในอนาคต"],a:3,e:"ปกติเส้นชันขึ้น (ถือนานต้องได้มาก) เมื่อหัวกลับ แสดงว่าตลาดคาดว่าดอกเบี้ยจะลด ซึ่งมักเกิดเมื่อคาดว่าเศรษฐกิจจะชะลอ จึงเป็นสัญญาณเตือนภาวะถดถอยที่ถูกจับตา"},
+{s:1,q:"ฝากเงิน 50,000 บาท ดอกเบี้ยแบบไม่ทบต้น (Simple Interest) 3% ต่อปี เป็นเวลา 4 ปี จะได้เงินรวมเท่าใด",o:["56,000.00 บาท","56,275.44 บาท","54,000.00 บาท","53,000.00 บาท"],a:0,e:"ดอกเบี้ยแบบไม่ทบต้น = เงินต้น × อัตรา × เวลา = 50,000 × 0.03 × 4 = 6,000 รวม 56,000 บาท ส่วน 56,275.44 คือแบบทบต้น (50,000 × 1.03⁴)"},
+{s:1,q:"พอร์ตลงทุนหุ้น A 60% (Beta 1.2) และหุ้น B 40% (Beta 0.7) Beta ของพอร์ตเท่าใด",o:["0.95","1.90","1.00","1.20"],a:2,e:"Beta พอร์ต = ค่าเฉลี่ยถ่วงน้ำหนัก = 0.6×1.2 + 0.4×0.7 = 0.72 + 0.28 = 1.00 พอร์ตจะเคลื่อนไหวใกล้เคียงตลาด ส่วน 0.95 คือการเฉลี่ยธรรมดาโดยไม่ถ่วงน้ำหนัก"},
+{s:2,q:"IC มีลูกค้าเป็นญาติสนิท และมีหุ้น IPO ที่เป็นที่ต้องการสูงในจำนวนจำกัด IC ควรจัดสรรอย่างไร",o:["ให้ญาติก่อนเพราะไว้ใจได้","จัดสรรตามหลักเกณฑ์ที่บริษัทกำหนดอย่างเป็นธรรม ไม่ให้สิทธิพิเศษแก่ญาติเหนือลูกค้าอื่น","ให้ลูกค้าที่ให้ค่าคอมมิชชันสูงสุดก่อน","เก็บไว้ในบัญชีตนเองบางส่วนก่อน"],a:1,e:"หลักปฏิบัติต่อลูกค้าอย่างเท่าเทียมและเป็นธรรม ต้องใช้เกณฑ์เดียวกันกับทุกคนที่โปร่งใส ความสัมพันธ์ส่วนตัวหรือรายได้ที่ IC จะได้รับไม่ใช่เหตุผลให้เลือกปฏิบัติ"},
+{s:2,q:"ข้อใดเป็นการกระทำที่ IC ทำได้เกี่ยวกับหุ้น IPO ที่ลูกค้าต้องการจำนวนมาก",o:["จองซื้อในชื่อตนเองก่อน แล้วขายต่อให้ลูกค้า","ให้ญาติจองแทนแล้วแบ่งกำไร","จองให้ตนเองก่อนเพราะเป็นพนักงาน","จัดสรรให้ลูกค้าตามเกณฑ์ก่อน โดยไม่นำประโยชน์ของตนเองหรือผู้เกี่ยวข้องมาก่อนลูกค้า"],a:3,e:"ห้ามนำประโยชน์ส่วนตัวมาก่อนลูกค้า การจองเองหรือผ่านญาติเพื่อเอากำไรเป็นความขัดแย้งทางผลประโยชน์ที่เอาเปรียบลูกค้าโดยตรง"},
+{s:2,q:"IC โพสต์ในโซเชียลมีเดียว่า “กองนี้ลงทุนแล้วไม่มีขาดทุนแน่นอน ผลตอบแทนดีกว่าเงินฝาก” ทั้งที่เป็นกองทุนผสม ข้อใดถูกต้อง",o:["เป็นการโฆษณาที่ทำให้เข้าใจผิด ห้ามกระทำ","ทำได้ หากผลงานย้อนหลังไม่เคยติดลบ","ทำได้ เพราะเป็นบัญชีส่วนตัว","ทำได้ หากใส่ลิงก์หนังสือชี้ชวนไว้ด้วย"],a:0,e:"การสื่อสารใดๆ ต้องไม่บิดเบือนหรือรับรองผลตอบแทน แม้เป็นบัญชีส่วนตัว หากเป็นการชักชวนลงทุนก็อยู่ใต้กฎเกณฑ์เดียวกัน การแนบลิงก์ไม่ได้ทำให้ข้อความที่ผิดกลายเป็นถูก"},
+{s:2,q:"ก่อนลูกค้าตัดสินใจลงทุนในกองทุนรวม IC มีหน้าที่สำคัญเรื่องเอกสารอย่างไร",o:["ส่งเอกสารหลังลูกค้าซื้อแล้วก็ได้","ไม่ต้องให้เอกสารหากลูกค้าเคยลงทุนมาก่อน","ให้หนังสือชี้ชวนส่วนสรุปข้อมูลสำคัญ (Fact Sheet) และอธิบายลักษณะ ความเสี่ยง ค่าธรรมเนียมให้ลูกค้าเข้าใจ","ให้เฉพาะโบรชัวร์โฆษณา"],a:2,e:"ลูกค้าต้องได้ข้อมูลสำคัญก่อนตัดสินใจ ไม่ใช่หลังซื้อ Fact Sheet สรุปนโยบาย ความเสี่ยง ผลตอบแทนย้อนหลัง และค่าธรรมเนียม ช่วยให้ลูกค้าตัดสินใจได้อย่างมีข้อมูล"},
+{s:2,q:"ลูกค้ายื่นเงินสดให้ IC และฝากให้ช่วยนำไปซื้อกองทุน IC ควรทำอย่างไร",o:["รับไว้แล้วโอนเข้าบัญชีตนเองก่อนเพื่อความสะดวก","ไม่รับเงินในนามตนเอง แนะนำให้ลูกค้าชำระผ่านช่องทางของบริษัทหรือบัญชีที่บริษัทกำหนดโดยตรง","รับไว้หากลูกค้าเซ็นยินยอม","รับไว้แล้วซื้อให้ในวันถัดไป"],a:1,e:"ห้าม IC รับเงินหรือทรัพย์สินของลูกค้าเข้าบัญชีส่วนตัว เพื่อป้องกันการยักยอกและข้อพิพาท เงินลูกค้าต้องเข้าสู่ระบบของบริษัทเท่านั้น"},
+{s:2,q:"IC ถือหุ้น Y ในบัญชีส่วนตัว และกำลังจะแนะนำหุ้น Y ให้ลูกค้าจำนวนมาก IC ควรปฏิบัติอย่างไร",o:["ขายหุ้น Y ของตนก่อนออกคำแนะนำ","ซื้อเพิ่มก่อนแนะนำเพื่อทำกำไร","ไม่ต้องทำอะไรเพราะเป็นการลงทุนส่วนตัว","ปฏิบัติตามนโยบายการซื้อขายของพนักงาน เปิดเผยส่วนได้เสียตามระเบียบ และไม่ซื้อขายตัดหน้าหรือสวนคำแนะนำเพื่อประโยชน์ตนเอง"],a:3,e:"การถือหลักทรัพย์ส่วนตัวไม่ผิด แต่สร้างความขัดแย้งทางผลประโยชน์ ต้องจัดการด้วยการเปิดเผยข้อมูล ปฏิบัติตามช่วงห้ามซื้อขาย และต้องให้คำสั่งของลูกค้าได้ก่อน"},
+{s:2,q:"ลูกค้าร้องเรียนว่าได้รับข้อมูลไม่ครบก่อนซื้อกองทุน IC ควรทำอย่างไร",o:["รับเรื่อง บันทึกข้อร้องเรียน และส่งต่อหน่วยงานที่รับผิดชอบ (เช่น Compliance) ตามกระบวนการของบริษัท","ขอให้ลูกค้าถอนเรื่องเพราะจะกระทบผลงาน","แก้ไขเอกสารย้อนหลังให้ดูครบถ้วน","เพิกเฉยเพราะลูกค้าเซ็นเอกสารไปแล้ว"],a:0,e:"การจัดการข้อร้องเรียนต้องเป็นระบบ โปร่งใส และมีบันทึก การแก้เอกสารย้อนหลังคือการปลอมแปลง และการกดดันลูกค้าเป็นการปฏิบัติไม่เป็นธรรม"},
+{s:2,q:"ผู้แนะนำการลงทุนตราสารทั่วไป (IC Plain) ให้คำแนะนำในผลิตภัณฑ์ใดได้",o:["สัญญาซื้อขายล่วงหน้า (Derivatives) ทุกประเภท","ผลิตภัณฑ์ซับซ้อนทุกประเภทหากลูกค้ายินยอม","หลักทรัพย์ทั่วไปที่ไม่ซับซ้อน เช่น หุ้น ตราสารหนี้ทั่วไป และกองทุนรวมที่ไม่ซับซ้อน","เฉพาะเงินฝากธนาคาร"],a:2,e:"IC Plain ครอบคลุมตราสารทั่วไป ส่วนผลิตภัณฑ์ซับซ้อนหรืออนุพันธ์ต้องใช้ IC Complex ระดับที่เกี่ยวข้อง การยินยอมของลูกค้าไม่ได้ขยายขอบเขตใบอนุญาต"},
+{s:2,q:"ลูกค้าแจ้งว่าเพิ่งตกงานและต้องใช้เงินในอีก 6 เดือน แต่ผลประเมินความเสี่ยงล่าสุดเมื่อปีที่แล้วอยู่ระดับเสี่ยงสูง IC ควรทำอย่างไร",o:["ใช้ผลประเมินเดิมได้จนครบ 2 ปี","ทบทวนข้อมูลและประเมินความเหมาะสมใหม่ เพราะสถานะของลูกค้าเปลี่ยนแปลงอย่างมีนัยสำคัญ","แนะนำกองทุนหุ้นเพื่อหวังกำไรเร็ว","ให้ลูกค้าตัดสินใจเองโดยไม่ต้องให้ข้อมูลใด"],a:1,e:"รายได้ที่หายไปและระยะเวลาใช้เงินที่สั้นลงเปลี่ยนความสามารถรับความเสี่ยงทันที ไม่ต้องรอครบรอบทบทวน ต้องประเมินใหม่และแนะนำให้สอดคล้องกับสถานะปัจจุบัน"},
+{s:2,q:"เพื่อนที่เป็นผู้บริหารบริษัทจดทะเบียนเล่าให้ IC ฟังว่าบริษัทกำลังจะประกาศควบรวมกิจการ ซึ่งยังไม่เปิดเผยต่อสาธารณะ IC ควรทำอย่างไร",o:["รีบแนะนำลูกค้าให้ซื้อก่อนประกาศ","ซื้อเฉพาะบัญชีตนเองเล็กน้อย","บอกต่อเฉพาะลูกค้า VIP","ไม่ใช้ข้อมูลนั้นซื้อขาย และไม่ส่งต่อให้ผู้อื่น เพราะเป็นข้อมูลภายในที่ยังไม่เปิดเผย"],a:3,e:"การใช้หรือส่งต่อข้อมูลภายใน (Insider Information) เพื่อซื้อขายเป็นความผิดตามกฎหมายหลักทรัพย์ ไม่ว่าจะทำเองหรือบอกให้คนอื่นทำ"},
+{s:3,q:"หุ้นราคา 40 บาท จ่ายเงินปันผลปีละ 2 บาท Dividend Yield เท่าใด",o:["5%","20%","2%","4%"],a:0,e:"Dividend Yield = DPS ÷ ราคาหุ้น = 2 ÷ 40 = 5% บอกผลตอบแทนเงินสดที่ได้รับเทียบกับราคาที่จ่าย"},
+{s:3,q:"จากข้อที่แล้ว หากราคาหุ้นลดลงเหลือ 32 บาท โดยเงินปันผลเท่าเดิม Dividend Yield จะเป็นเท่าใด",o:["5.00%","4.00%","6.25%","8.00%"],a:2,e:"2 ÷ 32 = 6.25% ราคาลดลงแต่ปันผลเท่าเดิม Dividend Yield จะสูงขึ้น ต้องตรวจสอบเสมอว่าราคาลดเพราะพื้นฐานแย่ลงหรือไม่ (Dividend Trap)"},
+{s:3,q:"บริษัทมีมูลค่าตลาด (Market Cap) 6,000 ล้านบาท กำไรสุทธิ 400 ล้านบาท P/E Ratio เท่าใด",o:["6.67 เท่า","15 เท่า","24 เท่า","1.5 เท่า"],a:1,e:"P/E = มูลค่าตลาด ÷ กำไรสุทธิ (เทียบเท่า ราคา ÷ EPS) = 6,000 ÷ 400 = 15 เท่า หมายความว่านักลงทุนยอมจ่าย 15 บาทเพื่อกำไร 1 บาทต่อปี"},
+{s:3,q:"หุ้นกู้ราคาตราไว้ 1,000 บาท คูปอง 5% ต่อปี ขณะที่ผลตอบแทนตลาดของตราสารลักษณะเดียวกันเท่ากับ 5% ราคาหุ้นกู้ควรเป็นเท่าใด",o:["950 บาท","1,050 บาท","500 บาท","1,000 บาท"],a:3,e:"คูปอง = Yield → ราคา = ราคาตราไว้ (Par) = 1,000 บาท เพราะดอกเบี้ยที่ได้รับเท่ากับผลตอบแทนที่ตลาดต้องการพอดี ไม่ต้องลดหรือเพิ่มราคา"},
+{s:3,q:"พันธบัตรมี Modified Duration 7 หากอัตราผลตอบแทนตลาดเพิ่มขึ้น 0.25% ราคาพันธบัตรจะเปลี่ยนแปลงประมาณเท่าใด",o:["ลดลง 1.75%","เพิ่มขึ้น 1.75%","ลดลง 7%","ลดลง 0.25%"],a:0,e:"%ΔP ≈ −MD × Δy = −7 × 0.25% = −1.75% เครื่องหมายลบเพราะราคาแปรผกผันกับดอกเบี้ย ดอกเบี้ยขึ้นราคาลง"},
+{s:3,q:"หุ้นราคา 11 บาทก่อนขึ้น XR บริษัทเสนอขายหุ้นเพิ่มทุนในอัตรา 2 หุ้นเดิม : 1 หุ้นใหม่ ราคาจองซื้อ 5 บาท ราคาหุ้นภายหลังขึ้น XR ตามทฤษฎีเท่าใด",o:["8 บาท","6 บาท","9 บาท","10 บาท"],a:2,e:"ราคาตามทฤษฎี = (2 × 11 + 1 × 5) ÷ (2 + 1) = 27 ÷ 3 = 9 บาท คือราคาเฉลี่ยของหุ้นเดิม 2 หุ้นกับหุ้นใหม่ 1 หุ้น ตัวเลือก 8 บาทคือเฉลี่ยแบบไม่ถ่วงน้ำหนัก"},
+{s:3,q:"ผู้ลงทุนอายุ 45 ปี ขายคืน RMF ที่ถือมา 6 ปี (ไม่ได้ทุพพลภาพ) ผลทางภาษีคือข้อใด",o:["ไม่มีผลใด เพราะถือครบ 5 ปีแล้ว","ต้องคืนสิทธิลดหย่อนภาษีที่เคยใช้ พร้อมเงินเพิ่ม 1.5% ต่อเดือน และกำไรจากการขายต้องนำไปเสียภาษี","เสียค่าปรับให้ บลจ. 10% เท่านั้น","ห้ามขายคืนเด็ดขาดจนกว่าอายุ 55 ปี"],a:1,e:"RMF ต้องถือ ≥ 5 ปี และ อายุ ≥ 55 ปี ครบทั้งคู่ เมื่ออายุยังไม่ถึง ถือว่าผิดเงื่อนไข ต้องคืนภาษีที่ได้รับยกเว้นย้อนหลัง พร้อมเงินเพิ่ม 1.5% ต่อเดือน และกำไรส่วนต่างถือเป็นเงินได้ (ขายคืนได้ แต่เสียสิทธิทางภาษี)"},
+{s:3,q:"บริษัทล้มละลาย ขายทรัพย์สินได้ 100 ล้านบาท ชำระเจ้าหนี้มีประกัน 40 ล้านบาท และหนี้บุริมสิทธิตามกฎหมาย (ภาษีค้าง ค่าจ้าง) 10 ล้านบาทแล้ว ยังมีหุ้นกู้ไม่มีประกันไม่ด้อยสิทธิ 60 ล้านบาท หุ้นกู้ด้อยสิทธิ 30 ล้านบาท ผู้ถือหุ้นกู้ไม่ด้อยสิทธิจะได้รับชำระประมาณกี่เปอร์เซ็นต์ของหนี้",o:["100%","55.56%","60%","83.33%"],a:3,e:"เงินเหลือ = 100 − 40 − 10 = 50 ล้านบาท ผู้ถือหุ้นกู้ไม่ด้อยสิทธิได้ก่อนกลุ่มด้อยสิทธิ → 50 ÷ 60 = 83.33% หุ้นกู้ด้อยสิทธิ หุ้นบุริมสิทธิ และหุ้นสามัญไม่ได้รับเลย ตัวเลือก 55.56% คือการเฉลี่ย 50 ให้ทั้งสองกลุ่ม (50/90) ซึ่งผิดหลักลำดับสิทธิ"},
+{s:3,q:"ข้อใดถูกต้องเกี่ยวกับกองทุน SSF ณ ปีภาษี 2569",o:["ไม่มีสิทธิลดหย่อนภาษีสำหรับการซื้อใหม่แล้ว (สิทธิสิ้นสุดปี 2567) แต่หน่วยที่ซื้อไว้เดิมต้องถือครบ 10 ปี","ลดหย่อนได้ 30% ไม่เกิน 200,000 บาท","ถือครบ 5 ปีขายได้","ต้องซื้อต่อเนื่องทุกปี"],a:0,e:"SSF ให้สิทธิลดหย่อนถึงปีภาษี 2567 เท่านั้น ผู้ที่ถือหน่วยเดิมยังต้องถือครบ 10 ปีนับวันชนวันตามเงื่อนไข ปัจจุบันกองประหยัดภาษีหลักคือ RMF และ ThaiESG/ThaiESGX"},
+{s:3,q:"กองทุนรวมตราสารทุนที่ลงทุนกระจายในหุ้นหลายอุตสาหกรรม (เฉลี่ยรอบปีบัญชีมากกว่า 80% ของ NAV) มีระดับความเสี่ยงเท่าใด",o:["ระดับ 5","ระดับ 7","ระดับ 6","ระดับ 8"],a:2,e:"ระดับ 6 = กองทุนรวมตราสารทุน (หุ้นทั่วไปกระจายหลายอุตสาหกรรม) ส่วนกองหุ้นที่กระจุกอุตสาหกรรมเดียวขึ้นเป็นระดับ 7"},
+{s:3,q:"กองทุนที่ลงทุนในหุ้นกลุ่มเทคโนโลยีเท่านั้น (Sector Fund) มีระดับความเสี่ยงเท่าใด",o:["ระดับ 6","ระดับ 7","ระดับ 4","ระดับ 5"],a:1,e:"ระดับ 7 = กองทุนหมวดอุตสาหกรรม ลงทุนกระจุกตัวในกลุ่มเดียว ความเสี่ยงสูงกว่ากองหุ้นทั่วไปเพราะกระจายความเสี่ยงได้น้อย"},
+{s:3,q:"กองทุนรวมไทยที่นำเงินเกือบทั้งหมดไปลงทุนในกองทุนหลักต่างประเทศเพียงกองเดียว (Feeder Fund) มีความเสี่ยงเพิ่มเติมที่สำคัญคือข้อใด",o:["ไม่มีความเสี่ยงเพิ่ม เพราะกองหลักเป็นมืออาชีพ","ความเสี่ยงจากการเมืองไทยเท่านั้น","ความเสี่ยงจากการผิดนัดชำระของรัฐบาลไทย","ความเสี่ยงจากอัตราแลกเปลี่ยน (หากไม่ได้ป้องกันเต็มจำนวน) และความเสี่ยงจากการกระจุกตัวในกองทุนหลัก"],a:3,e:"Feeder Fund แปลงเงินบาทเป็นสกุลต่างประเทศ จึงมีความเสี่ยงอัตราแลกเปลี่ยน และผลตอบแทนผูกกับกองหลักกองเดียว ผู้ลงทุนควรดูนโยบายป้องกันความเสี่ยงค่าเงินใน Fact Sheet"},
+{s:3,q:"ข้อใดเป็นลักษณะของกองทุนดัชนี (Index Fund) เมื่อเทียบกับกองทุนบริหารเชิงรุก (Active Fund)",o:["มุ่งสร้างผลตอบแทนใกล้เคียงดัชนีอ้างอิง และมักมีค่าธรรมเนียมการจัดการต่ำกว่า","มุ่งชนะดัชนีอย่างมาก จึงมีค่าธรรมเนียมสูง","ผู้จัดการเลือกหุ้นเองตามมุมมองตลาดตลอดเวลา","รับประกันว่าจะไม่ขาดทุนเมื่อดัชนีลดลง"],a:0,e:"Passive/Index Fund ลงทุนตามดัชนี ซื้อขายน้อย ต้นทุนต่ำ ผลตอบแทนตามตลาด เมื่อดัชนีลด กองก็ลดตาม ส่วน Active Fund พยายามเอาชนะดัชนีและมีค่าธรรมเนียมสูงกว่า"},
+{s:3,q:"ข้อใดเป็นลักษณะของกองทุน ETF",o:["ซื้อขายได้วันละครั้งที่ราคา NAV สิ้นวันเท่านั้น","ต้องซื้อผ่าน บลจ. โดยตรงเท่านั้น","ซื้อขายผ่านตลาดหลักทรัพย์ได้ระหว่างวันเหมือนหุ้น ผ่านบัญชีซื้อขายหลักทรัพย์","รับประกันราคาเท่ากับ NAV ตลอดเวลา"],a:2,e:"ETF จดทะเบียนในตลาดหลักทรัพย์ ราคาเปลี่ยนตามอุปสงค์อุปทานระหว่างวัน ซึ่งอาจต่างจาก NAV เล็กน้อย ต่างจากกองทุนเปิดทั่วไปที่ซื้อขายที่ NAV สิ้นวัน"},
+{s:3,q:"กองทุนรวมตราสารหนี้ภาครัฐที่ลงทุนในพันธบัตรรัฐบาลและตราสารที่รัฐค้ำประกัน (เฉลี่ยรอบปีบัญชี ≥ 80%) มีระดับความเสี่ยงเท่าใด",o:["ระดับ 1","ระดับ 3","ระดับ 4","ระดับ 2"],a:1,e:"ระดับ 3 = กองทุนพันธบัตรรัฐบาล ความเสี่ยงด้านเครดิตต่ำมาก แต่ยังมีความเสี่ยงอัตราดอกเบี้ย ส่วนระดับ 4 = กองตราสารหนี้ทั่วไปที่มีหุ้นกู้เอกชน"},
+{s:3,q:"ในช่วงที่อัตราดอกเบี้ยตลาดลดลง ผู้ถือตราสารหนี้ที่ได้รับดอกเบี้ยเป็นงวดจะเผชิญความเสี่ยงใดเพิ่มขึ้น",o:["ความเสี่ยงที่ราคาตราสารลดลง","ความเสี่ยงจากเงินเฟ้อสูงขึ้นทันที","ความเสี่ยงด้านสภาพคล่องเท่านั้น","ความเสี่ยงจากการนำเงินไปลงทุนต่อ (Reinvestment Risk) ที่ได้ดอกเบี้ยต่ำลง"],a:3,e:"ดอกเบี้ยลด → ราคาตราสารขึ้น (ได้ประโยชน์ด้านราคา) แต่ดอกเบี้ยที่ได้รับต้องนำไปลงทุนต่อที่อัตราต่ำลง ความเสี่ยงด้านราคาและด้านการลงทุนต่อจึงเคลื่อนไหวสวนทางกัน"},
+{s:3,q:"เหตุใดหุ้นกู้ภาคเอกชนจึงมักให้ผลตอบแทนสูงกว่าพันธบัตรรัฐบาลที่อายุเท่ากัน",o:["เพราะต้องชดเชยความเสี่ยงด้านเครดิต (โอกาสผิดนัดชำระ) ที่สูงกว่า","เพราะเอกชนมีกำไรมากกว่ารัฐบาล","เพราะกฎหมายบังคับให้จ่ายสูงกว่า","เพราะหุ้นกู้ไม่มีความเสี่ยงอัตราดอกเบี้ย"],a:0,e:"ส่วนต่างผลตอบแทน (Credit Spread) คือค่าชดเชยความเสี่ยงที่ผู้ออกเอกชนอาจผิดนัด ยิ่งอันดับเครดิตต่ำ Spread ยิ่งกว้าง พันธบัตรรัฐบาลถือเป็นผู้ออกที่ความเสี่ยงเครดิตต่ำสุดในประเทศ"},
+{s:3,q:"ตั๋วเงินคลัง (Treasury Bill) มีลักษณะอย่างไร",o:["ตราสารทุนของรัฐวิสาหกิจ","ตราสารหนี้ระยะยาว 10 ปีขึ้นไป จ่ายดอกเบี้ยทุก 6 เดือน","ตราสารหนี้ระยะสั้นไม่เกิน 1 ปีที่รัฐบาลออก ขายแบบมีส่วนลด (Discount) ไม่มีคูปอง","หุ้นกู้ของธนาคารพาณิชย์"],a:2,e:"T-Bill คือเครื่องมือระดมเงินระยะสั้นของรัฐ ขายต่ำกว่าราคาตราไว้แล้วคืนเต็มเมื่อครบกำหนด จึงเป็นตราสารแบบไม่มีดอกเบี้ย (Zero Coupon) อายุสั้น และเป็นทรัพย์สินหลักของกองทุนตลาดเงิน"},
+{s:3,q:"หุ้นกู้มีประกัน (Secured Debenture) แตกต่างจากหุ้นกู้ไม่มีประกันอย่างไร",o:["ได้รับดอกเบี้ยสูงกว่าเสมอ","มีทรัพย์สินเป็นหลักประกัน ทำให้ได้สิทธิรับชำระจากทรัพย์สินนั้นก่อนเจ้าหนี้ไม่มีประกัน","มีสิทธิออกเสียงในที่ประชุมผู้ถือหุ้น","แปลงเป็นหุ้นสามัญได้อัตโนมัติ"],a:1,e:"หลักประกันลดความเสี่ยงของผู้ถือหุ้นกู้ เพราะหากผิดนัดสามารถบังคับเอาจากทรัพย์สินที่ค้ำได้ก่อน จึงมักให้ดอกเบี้ยต่ำกว่าหุ้นกู้ไม่มีประกันของผู้ออกรายเดียวกัน"},
+{s:3,q:"ข้อใดเป็นสิทธิของผู้ถือหุ้นสามัญ",o:["ได้รับดอกเบี้ยคงที่ทุกงวด","ได้รับเงินคืนก่อนเจ้าหนี้เมื่อบริษัทเลิกกิจการ","รับเงินปันผลก่อนหุ้นบุริมสิทธิ","สิทธิออกเสียงในที่ประชุมผู้ถือหุ้น สิทธิรับเงินปันผลเมื่อบริษัทประกาศจ่าย และสิทธิในทรัพย์สินที่เหลือเป็นลำดับสุดท้าย"],a:3,e:"ผู้ถือหุ้นสามัญคือเจ้าของตัวจริง มีสิทธิกำหนดทิศทางบริษัทผ่านการออกเสียง ได้ประโยชน์เต็มที่เมื่อบริษัทเติบโต แต่รับความเสี่ยงสูงสุด (Residual Claim) เพราะได้รับคืนเป็นลำดับสุดท้าย"},
+{s:3,q:"หุ้นบุริมสิทธิชนิดสะสมปันผล (Cumulative Preferred Stock) หมายความว่าอย่างไร",o:["หากปีใดบริษัทงดจ่ายปันผล ปันผลที่ค้างจะสะสมไว้ และต้องจ่ายให้ครบก่อนจะจ่ายปันผลแก่หุ้นสามัญ","ได้รับปันผลเพิ่มขึ้นทุกปีโดยอัตโนมัติ","สะสมสิทธิออกเสียงเพิ่มทุกปี","แปลงเป็นหุ้นกู้ได้เมื่อครบกำหนด"],a:0,e:"Cumulative = ปันผลที่ค้างไม่หายไป ผู้ถือหุ้นสามัญจะได้ปันผลก็ต่อเมื่อจ่ายส่วนค้างของหุ้นบุริมสิทธิครบแล้ว ส่วนชนิดไม่สะสม ปีที่งดจ่ายถือว่าสิทธิสิ้นไป"},
+{s:3,q:"เครื่องหมาย XM บนกระดานซื้อขายหมายความว่าอะไร",o:["ผู้ซื้อไม่ได้รับเงินปันผล","ผู้ซื้อไม่ได้สิทธิจองหุ้นเพิ่มทุน","ผู้ซื้อไม่มีสิทธิเข้าประชุมผู้ถือหุ้นครั้งนั้น","ผู้ซื้อไม่ได้รับดอกเบี้ย"],a:2,e:"XM (Excluding Meeting) = ผู้ซื้อตั้งแต่วันนี้ไม่มีสิทธิเข้าร่วมประชุมผู้ถือหุ้นครั้งที่กำหนด จำคู่กับ XD (ปันผล) XR (สิทธิจองหุ้น) XI (ดอกเบี้ย) XW (ใบสำคัญแสดงสิทธิ)"},
+{s:3,q:"หุ้นมี P/BV เท่ากับ 0.8 เท่า ตีความได้อย่างไรเบื้องต้น",o:["ราคาหุ้นสูงกว่ามูลค่าตามบัญชี 0.8 เท่า","ราคาหุ้นต่ำกว่ามูลค่าทางบัญชีต่อหุ้น ซึ่งอาจถูกเกินจริง หรือตลาดกังวลเรื่องคุณภาพสินทรัพย์/ความสามารถทำกำไร","บริษัทขาดทุนแน่นอน","ต้องซื้อทันทีเพราะได้กำไร 20% แน่นอน"],a:1,e:"P/BV < 1 คือซื้อหุ้นได้ถูกกว่าส่วนของเจ้าของตามบัญชี อาจเป็นโอกาส หรืออาจเป็นสัญญาณว่าสินทรัพย์ด้อยค่าหรือ ROE ต่ำ ต้องวิเคราะห์ประกอบ ไม่ใช่กำไรแน่นอน"},
+{s:3,q:"บริษัทมีกำไรสุทธิ 150 ล้านบาท ส่วนของผู้ถือหุ้น 1,000 ล้านบาท ROE เท่าใด",o:["6.67%","1.5%","66.7%","15%"],a:3,e:"ROE = กำไรสุทธิ ÷ ส่วนของผู้ถือหุ้น = 150 ÷ 1,000 = 15% วัดว่าบริษัทใช้เงินของเจ้าของสร้างกำไรได้ดีเพียงใด และเชื่อมกับ P/BV: P/BV = P/E × ROE"},
+{s:3,q:"สำหรับปีภาษี 2569 วงเงินลดหย่อนสูงสุดของ ThaiESG และ ThaiESGX พิจารณาอย่างไร",o:["รวมกันไม่เกิน 300,000 บาท แยกจากกลุ่มเงินออมเพื่อเกษียณ 500,000 บาท","ต่างคนต่างได้ 300,000 บาท รวม 600,000 บาท","รวมกับ RMF ไม่เกิน 500,000 บาท","ไม่มีวงเงินสูงสุด"],a:0,e:"ปีภาษี 2569 ใช้วงเงินร่วมกันของ ThaiESG และ ThaiESGX ไม่เกิน 300,000 บาท (และไม่เกิน 30% ของเงินได้) โดยไม่นับรวมเพดาน 500,000 บาทของ RMF/PVD/กบข./ประกันบำนาญ เงื่อนไขภาษีอาจเปลี่ยน ควรตรวจสอบประกาศล่าสุด"}
+]});
+
+(function(){
+const $=s=>document.querySelector(s);
+const KEY='icplain2569-progress';
+let P={ch:{},mock:{}};
+try{const r=localStorage.getItem(KEY);if(r){const j=JSON.parse(r);if(j&&j.ch)P=j;}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(P));}catch(e){}}
+try{const t=localStorage.getItem('icplain-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}
+
+const PART={1:'ส่วนที่ 1 ความรู้พื้นฐาน',2:'ส่วนที่ 2 กฎเกณฑ์และจรรยาบรรณ',3:'ส่วนที่ 3 ผลิตภัณฑ์'};
+const SEC={1:'ส่วนที่ 1 · ความรู้พื้นฐานการเงินและเศรษฐศาสตร์',2:'ส่วนที่ 2 · กฎเกณฑ์และจรรยาบรรณ',3:'ส่วนที่ 3 · ความรู้ผลิตภัณฑ์'};
+const GROUPS=[['หมวด ก · กฎเกณฑ์และจรรยาบรรณ',0,4],['หมวด ข · ผลิตภัณฑ์การลงทุน',4,10],['หมวด ค · การคำนวณและเศรษฐศาสตร์',10,14]];
+const K=['ก','ข','ค','ง'];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const passOf=c=>c.pass||Math.ceil(c.quiz.length*0.7);
+
+function dot(id){const r=P.ch[id];if(!r)return'';const c=CH.find(x=>x.id===id);const ok=r.best>=passOf(c);return `<span class="dot ${ok?'pass':'fail'}">${r.best}/${r.total}</span>`;}
+function mdot(id){const r=P.mock[id];if(!r)return'';return `<span class="dot ${r.passed?'pass':'fail'}">${r.best}/50</span>`;}
+
+function nav(cur){
+  let h=`<a class="logo" href="#/"><span class="seal">IC</span><span><b>ติวสอบ IC Plain</b><small>ฉบับเตรียมสอบปี 2569</small></span></a><div class="nav">`;
+  h+=`<a href="#/" class="${cur==='home'?'on':''}"><span class="n">⌂</span><span>หน้าแรก · โครงสร้างข้อสอบ</span></a>`;
+  GROUPS.forEach(g=>{h+=`<div class="navgrp">${g[0]}</div>`;
+    for(let i=g[1];i<g[2];i++){const c=CH[i];h+=`<a href="#/ch/${c.id}" class="${cur===c.id?'on':''}"><span class="n">${i+1}</span><span>${esc(c.title)}</span>${dot(c.id)}</a>`;}});
+  h+=`<div class="navgrp">หมวด ง · ข้อสอบเสมือนจริง</div>`;
+  MOCK.forEach((m,i)=>{h+=`<a href="#/mock/${m.id}" class="${cur===m.id?'on':''}"><span class="n">${K[i]}</span><span>แนวข้อสอบจำลอง ${esc(m.title)}</span>${mdot(m.id)}</a>`;});
+  h+=`</div><div class="sidefoot"><button class="chip" id="themeBtn">◐ สลับโหมดสว่าง/มืด</button><button class="chip" id="resetBtn">ล้างคะแนน</button></div>`;
+  $('#side').innerHTML=h;
+  $('#themeBtn').onclick=()=>{const d=document.documentElement;const isDark=d.getAttribute('data-theme')==='dark'||(!d.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);const n=isDark?'light':'dark';d.setAttribute('data-theme',n);try{localStorage.setItem('icplain-theme',n);}catch(e){}};
+  $('#resetBtn').onclick=()=>{if(confirm('ล้างคะแนนที่บันทึกไว้ทั้งหมด?')){P={ch:{},mock:{}};save();route();}};
+}
+
+function home(){
+  const done=Object.keys(P.ch).length, passed=CH.filter(c=>P.ch[c.id]&&P.ch[c.id].best>=passOf(c)).length;
+  let h=`<section class="hero"><div class="guil"></div>
+  <span class="kicker" style="color:#D9AE55">คู่มือเตรียมสอบ · ผู้แนะนำการลงทุนตราสารทั่วไป</span>
+  <h1>ติวสอบ IC Plain 2569<br>จากศูนย์ ถึงวันสอบจริง</h1>
+  <p>14 บทครอบคลุมทุกหัวข้อที่ออกสอบ อธิบายด้วยภาษาการเงินที่คนนอกสายก็เข้าใจ มีภาพจำ ตัวอย่างคำนวณ แบบทดสอบท้ายบทพร้อมเหตุผลทุกข้อ และแนวข้อสอบจำลอง 3 ชุด</p>
+  <div class="btns"><a class="btn gold" href="#/ch/${CH[0].id}">เริ่มบทที่ 1 →</a><a class="btn ghost" href="#/ch/ethicsdrill">ตะลุยโจทย์จรรยาบรรณ 20 ข้อ</a><a class="btn ghost" href="#/mock/mock1">ทำข้อสอบจำลองชุดที่ 1</a></div></section>
+
+  <div class="card"><h2 style="margin-top:0">ข้อสอบจริงหน้าตาเป็นอย่างไร</h2>
+  <p>ข้อสอบปรนัย 4 ตัวเลือก <b>100 ข้อ เวลา 2 ชั่วโมง 30 นาที</b> แบ่งเป็น 3 ส่วน สัดส่วนตามแถบด้านล่าง</p>
+  <div class="examBar" role="img" aria-label="สัดส่วนข้อสอบ ส่วนที่1 30 ข้อ ส่วนที่2 20 ข้อ ส่วนที่3 50 ข้อ">
+   <div style="flex:30;background:#1E6B58">ข้อ 1–30</div><div style="flex:20;background:#B3261E">ข้อ 31–50</div><div style="flex:50;background:#12463A">ข้อ 51–100</div></div>
+  <div class="legend"><div><b>ส่วนที่ 1 · 30 ข้อ</b><br>ความรู้พื้นฐานการเงิน เศรษฐศาสตร์ การคำนวณผลตอบแทน ความเสี่ยง และมูลค่าเงินตามเวลา<br>→ บทที่ 11, 13, 14</div>
+  <div style="box-shadow:inset 3px 0 0 #B3261E"><b>ส่วนที่ 2 · 20 ข้อ</b><br>กฎหมาย กฎเกณฑ์ และจรรยาบรรณ ส่วนที่ “ตกส่วนนี้ = ตกทั้งฉบับ”<br>→ บทที่ 1–4</div>
+  <div><b>ส่วนที่ 3 · 50 ข้อ</b><br>ผลิตภัณฑ์: กองทุนรวม ภาษี ตราสารหนี้ ตราสารทุน และอัตราส่วนทางการเงิน<br>→ บทที่ 5–10, 12</div></div>
+  <div class="rules"><div class="rule"><div class="num">≥ 70/100</div>คะแนนรวมต้องได้อย่างน้อย 70%</div>
+  <div class="rule red"><div class="num">≥ 14/20</div>และส่วนจรรยาบรรณ (ข้อ 31–50) ต้องได้อย่างน้อย 14 ข้อ แม้คะแนนรวมจะผ่านก็ตาม</div></div>
+  <p class="note" style="margin-top:14px">ข้อสอบจำลองในเว็บนี้ทำแบบครึ่งสเกล (50 ข้อ 75 นาที) เหมือนแบบทดสอบฝึกหัดของสถาบันฯ: ผ่านเมื่อได้ ≥ 35/50 และส่วนจรรยาบรรณ ≥ 7/10 ควรตรวจสอบรูปแบบ ค่าสมัคร และวันสอบล่าสุดกับตลาดหลักทรัพย์ฯ / ATI ก่อนสมัคร</p></div>
+
+  <div class="card"><h2 style="margin-top:0">สมุดคะแนนของคุณ</h2><p>ทำแบบทดสอบท้ายบทไปแล้ว <b>${done}/${CH.length}</b> บท · ผ่านเกณฑ์ <b>${passed}</b> บท (คะแนนบันทึกไว้ในเบราว์เซอร์นี้เท่านั้น)</p>`;
+  GROUPS.forEach(g=>{h+=`<h3 style="font-size:18px;margin:18px 0 8px">${g[0]}</h3><div class="grid">`;
+    for(let i=g[1];i<g[2];i++){const c=CH[i],r=P.ch[c.id];const pct=r?Math.round(r.best/r.total*100):0;const bad=r&&r.best<passOf(c);
+      h+=`<a class="tile" href="#/ch/${c.id}"><div class="no">บทที่ ${i+1} · ${PART[c.part]}</div><div class="tt">${esc(c.title)}</div><div class="meter"><i class="${bad?'bad':''}" style="width:${pct}%"></i></div><div class="sc">${r?`ดีที่สุด ${r.best}/${r.total} · เกณฑ์ ${passOf(c)}`:`ยังไม่ได้ทำ · ${c.quiz.length} ข้อ`}</div></a>`;}
+    h+='</div>';});
+  h+=`<h3 style="font-size:18px;margin:18px 0 8px">หมวด ง · แนวข้อสอบจำลอง</h3><div class="grid">`;
+  MOCK.forEach(m=>{const r=P.mock[m.id];h+=`<a class="tile" href="#/mock/${m.id}"><div class="no">50 ข้อ · 75 นาที</div><div class="tt">แนวข้อสอบจำลอง ${esc(m.title)}</div><div class="meter"><i class="${r&&!r.passed?'bad':''}" style="width:${r?r.best*2:0}%"></i></div><div class="sc">${r?`ดีที่สุด ${r.best}/50 · ${r.passed?'ผ่าน':'ยังไม่ผ่าน'}`:'ยังไม่ได้ทำ'}</div></a>`;});
+  h+=`</div></div>
+  <div class="card"><h2 style="margin-top:0">แผนอ่าน 14 วันแบบนักการเงิน</h2>
+  <ol class="steps"><li><b>วันที่ 1–3 · จรรยาบรรณก่อน (บท 1–4)</b> เพราะเป็นด่านที่ตกแล้วตกทั้งฉบับ ทำบทที่ 4 จนได้ 17/20 ขึ้นไปอย่างสม่ำเสมอ</li>
+  <li><b>วันที่ 4–8 · ผลิตภัณฑ์ (บท 5–10, 12)</b> เป็นครึ่งหนึ่งของคะแนน เน้นตารางความเสี่ยงกองทุน เงื่อนไขภาษี ลำดับสิทธิเรียกร้อง และ XD/XR</li>
+  <li><b>วันที่ 9–11 · คำนวณ (บท 11, 13, 14)</b> ฝึกกดเครื่องคิดเลขจริง สูตรที่ออกบ่อย: FV/PV, E(R), S.D., Beta/CAPM, P/E, P/BV, Dividend Yield</li>
+  <li><b>วันที่ 12–14 · ข้อสอบจำลอง 3 ชุด</b> จับเวลา 75 นาที ทบทวนเฉพาะข้อผิดด้วยปุ่ม “ดูเฉพาะข้อที่ผิด” แล้วกลับไปอ่านบทที่เกี่ยวข้อง</li></ol></div>
+  <p class="disc">เนื้อหาเรียบเรียงเพื่อการศึกษา อ้างอิงหลักเกณฑ์ ก.ล.ต. และกฎหมายภาษีที่ใช้ ณ ปี 2569 ข้อสอบจำลองแต่งขึ้นตามแนวและสัดส่วนข้อสอบจริง ไม่ใช่ข้อสอบจริงที่รั่วไหล กฎเกณฑ์และเงื่อนไขภาษีอาจเปลี่ยนแปลง โปรดตรวจสอบกับสำนักงาน ก.ล.ต. กรมสรรพากร และตลาดหลักทรัพย์ฯ ก่อนสอบ</p>`;
+  return h;
+}
+
+/* ---------- quiz engine ---------- */
+function quizHTML(qs,prefix,withSec){
+  let h='',last=null;
+  qs.forEach((q,i)=>{
+    if(withSec&&q.s!==last){h+=`<div class="sechead" id="${prefix}-sec${q.s}">${SEC[q.s]}</div>`;last=q.s;}
+    h+=`<div class="qitem" id="${prefix}-q${i}"><div class="qnum">ข้อ ${i+1}</div><div class="qtext">${esc(q.q)}</div><div role="radiogroup" aria-label="ตัวเลือกข้อ ${i+1}">`;
+    q.o.forEach((o,j)=>{h+=`<label class="opt"><input type="radio" name="${prefix}${i}" value="${j}"><span><span class="k">${K[j]}.</span> ${esc(o)}</span></label>`;});
+    h+=`</div><div class="expbox"></div></div>`;
+  });
+  return h;
+}
+function bindSelect(root){root.addEventListener('change',e=>{if(e.target.type!=='radio')return;const g=e.target.closest('[role=radiogroup]');g.querySelectorAll('.opt').forEach(l=>l.classList.toggle('sel',l.querySelector('input').checked));const f=root.dataset.onchange;if(f&&window[f])window[f]();});}
+function grade(root,qs,prefix){
+  let score=0;const sec={};const res=[];
+  qs.forEach((q,i)=>{
+    const box=root.querySelector(`#${prefix}-q${i}`);const pick=box.querySelector('input:checked');const v=pick?+pick.value:-1;
+    const ok=v===q.a;if(ok)score++;
+    if(q.s){sec[q.s]=sec[q.s]||{c:0,t:0};sec[q.s].t++;if(ok)sec[q.s].c++;}
+    box.classList.add('done',ok?'right':(v<0?'skip':'wrong'));
+    box.querySelectorAll('.opt').forEach((l,j)=>{const inp=l.querySelector('input');inp.disabled=true;if(j===q.a)l.classList.add('is-ans');else if(j===v)l.classList.add('is-wrong');});
+    const lab=ok?'✓ ถูกต้อง':(v<0?`– ไม่ได้ตอบ · คำตอบที่ถูกคือ ${K[q.a]}`:`✗ ยังไม่ถูก · คุณตอบ ${K[v]} คำตอบที่ถูกคือ ${K[q.a]}`);
+    box.querySelector('.expbox').innerHTML=`<div class="exp ${ok?'r':(v<0?'s':'w')}"><b>${lab}</b>${esc(q.e)}</div>`;
+    res.push(ok?1:(v<0?0:-1));
+  });
+  return {score,sec,res};
+}
+function filterBar(root,id){return `<div class="filter" id="${id}" role="group" aria-label="กรองข้อ"><button class="on" data-f="all">ทั้งหมด</button><button data-f="wrong">ดูเฉพาะข้อที่ผิด/ไม่ได้ตอบ</button></div>`;}
+function bindFilter(root,id){const fb=root.querySelector('#'+id);if(!fb)return;fb.onclick=e=>{const b=e.target.closest('button');if(!b)return;fb.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const w=b.dataset.f==='wrong';root.querySelectorAll('.qitem').forEach(q=>q.style.display=(w&&q.classList.contains('right'))?'none':'');root.querySelectorAll('.sechead').forEach(s=>s.style.display=w?'none':'');};}
+
+/* ---------- chapter ---------- */
+function chapter(id){
+  const i=CH.findIndex(c=>c.id===id);if(i<0)return null;const c=CH[i];
+  const tmp=document.createElement('div');tmp.innerHTML=c.body;const hs=[...tmp.querySelectorAll('h3')];hs.forEach((x,k)=>x.id='sec'+k);
+  let toc=hs.length>2?`<details class="toc" open><summary>หัวข้อในบทนี้ (${hs.length})</summary><ol>${hs.map((x,k)=>`<li><a href="#/ch/${id}/sec${k}">${esc(x.textContent.replace(/^\d+\.\d+\s*/,''))}</a></li>`).join('')}<li><a href="#/ch/${id}/quiz">แบบทดสอบท้ายบท</a></li></ol></details>`:'';
+  const pass=passOf(c);
+  let h=`<span class="kicker">บทที่ ${i+1} <span class="tag">${PART[c.part]}</span></span><h1>${esc(c.title)}</h1><p class="lead">${esc(c.lead)}</p>${toc}<article class="body">${tmp.innerHTML}</article>
+  <section class="quiz" id="quiz"><div class="quiz-h"><div><h2 style="margin-bottom:0">${c.id==='ethicsdrill'?'ตะลุยโจทย์ 20 ข้อ':'แบบทดสอบท้ายบท'}</h2><span class="kicker">${c.quiz.length} ข้อ · เกณฑ์ผ่าน ${pass}/${c.quiz.length} ${c.pass?'(เท่ากับเกณฑ์ส่วนจรรยาบรรณของข้อสอบจริง)':''}</span></div>${P.ch[id]?`<span class="dot ${P.ch[id].best>=pass?'pass':'fail'}" style="font-size:14px;padding:3px 10px">ดีที่สุด ${P.ch[id].best}/${P.ch[id].total}</span>`:''}</div>
+  <div id="qz">${quizHTML(c.quiz,'c')}</div><div id="qres"></div>
+  <div class="actions" id="qact"><button class="btn pri" id="chk">ตรวจคำตอบ</button><span class="kicker" id="cnt">ตอบแล้ว 0/${c.quiz.length}</span></div></section>
+  <div class="pager">${i>0?`<a href="#/ch/${CH[i-1].id}"><small>← บทก่อนหน้า</small>${esc(CH[i-1].title)}</a>`:'<span></span>'}${i<CH.length-1?`<a class="nx" href="#/ch/${CH[i+1].id}"><small>บทถัดไป →</small>${esc(CH[i+1].title)}</a>`:`<a class="nx" href="#/mock/mock1"><small>ต่อไป →</small>แนวข้อสอบจำลอง ชุดที่ 1</a>`}</div>`;
+  return {h,after(){
+    const qz=$('#qz');qz.dataset.onchange='__cnt';window.__cnt=()=>{$('#cnt').textContent=`ตอบแล้ว ${qz.querySelectorAll('input:checked').length}/${c.quiz.length}`;};bindSelect(qz);
+    $('#chk').onclick=()=>{
+      const n=qz.querySelectorAll('input:checked').length;if(n<c.quiz.length&&!confirm(`ยังตอบไม่ครบ (${n}/${c.quiz.length}) ต้องการตรวจเลยหรือไม่?`))return;
+      const g=grade(qz,c.quiz,'c');const ok=g.score>=pass;
+      const prev=P.ch[id];P.ch[id]={best:Math.max(g.score,prev?prev.best:0),last:g.score,total:c.quiz.length};save();nav(id);
+      $('#qres').innerHTML=`<div class="result ${ok?'pass':'fail'}" role="status"><div class="big">${g.score}/${c.quiz.length}</div><div><b>${ok?'ผ่านเกณฑ์แล้ว':'ยังไม่ถึงเกณฑ์'}</b> (เกณฑ์ ${pass} ข้อ)<br>${ok?'อ่านคำอธิบายข้อที่พลาดเพื่อปิดช่องโหว่ แล้วไปบทถัดไปได้เลย':'ทบทวนคำอธิบายด้านบน โดยเฉพาะข้อที่ผิด แล้วลองทำใหม่อีกครั้ง'}</div></div>${filterBar(qz,'cf')}`;
+      bindFilter(document,'cf');
+      $('#qact').innerHTML=`<button class="btn pri" id="again">ทำใหม่อีกครั้ง</button>`;$('#again').onclick=()=>{route(true);setTimeout(()=>{const q=$('#quiz');q&&q.scrollIntoView();},30);};
+      $('#qres').scrollIntoView({behavior:'smooth',block:'start'});
+    };
+  }};
+}
+
+/* ---------- mock ---------- */
+let TIMER=null;
+function mock(id){
+  const m=MOCK.find(x=>x.id===id);if(!m)return null;const r=P.mock[id];
+  const cnt={1:0,2:0,3:0};m.q.forEach(q=>cnt[q.s]++);
+  let h=`<span class="kicker">แนวข้อสอบจำลอง <span class="tag">50 ข้อ · 75 นาที</span></span><h1>ข้อสอบจำลอง IC Plain ${esc(m.title)}</h1>
+  <p class="lead">จำลองแบบครึ่งสเกลของข้อสอบจริง เรียงตามโครงสร้างจริง: ส่วนที่ 1 (${cnt[1]} ข้อ) ส่วนที่ 2 จรรยาบรรณ (${cnt[2]} ข้อ) ส่วนที่ 3 ผลิตภัณฑ์ (${cnt[3]} ข้อ)</p>
+  <div class="card" style="margin-top:0"><b>เกณฑ์ผ่าน:</b> คะแนนรวม ≥ 35/50 <b>และ</b> ส่วนจรรยาบรรณ ≥ 7/10 · เตรียมเครื่องคิดเลขและกระดาษทด แนะนำให้กดจับเวลาเพื่อฝึกการคุมเวลา (เฉลี่ยข้อละ 1.5 นาที) ${r?`<br><b>ผลดีที่สุดของคุณ:</b> ${r.best}/50 · ${r.passed?'ผ่าน':'ยังไม่ผ่าน'}`:''}</div>
+  <div class="sticky"><span><span class="timer" id="tm">75:00</span> <span class="kicker" id="mcnt">ตอบแล้ว 0/50</span></span><span style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sec" id="tbtn">▶ เริ่มจับเวลา</button><button class="btn pri" id="msub">ส่งคำตอบ</button></span></div>
+  <div id="mres"></div><div id="mq">${quizHTML(m.q,'m',true)}</div>
+  <div class="actions" id="mact"><button class="btn pri" id="msub2">ส่งคำตอบและดูเฉลย</button></div>
+  <p class="disc">ข้อสอบชุดนี้แต่งขึ้นตามแนวและสัดส่วนข้อสอบจริงเพื่อการฝึกฝน ไม่ใช่ข้อสอบจริง</p>`;
+  return {h,after(){
+    const mq=$('#mq');mq.dataset.onchange='__mcnt';window.__mcnt=()=>{$('#mcnt').textContent=`ตอบแล้ว ${mq.querySelectorAll('input:checked').length}/50`;};bindSelect(mq);
+    let left=75*60,submitted=false;
+    const fmt=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+    $('#tbtn').onclick=()=>{if(TIMER){clearInterval(TIMER);TIMER=null;$('#tbtn').textContent='▶ จับเวลาต่อ';return;}
+      $('#tbtn').textContent='❚❚ หยุดชั่วคราว';TIMER=setInterval(()=>{left--;const t=$('#tm');if(!t){clearInterval(TIMER);TIMER=null;return;}t.textContent=fmt(left);t.classList.toggle('low',left<=600);if(left<=0){clearInterval(TIMER);TIMER=null;alert('หมดเวลา ระบบจะส่งคำตอบให้อัตโนมัติ');submit(true);}},1000);};
+    function submit(force){
+      if(submitted)return;const n=mq.querySelectorAll('input:checked').length;
+      if(!force&&n<50&&!confirm(`ยังตอบไม่ครบ (${n}/50) ข้อที่ไม่ได้ตอบจะนับเป็นผิด ต้องการส่งเลยหรือไม่?`))return;
+      submitted=true;if(TIMER){clearInterval(TIMER);TIMER=null;}
+      const g=grade(mq,m.q,'m');const eth=g.sec[2]||{c:0,t:10};const passed=g.score>=35&&eth.c>=7;
+      const prev=P.mock[id];P.mock[id]={best:Math.max(g.score,prev?prev.best:0),passed:(prev&&prev.passed)||passed};save();nav(id);
+      const reason=passed?'ผ่านทั้งเกณฑ์คะแนนรวมและเกณฑ์จรรยาบรรณ':(g.score<35&&eth.c<7?'ไม่ถึงทั้งเกณฑ์คะแนนรวม (35) และเกณฑ์จรรยาบรรณ (7)':g.score<35?'คะแนนรวมยังไม่ถึง 35':'คะแนนรวมผ่าน แต่ส่วนจรรยาบรรณได้ไม่ถึง 7/10 จึงถือว่าไม่ผ่าน เหมือนข้อสอบจริง');
+      const sb=s=>{const x=g.sec[s]||{c:0,t:0};return `<div><span class="kicker">${SEC[s].split(' · ')[1]}</span><b>${x.c}/${x.t}</b>${Math.round(x.c/x.t*100)}%${s===2?` · เกณฑ์ 7`:''}</div>`;};
+      $('#mres').innerHTML=`<div class="result ${passed?'pass':'fail'}" role="status"><div class="big">${g.score}/50</div><div><b>${passed?'ผ่าน':'ยังไม่ผ่าน'}</b> · ${reason}<br>${left<75*60?`ใช้เวลา ${fmt(75*60-left)} นาที`:''}</div><div class="secs">${sb(1)}${sb(2)}${sb(3)}</div></div>${filterBar(mq,'mf')}`;
+      bindFilter(document,'mf');
+      const again=`<button class="btn pri" onclick="location.hash='#/mock/${id}';window.__rerender()">ทำชุดนี้ใหม่</button>`+ (MOCK.findIndex(x=>x.id===id)<MOCK.length-1?`<a class="btn sec" href="#/mock/${MOCK[MOCK.findIndex(x=>x.id===id)+1].id}">ไปชุดถัดไป →</a>`:'');
+      $('#mact').innerHTML=again;$('#msub').disabled=true;$('#tbtn').disabled=true;
+      $('#mres').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    $('#msub').onclick=()=>submit(false);$('#msub2').onclick=()=>submit(false);
+  }};
+}
+
+/* ---------- router ---------- */
+function route(){
+  if(TIMER){clearInterval(TIMER);TIMER=null;}
+  document.body.classList.remove('menu');
+  const parts=(location.hash||'#/').slice(2).split('/');
+  let v=null,cur='home',title='IC Plain 2569';
+  if(parts[0]==='ch'){v=chapter(parts[1]);cur=parts[1];const c=CH.find(x=>x.id===cur);if(c)title=c.title;}
+  else if(parts[0]==='mock'){v=mock(parts[1]);cur=parts[1];title='ข้อสอบจำลอง';}
+  if(!v){v={h:home(),after(){}};cur='home';}
+  $('#view').innerHTML=v.h;v.after();nav(cur);$('#topTitle').textContent=title;
+  document.title=(cur==='home'?'':title+' · ')+'ติวสอบ IC Plain 2569';
+  const anchor=parts[2];
+  if(anchor){const el=document.getElementById(anchor);if(el){el.scrollIntoView();return;}}
+  window.scrollTo(0,0);
+}
+window.__rerender=route;
+let lastBase='';
+window.addEventListener('hashchange',()=>{const p=(location.hash||'#/').slice(2).split('/');const base=p.slice(0,2).join('/');
+  if(base===lastBase&&p[2]){const el=document.getElementById(p[2]);if(el){el.scrollIntoView({behavior:'smooth'});return;}}lastBase=base;route();});
+lastBase=(location.hash||'#/').slice(2).split('/').slice(0,2).join('/');
+$('#menuBtn').onclick=()=>document.body.classList.toggle('menu');
+document.addEventListener('click',e=>{if(document.body.classList.contains('menu')&&!e.target.closest('.side')&&!e.target.closest('#menuBtn'))document.body.classList.remove('menu');});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.body.classList.remove('menu');});
+route();
+})();
+
+
+</script>
+</body>
+</html>
